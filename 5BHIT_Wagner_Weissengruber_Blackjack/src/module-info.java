@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author rudiw
- *
- */
-module fett {
-}
