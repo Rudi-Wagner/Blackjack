@@ -11,9 +11,9 @@ import java.net.Socket;
 
 import com.google.gson.Gson;
 
-import Misc.Card;
-import Misc.CardDeck;
-import Misc.JsonObj;
+import misc.Card;
+import misc.CardDeck;
+import misc.JsonObj;
 
 public class clientThread extends Thread
 {
@@ -70,17 +70,25 @@ public class clientThread extends Thread
 	                }
 	                else
 	                { //Client Communication
-	                	String type = getTypeViaJson(recievedMSG);
+	                	Gson gson = new Gson();
+	            		JsonObj jsondata = gson.fromJson(recievedMSG, JsonObj.class);
 	                	String msg = "";
-	                	switch (type) 
+	                	switch (jsondata.getType()) 
 	                	{
 							case "draw":
 								Card card = deck.drawCard();
 								msg = cardToJson(card);
 								break;
+							
+							case "stand":
+								int playerHandValue = jsondata.getValue();
+								int dealerHandValue = 22;
+								//Vergleichen mit Server hand
+								System.out.println("#ThreadLog# Player's Hand is " + playerHandValue + " worth!");
+								break;
 								
 							default:
-								throw new IllegalArgumentException("Unexpected value: " + type);
+								throw new IllegalArgumentException("Unexpected value: " + jsondata.getType());
 						}
 	                	writer.println(msg);
 	                }
@@ -109,12 +117,5 @@ public class clientThread extends Thread
 		Gson gson = new Gson();
 		String jsondata = gson.toJson(card);
 		return jsondata;
-	}
-
-	private String getTypeViaJson(String recievedMSG) 
-	{
-		Gson gson = new Gson();
-		JsonObj jsondata = gson.fromJson(recievedMSG, JsonObj.class);
-		return jsondata.getType();
 	}
 }

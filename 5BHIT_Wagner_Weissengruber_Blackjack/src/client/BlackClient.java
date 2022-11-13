@@ -9,9 +9,14 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 import com.google.gson.Gson;
-import Misc.JsonObj;
+
+import misc.Card;
+import misc.CardHand;
+import misc.JsonObj;
 
 
 public class BlackClient {
@@ -19,6 +24,7 @@ public class BlackClient {
 	private static OutputStream output;
 	private static PrintWriter writer;
 	private static Socket socket;
+	private static CardHand hand;
  
 	/*
 	 * Rudi Wagner
@@ -43,23 +49,36 @@ public class BlackClient {
  
             String msg;
             int i = 0;
-            int durchläufe = 5;
+            int durchläufe = 26;
+            hand = new CardHand();
+            
+            Scanner scanner = new Scanner(System. in);
+            
 
-            while (i < durchläufe) {
-            	msg = getMsg();
-//                System.out.println("#Client# Package: " + i + " , Gesendet: " + sendJSON);
-                writer.println(msg);	//Send message to server
- 
-                InputStream input = socket.getInputStream();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(input));
- 
-                String answer = reader.readLine();	//Server answer
-                
-                
-                
-                System.out.println("#Client# Antwort vom Server: " + answer);
+            while (true) {
+            	String inputString = scanner.nextLine();
+            	
+            	if (inputString.equals("draw")) 
+            	{
+            		msg = getMsgDraw();
+                    writer.println(msg);	//Send message to server
+     
+                    InputStream input = socket.getInputStream();
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+     
+                    String answer = reader.readLine();	//Server answer
+                    translateFromJson(answer);
+                    
+                    
+                    System.out.println("#Client# Antwort vom Server: " + answer);
+				}
+            	else if (inputString.equals("stop"))
+            	{
+            		break;
+            	}
                 i++;
             }
+            writer.println(getMsgStand());
             shutdown();
         } catch (UnknownHostException ex) {
  
@@ -70,6 +89,16 @@ public class BlackClient {
             System.out.println("#Client# I/O error: " + ex.getMessage());
         }
     }
+
+	private static void translateFromJson(String msg) 
+	{
+		Gson gson = new Gson();
+		if (msg.contains("name") && msg.contains("value")) 
+		{
+			Card card = gson.fromJson(msg, Card.class);
+			hand.addCard(card);
+		}
+	}
 
 	public static void shutdown()
 	{ //Bei einem geplanten Verbindungsabbruch wird eine letzte Nachricht geschickt, der Server stoppt somit den Thread
@@ -86,9 +115,18 @@ public class BlackClient {
 		}
 	}
 	
-	private static String getMsg()
+	private static String getMsgDraw()
 	{
 		JsonObj obj = new JsonObj("draw", 0);
+		Gson gson = new Gson();
+		String jsondata = gson.toJson(obj);
+		System.out.println(jsondata);
+		return jsondata;
+	}
+	
+	private static String getMsgStand()
+	{
+		JsonObj obj = new JsonObj("stand", hand.getValue());
 		Gson gson = new Gson();
 		String jsondata = gson.toJson(obj);
 		System.out.println(jsondata);

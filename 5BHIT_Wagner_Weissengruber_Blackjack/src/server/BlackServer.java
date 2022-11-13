@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
 
-import Misc.CardDeck;
+import misc.CardDeck;
 
 /*
  * Rudi Wagner
