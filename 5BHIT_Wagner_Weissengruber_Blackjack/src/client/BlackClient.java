@@ -9,7 +9,6 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.google.gson.Gson;
@@ -39,6 +38,7 @@ public class BlackClient {
     	System.out.println("#Client# Client Started!");
     	//Connection Data
     	String hostname = "localhost";
+    	//Gui	https://www.kenney.nl/assets/playing-cards-pack
     	int port = 6868;
  
     	try {
@@ -47,14 +47,10 @@ public class BlackClient {
             output = socket.getOutputStream();
             writer = new PrintWriter(output, true);
  
-            String msg;
-            int i = 0;
-            int durchläufe = 26;
+            String msg = "";
             hand = new CardHand();
-            
             Scanner scanner = new Scanner(System. in);
             
-
             while (true) {
             	String inputString = scanner.nextLine();
             	
@@ -74,11 +70,15 @@ public class BlackClient {
 				}
             	else if (inputString.equals("stop"))
             	{
+            		writer.println(getMsgStand());
+            	}
+            	else if (inputString.equals("quit"))
+            	{
             		break;
             	}
-                i++;
             }
-            writer.println(getMsgStand());
+            
+            scanner.close();
             shutdown();
         } catch (UnknownHostException ex) {
  

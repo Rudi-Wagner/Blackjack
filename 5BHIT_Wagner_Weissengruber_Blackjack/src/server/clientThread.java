@@ -51,10 +51,8 @@ public class clientThread extends Thread
 	
 	
 	            String recievedMSG;
-	            int runs = 0;
 	            
 	            do {
-	            	runs++;
 	            	Thread.sleep(1000);
 	                recievedMSG = reader.readLine();
 	                
@@ -82,7 +80,7 @@ public class clientThread extends Thread
 							
 							case "stand":
 								int playerHandValue = jsondata.getValue();
-								int dealerHandValue = 22;
+								@SuppressWarnings("unused") int dealerHandValue = 22;
 								//Vergleichen mit Server hand
 								System.out.println("#ThreadLog# Player's Hand is " + playerHandValue + " worth!");
 								break;

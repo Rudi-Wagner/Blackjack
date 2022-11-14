@@ -5,20 +5,10 @@ import java.util.Random;
 
 public class CardDeck 
 {
-	public volatile static ArrayList<Card> CardDeck = new ArrayList<Card>();
+	public volatile ArrayList<Card> CardDeck = new ArrayList<Card>();
 	
-	private String[] cardNames	= {"Ass", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+	private String[] cardNames	= {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
 	private int[] cardValues 	= { 11	,  2 ,  3 ,  4 ,  5 ,  6 ,  7 ,  8 ,  9 ,  10 ,   10  ,   10   ,   10  };
-	
-//	public static void main(String[] args)
-//	{
-//		CardDeck deck = new CardDeck();
-//		for (int i = 0; i < 52; i++) 
-//		{
-//			Card card = deck.drawCard();
-//			System.out.println(i + ": " + card.getName() + " -> " + card.getValue());
-//		}
-//	}
 	
 	public CardDeck() 
 	{
@@ -32,7 +22,7 @@ public class CardDeck
 		}
 	}
 	
-	public static Card drawCard()
+	public Card drawCard()
 	{
 		//Calculate Random Number
 		int max = CardDeck.size();
