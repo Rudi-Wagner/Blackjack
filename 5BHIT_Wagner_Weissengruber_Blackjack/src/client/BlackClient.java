@@ -18,12 +18,14 @@ import misc.CardHand;
 import misc.JsonObj;
 
 
-public class BlackClient {
+public class BlackClient extends Thread{
 	
-	private static OutputStream output;
-	private static PrintWriter writer;
-	private static Socket socket;
-	private static CardHand hand;
+	private OutputStream output;
+	private PrintWriter writer;
+	private static Gui window;
+	private Socket socket;
+	private CardHand hand;
+	private String inputString = "";
  
 	/*
 	 * Rudi Wagner
@@ -33,13 +35,23 @@ public class BlackClient {
 	 * Client
 	 */
 	
-	public static void main(String[] args) 
+	public static void main(String[] args)
+	{
+		BlackClient client = new BlackClient();
+		client.begin();
+		window = new Gui(client);
+	}
+	
+	
+	public void begin() 
 	{	
     	System.out.println("#Client# Client Started!");
     	//Connection Data
     	String hostname = "localhost";
     	//Gui	https://www.kenney.nl/assets/playing-cards-pack
     	int port = 6868;
+    	
+    	
  
     	try {
     		//Intialize socket, output and writer
@@ -52,8 +64,7 @@ public class BlackClient {
             Scanner scanner = new Scanner(System. in);
             
             while (true) {
-            	String inputString = scanner.nextLine();
-            	
+//            	String inputString = scanner.nextLine();
             	if (inputString.equals("draw")) 
             	{
             		msg = getMsgDraw();
@@ -63,7 +74,8 @@ public class BlackClient {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(input));
      
                     String answer = reader.readLine();	//Server answer
-                    translateFromJson(answer);
+                    Card card = translateFromJson(answer);
+                    window.setCard(card.getName());
                     
                     
                     System.out.println("#Client# Antwort vom Server: " + answer);
@@ -90,17 +102,19 @@ public class BlackClient {
         }
     }
 
-	private static void translateFromJson(String msg) 
+	private Card translateFromJson(String msg) 
 	{
 		Gson gson = new Gson();
 		if (msg.contains("name") && msg.contains("value")) 
 		{
 			Card card = gson.fromJson(msg, Card.class);
 			hand.addCard(card);
+			return card;
 		}
+		return null;
 	}
 
-	public static void shutdown()
+	public void shutdown()
 	{ //Bei einem geplanten Verbindungsabbruch wird eine letzte Nachricht geschickt, der Server stoppt somit den Thread
     	try {
     		System.out.println("#Client# Requested shutdown!");
@@ -115,7 +129,13 @@ public class BlackClient {
 		}
 	}
 	
-	private static String getMsgDraw()
+	public void sendMessage(String msg)
+	{
+		inputString = msg;
+		System.out.println("fett");
+	}
+	
+	private String getMsgDraw()
 	{
 		JsonObj obj = new JsonObj("draw", 0);
 		Gson gson = new Gson();
@@ -124,7 +144,7 @@ public class BlackClient {
 		return jsondata;
 	}
 	
-	private static String getMsgStand()
+	private String getMsgStand()
 	{
 		JsonObj obj = new JsonObj("stand", hand.getValue());
 		Gson gson = new Gson();
