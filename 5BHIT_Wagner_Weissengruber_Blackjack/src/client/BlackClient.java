@@ -9,7 +9,6 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.util.Scanner;
 
 import com.google.gson.Gson;
 
@@ -38,12 +37,12 @@ public class BlackClient extends Thread{
 	public static void main(String[] args)
 	{
 		BlackClient client = new BlackClient();
-		client.begin();
 		window = new Gui(client);
+		client.start();
 	}
 	
 	
-	public void begin() 
+	public void run() 
 	{	
     	System.out.println("#Client# Client Started!");
     	//Connection Data
@@ -58,25 +57,22 @@ public class BlackClient extends Thread{
     		socket = new Socket(hostname, port);
             output = socket.getOutputStream();
             writer = new PrintWriter(output, true);
- 
-            String msg = "";
             hand = new CardHand();
-            Scanner scanner = new Scanner(System. in);
             
             while (true) {
-//            	String inputString = scanner.nextLine();
+            	System.out.print("");	//Ohne dem gehts nimma xD
             	if (inputString.equals("draw")) 
             	{
-            		msg = getMsgDraw();
-                    writer.println(msg);	//Send message to server
+            		inputString = getMsgDraw();
+                    writer.println(inputString);	//Send message to server
+                    inputString = "";
      
                     InputStream input = socket.getInputStream();
                     BufferedReader reader = new BufferedReader(new InputStreamReader(input));
      
                     String answer = reader.readLine();	//Server answer
                     Card card = translateFromJson(answer);
-                    window.setCard(card.getName());
-                    
+                    window.setCard(card);
                     
                     System.out.println("#Client# Antwort vom Server: " + answer);
 				}
@@ -89,8 +85,6 @@ public class BlackClient extends Thread{
             		break;
             	}
             }
-            
-            scanner.close();
             shutdown();
         } catch (UnknownHostException ex) {
  
@@ -132,7 +126,6 @@ public class BlackClient extends Thread{
 	public void sendMessage(String msg)
 	{
 		inputString = msg;
-		System.out.println("fett");
 	}
 	
 	private String getMsgDraw()

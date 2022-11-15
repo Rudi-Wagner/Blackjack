@@ -9,6 +9,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+
+import misc.Card;
+
 import javax.swing.JButton;
 
 public class Gui {
@@ -16,6 +19,8 @@ public class Gui {
 	private JFrame frame;
 	private BlackClient client;
 	private ArrayList<JLabel> playerHand;
+	private int cardCnt = 0;
+	private int handValue = 0;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -35,13 +40,6 @@ public class Gui {
 		this.client = client;
 		initialize();
 		frame.setVisible(true);
-	}
-	
-	public void updateCard(int pos, String type)
-	{
-		JLabel card = playerHand.get(pos);
-		card.setIcon(new ImageIcon(Gui.class.getResource("/resources/" + type + ".png")));
-		frame.repaint();
 	}
 
 	private void initialize() 
@@ -85,12 +83,20 @@ public class Gui {
 
 	private void drawCard() 
 	{
-		System.out.println("boibert ");
 		client.sendMessage("draw");
 	}
 
-	public void setCard(String type) 
+	public void setCard(Card card) 
 	{
-		updateCard(1, type);
+		updateCard(cardCnt, card.getName());
+		handValue += card.getValue();
+		cardCnt++;
+	}
+	
+	public void updateCard(int pos, String type)
+	{
+		JLabel card = playerHand.get(pos);
+		card.setIcon(new ImageIcon(Gui.class.getResource("/resources/" + type + ".png")));
+		frame.repaint();
 	}
 }
