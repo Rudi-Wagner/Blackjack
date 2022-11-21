@@ -22,7 +22,7 @@ public class BlackClient extends Thread{
 	private OutputStream output;
 	private PrintWriter writer;
 	private static Gui window;
-	private Socket socket;
+	private Socket socket = null;
 	private CardHand hand;
 	private String inputString = "";
  
@@ -54,7 +54,23 @@ public class BlackClient extends Thread{
  
     	try {
     		//Intialize socket, output and writer
-    		socket = new Socket(hostname, port);
+    		while(socket == null)
+    		{
+    			try {
+    				socket = new Socket(hostname, port);
+    			}
+    			catch(IOException ex)
+    			{
+    				System.out.println("#Client# No server found!");
+    				try {
+						Thread.sleep(5000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+    			}
+    		}
+    		System.out.println("#Client# Connected succesfully");
+    		   		
             output = socket.getOutputStream();
             writer = new PrintWriter(output, true);
             hand = new CardHand();
