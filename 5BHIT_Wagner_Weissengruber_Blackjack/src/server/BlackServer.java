@@ -25,7 +25,7 @@ public class BlackServer
     	int port = 6868;		//Port festlegen
     	CardDeck deck = new CardDeck();
  
-    	//Öffnen und warten auf Clients
+    	//Oeffnen und warten auf Clients
     	try (ServerSocket serverSocket = new ServerSocket(port)) {
     		 
             System.out.println("#Server# Server is listening on port " + port);
@@ -34,7 +34,7 @@ public class BlackServer
  
             //Endlos Schleife um "unendlich" Clients aufzunehmen
             while (true) {
-            	//Check für gestoppte Threads --> gestoppte Threads werden gelöscht
+            	//Check fuer gestoppte Threads --> gestoppte Threads werden gelï¿½scht
             	checkStoppedThread();
             	checkCardDeck();
             	try {
@@ -45,7 +45,7 @@ public class BlackServer
             	}
         
                 if(socket != null)
-                { //Wenn ein Client gefunden wurde, wird ein Thread gestartet der die Verbindung "übernimmt"
+                { //Wenn ein Client gefunden wurde, wird ein Thread gestartet der die Verbindung uebernimmt"
                 	System.out.println("#Server# New client connected");
                 	Thread clientRunnabel = new clientThread(socket, deck);
                 	saveConnection(socket, clientRunnabel);

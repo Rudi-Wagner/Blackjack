@@ -33,7 +33,7 @@ public class CardHand
 			Card card = Hand.get(i);
 			
 			//Check Ass logic
-			//  Muss ein Ass sein,                  Wert der Karten muss über 21 gelangen
+			//  Muss ein Ass sein,                  Wert der Karten mussueber 21 gelangen
 //			if (card.getName().startsWith("Ass") && value + 11 > 21) 
 //			{
 //				value += 1;

@@ -58,7 +58,7 @@ public class clientThread extends Thread
 	                
 	                if(recievedMSG.equals("startSession"))
 	                { //Verbindungs start
-	                	System.out.println("#Thread# " + this.getId() + " Thread erhält nun Daten!");
+	                	System.out.println("#Thread# " + this.getId() + " Thread erhaelt nun Daten!");
 	                }
 	                else if(recievedMSG.equals("closeSession"))
 	                { //Abbruch der Verbindung falls der Client das fordert

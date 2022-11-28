@@ -1,5 +1,6 @@
 package client;
 
+import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.util.ArrayList;
@@ -8,20 +9,34 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRootPane;
 import javax.swing.SwingConstants;
 
 import misc.Card;
 
 import javax.swing.JButton;
+import javax.swing.JSpinner;
+import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ActionEvent;
+import javax.swing.border.BevelBorder;
 
 public class Gui {
 
 	private JFrame frame;
 	private BlackClient client;
+	
+	//Panels to access every Component later on
+	private JPanel playerActionPanel;
+	private JPanel playerHandPanel;
+	private JPanel playerMoneyPanel;
+	private JLabel topLabel;
+	
+	//PlayerHand variables
 	private ArrayList<JLabel> playerHand;
-	private ArrayList<JButton> buttons;
-	private JButton reloadButton;
-	private JLabel handValueLabel;
+	private JLabel playerHandValueLabel;
+	
 	private int cardCnt = 0;
 	private int handValue = 0;
 
@@ -40,7 +55,6 @@ public class Gui {
 
 	public Gui(BlackClient client) {
 		playerHand = new ArrayList<JLabel>();
-		buttons = new ArrayList<JButton>();
 		this.client = client;
 		initialize();
 		frame.setVisible(true);
@@ -50,65 +64,247 @@ public class Gui {
 	{
 		frame = new JFrame();
 		frame.getContentPane().setLayout(null);
-		frame.setSize(850, 670);
+		frame.setSize(1000, 700);
 		
-		JPanel playerActionPanel = new JPanel();
-		playerActionPanel.setBounds(10, 100, 807, 441);
+		frame.addComponentListener(new ComponentAdapter() {
+		    public void componentResized(ComponentEvent componentEvent) 
+		    {
+		        OnResize();
+		    }
+		});
+		
+		//Player Action Panel (Middle Panel with Buttons)
+		playerActionPanel = new JPanel();
+		playerActionPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		playerActionPanel.setBounds(10, 283, 964, 266);
 		frame.getContentPane().add(playerActionPanel);
 		playerActionPanel.setLayout(null);
 		
-		JButton drawButton = new JButton("Hit");
-		drawButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
-		drawButton.setBounds(60, 109, 223, 173);
-		drawButton.addActionListener(e -> drawCard());
-		buttons.add(drawButton);
-		playerActionPanel.add(drawButton);
+			//Hit Button
+			JButton drawButton = new JButton("Hit");
+			drawButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
+			drawButton.setBounds(33, 50, 200, 170);
+			drawButton.addActionListener(e -> drawCard());
+			drawButton.setName("drawButton");
+			playerActionPanel.add(drawButton);
+			
+			//Stand Button
+			JButton standButton = new JButton("Stand");
+			standButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
+			standButton.setBounds(731, 50, 200, 170);
+			standButton.addActionListener(e -> stand());
+			standButton.setName("standButton");
+			playerActionPanel.add(standButton);
+			
+			//New Round Button
+			JButton reloadButton = new JButton("New Round!");
+			reloadButton.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+				}
+			});
+			reloadButton.setBounds(382, 231, 200, 21);
+			reloadButton.addActionListener(e -> newRound());
+			reloadButton.setName("reloadButton");
+			playerActionPanel.add(reloadButton);
+			reloadButton.setEnabled(false);
+			
+			//Double Down Button
+			JButton doubleDownButton = new JButton("Double");
+			doubleDownButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
+			doubleDownButton.setBounds(265, 50, 200, 170);
+			doubleDownButton.addActionListener(e -> doubleDown());
+			doubleDownButton.setName("doubleDownButton");
+			playerActionPanel.add(doubleDownButton);
+			
+			//Split Button
+			JButton splitButton = new JButton("Split");
+			splitButton.addActionListener(e -> split());
+			splitButton.setName("splitButton");
+			splitButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
+			splitButton.setBounds(498, 50, 200, 170);
+			splitButton.setEnabled(false);
+			playerActionPanel.add(splitButton);
 		
-		JButton standButton = new JButton("Stand");
-		standButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
-		standButton.setBounds(528, 109, 223, 173);
-		standButton.addActionListener(e -> stand());
-		buttons.add(standButton);
-		playerActionPanel.add(standButton);
-		
-		handValueLabel = new JLabel("Current hand value: ");
-		handValueLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		handValueLabel.setBounds(10, 410, 235, 21);
-		playerActionPanel.add(handValueLabel);
-		
-		reloadButton = new JButton("New Round!");
-		reloadButton.setBounds(671, 410, 126, 21);
-		reloadButton.addActionListener(e -> newRound());
-		playerActionPanel.add(reloadButton);
-		reloadButton.setEnabled(false);
-		
-		JPanel playerHandPanel = new JPanel();
-		playerHandPanel.setBounds(10, 551, 807, 64);
-		frame.getContentPane().add(playerHandPanel);
+		playerHandPanel = new JPanel();
+		playerHandPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		playerHandPanel.setLayout(null);
+		playerHandPanel.setBounds(10, 176, 964, 96);
+		frame.getContentPane().add(playerHandPanel);
+			
+		playerHandValueLabel = new JLabel("Current player-hand value: ");
+		playerHandValueLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		playerHandValueLabel.setBounds(10, 0, 357, 20);
+		playerHandValueLabel.setName("playerHandValueLabel");
+		playerHandPanel.add(playerHandValueLabel);
+			
+			//Set Player Hand Images
+			int cards = 11;
+			for(int i = 0; i < cards; i++)
+			{
+				JLabel card = new JLabel("");
+				card.setIcon(new ImageIcon(Gui.class.getResource("/resources/card_back.png")));
+				card.setBounds(i * 74, 25, 64, 64);
+				card.setName("card" + i);
+				playerHand.add(card);
+				playerHandPanel.add(card);
+			}
 		
-		//Set Player Hand Images
-		int cards = 11;
-		for(int i = 0; i <= cards; i++)
-		{
-			JLabel card = new JLabel("");
-			card.setIcon(new ImageIcon(Gui.class.getResource("/resources/card_back.png")));
-			card.setBounds(i * 74, 0, 64, 64);
-			playerHand.add(card);
-			playerHandPanel.add(card);
-		}
-		
-		JLabel topLabel = new JLabel("BLACKJACK");
+		//Title
+		topLabel = new JLabel("BLACKJACK");
 		topLabel.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		topLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		topLabel.setBounds(10, 10, 807, 80);
+		topLabel.setBounds(10, 10, 964, 80);
 		frame.getContentPane().add(topLabel);
+		
+		//Player Money Panel
+		playerMoneyPanel = new JPanel();
+		playerMoneyPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		playerMoneyPanel.setLayout(null);
+		playerMoneyPanel.setBounds(10, 101, 964, 64);
+		frame.getContentPane().add(playerMoneyPanel);
+		
+			JLabel lblMoney = new JLabel("Money:");
+			lblMoney.setFont(new Font("Tahoma", Font.PLAIN, 24));
+			lblMoney.setBounds(10, 11, 78, 42);
+			lblMoney.setName("moneyLabel");
+			playerMoneyPanel.add(lblMoney);
+			
+			JLabel moneyLabel = new JLabel("0");
+			moneyLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
+			moneyLabel.setBounds(98, 11, 282, 42);
+			moneyLabel.setName("money");
+			playerMoneyPanel.add(moneyLabel);
+			
+			//Spinner for Player Bet
+			JSpinner spinner = new JSpinner();
+			spinner.setFont(new Font("Tahoma", Font.PLAIN, 24));
+			spinner.setBounds(718, 11, 236, 42);
+			spinner.setName("betAmount");
+			playerMoneyPanel.add(spinner);
+			
+			JLabel spinnerLabel = new JLabel("Bet amount:");
+			spinnerLabel.setBounds(577, 11, 131, 42);
+			spinnerLabel.setName("betAmountLabel");
+			playerMoneyPanel.add(spinnerLabel);
+			spinnerLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
+	}
+
+	protected void OnResize() 
+	{
+		if (frame.getWidth() < 870) 
+		{
+			frame.setBounds(frame.getX(), frame.getY(), 870, frame.getHeight());
+		}
+		
+		System.out.println("#GUI# Resizing to fit frame size: width: " + frame.getWidth() + ", height: " + frame.getHeight());
+		//Resize TopLabel
+		topLabel.setBounds(topLabel.getX(), topLabel.getY(), frame.getWidth() - 20 - 16, topLabel.getHeight());
+		
+		//Resize PlayerHandPanel
+			Component[] handComponents = playerHandPanel.getComponents();
+			//Panel Size/Pos
+			playerHandPanel.setBounds(playerHandPanel.getX(), playerHandPanel.getY(), frame.getWidth() - 20 - 16, playerHandPanel.getHeight());
+			
+			//			  (Panel Width - Extra Spacing Left&Right - Button Widths) / spacingAmount
+			int handSpacing = (playerHandPanel.getWidth() - 20 - (11 * 64)) / 12;
+			int handNextX = 10;
+			for (Component component : handComponents) 
+			{
+				if (!component.getName().equals("playerHandValueLabel")) 
+				{
+					int x = handNextX + handSpacing;
+					int y = component.getY();
+					component.setLocation(x, y);
+					handNextX = component.getX() + component.getWidth();
+				}
+			}
+		
+		//Resize PlayerActionPanel
+			Component[] actionComponents = playerActionPanel.getComponents();
+			//Panel Size/Pos
+			playerActionPanel.setBounds(playerActionPanel.getX(), playerActionPanel.getY(), frame.getWidth() - 20 - 16, playerActionPanel.getHeight());
+			
+			//			  (Panel Width - Extra Spacing Left&Right - Button Widths) / spacingAmount
+			int actionSpacing = (playerActionPanel.getWidth() - 20 - (4 * 200)) / 5;
+			int actionNextX = 10;
+			for (Component component : actionComponents) 
+			{
+				if (!component.getName().equals("reloadButton")) 
+				{
+					int x = actionNextX + actionSpacing;
+					int y = component.getY();
+					component.setLocation(x, y);
+					actionNextX = component.getX() + component.getWidth();
+				}
+				if (component.getName().equals("reloadButton")) 
+				{
+					int x = (playerActionPanel.getWidth() - component.getWidth())/2;
+					int y = component.getY();
+					component.setLocation(x, y);
+				}
+			}
+		
+		//Resize PlayerMoneyPanel
+			Component[] moneyComponents = playerMoneyPanel.getComponents();
+			//Panel Size/Pos
+			playerMoneyPanel.setBounds(playerMoneyPanel.getX(), playerMoneyPanel.getY(), frame.getWidth() - 20 - 16, playerMoneyPanel.getHeight());
+			
+			int savePos = 0;
+			for (Component component : moneyComponents) 
+			{
+				if(component.getName().equals("betAmount"))
+				{
+					int x = playerMoneyPanel.getWidth() - component.getWidth() - 10;
+					int y = component.getY();
+					component.setLocation(x, y);
+					savePos = component.getX();
+				}
+				if(component.getName().equals("betAmountLabel"))
+				{
+					int x = savePos - component.getWidth() - 10;
+					int y = component.getY();
+					component.setLocation(x, y);
+				}
+			}
+	}
+
+	//Button Actions
+	private void split() 
+	{
+		System.out.println("#ClientGUI# Request to split Hand.");
+		// TODO Auto-generated method stub
+	}
+
+	private void doubleDown() 
+	{
+		System.out.println("#ClientGUI# Request to double down.");
+		//Draw last Card
+		drawCard();
+		
+		//double MoneyBet
+		
+		//Automaticly Stand & end Round
+		stand();
 	}
 
 	private void drawCard() 
 	{
 		System.out.println("#ClientGUI# Request new Card.");
 		client.sendMessage("draw");
+		
+		if(cardCnt == 0)
+		{
+			//Disable DoubleDown and Split Button
+			Component[] components = playerActionPanel.getComponents();
+			for (Component component : components) 
+			{
+				if(component.getName().equals("doubleDownButton") || component.getName().equals("splitButton"))
+				{
+					//Set reload Button false
+					component.setEnabled(false);
+				}
+			}
+		}
 	}
 	
 	private void stand() 
@@ -116,12 +312,21 @@ public class Gui {
 		System.out.println("#ClientGUI# Request to stand.");
 		client.sendMessage("stand");
 		
-		for (int i = 0; i < buttons.size(); i++) 
+		Component[] components = playerActionPanel.getComponents();
+		for (Component component : components) 
 		{
-			JButton button = buttons.get(i);
-			button.setEnabled(false);
+			if(component.getClass() == JButton.class && !component.getName().equals("reloadButton"))
+			{
+				//Set all Buttons to false
+				component.setEnabled(false);
+			}
+			
+			if(component.getName().equals("reloadButton"))
+			{
+				//Set reload Button true
+				component.setEnabled(true);
+			}
 		}
-		reloadButton.setEnabled(true);
 	}
 	
 	private void newRound() 
@@ -139,17 +344,27 @@ public class Gui {
 		}
 		
 		//Reset Buttons
-		for (int i = 0; i < buttons.size(); i++) 
+		Component[] components = playerActionPanel.getComponents();
+		for (Component component : components) 
 		{
-			JButton button = buttons.get(i);
-			button.setEnabled(true);
+			if(component.getClass() == JButton.class && !component.getName().equals("reloadButton"))
+			{
+				//Set all Buttons to true
+				component.setEnabled(true);
+			}
+			
+			if(component.getName().equals("reloadButton"))
+			{
+				//Set reload Button false
+				component.setEnabled(false);
+			}
 		}
-		reloadButton.setEnabled(false);
 		
 		//Repaint
 		frame.repaint();
 	}
 
+	//Player Hand Cards
 	public void setCard(Card card) 
 	{
 		updateCard(cardCnt, card.getName());
@@ -167,7 +382,8 @@ public class Gui {
 	
 	private void updateHandValue() 
 	{
-		handValueLabel.setText("Current hand value: " + handValue);
+		playerHandValueLabel.setText("Current player-hand value: " + handValue + "");
+		frame.repaint();
 	}
 
 	public void updateCard(int pos, String type)
