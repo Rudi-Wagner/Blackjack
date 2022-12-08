@@ -26,6 +26,17 @@ public class CardDeck
 	{
 		//Calculate Random Number
 		int max = CardDeck.size();
+		if (max < 0) 
+		{
+			for (int i = 0; i < cardNames.length; i++) 
+			{
+				CardDeck.add(new Card(cardNames[i] + " of Hearts", cardValues[i]));
+				CardDeck.add(new Card(cardNames[i] + " of Spades", cardValues[i]));
+				CardDeck.add(new Card(cardNames[i] + " of Diamonds", cardValues[i]));
+				CardDeck.add(new Card(cardNames[i] + " of Clover", cardValues[i]));
+			}
+		}
+		
 		Random rand = new Random();
 		int randomNum = rand.nextInt(max);
 		
