@@ -35,13 +35,10 @@ public class Gui {
 	
 	//PlayerHand variables
 	private ArrayList<JLabel> playerHand;
-	private ArrayList<Card> playerCardHand;
 	private JLabel playerHandValueLabel;
 	
 	private int cardCnt = 0;
 	private int handValue = 0;
-	private int money = 5000;
-	private int playerBet = 0;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -58,7 +55,6 @@ public class Gui {
 
 	public Gui(BlackClient client) {
 		playerHand = new ArrayList<JLabel>();
-		playerCardHand = new ArrayList<Card>();
 		this.client = client;
 		initialize();
 		frame.setVisible(true);
@@ -86,7 +82,6 @@ public class Gui {
 		
 			//Hit Button
 			JButton drawButton = new JButton("Hit");
-			drawButton.setEnabled(false);
 			drawButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
 			drawButton.setBounds(33, 50, 200, 170);
 			drawButton.addActionListener(e -> drawCard());
@@ -95,7 +90,6 @@ public class Gui {
 			
 			//Stand Button
 			JButton standButton = new JButton("Stand");
-			standButton.setEnabled(false);
 			standButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
 			standButton.setBounds(731, 50, 200, 170);
 			standButton.addActionListener(e -> stand());
@@ -112,10 +106,10 @@ public class Gui {
 			reloadButton.addActionListener(e -> newRound());
 			reloadButton.setName("reloadButton");
 			playerActionPanel.add(reloadButton);
+			reloadButton.setEnabled(false);
 			
 			//Double Down Button
 			JButton doubleDownButton = new JButton("Double");
-			doubleDownButton.setEnabled(false);
 			doubleDownButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
 			doubleDownButton.setBounds(265, 50, 200, 170);
 			doubleDownButton.addActionListener(e -> doubleDown());
@@ -175,7 +169,7 @@ public class Gui {
 			lblMoney.setName("moneyLabel");
 			playerMoneyPanel.add(lblMoney);
 			
-			JLabel moneyLabel = new JLabel(Integer.toString(money));
+			JLabel moneyLabel = new JLabel("0");
 			moneyLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
 			moneyLabel.setBounds(98, 11, 282, 42);
 			moneyLabel.setName("money");
@@ -186,7 +180,6 @@ public class Gui {
 			spinner.setFont(new Font("Tahoma", Font.PLAIN, 24));
 			spinner.setBounds(718, 11, 236, 42);
 			spinner.setName("betAmount");
-			spinner.addChangeListener(e -> updateBet());
 			playerMoneyPanel.add(spinner);
 			
 			JLabel spinnerLabel = new JLabel("Bet amount:");
@@ -289,26 +282,8 @@ public class Gui {
 		drawCard();
 		
 		//double MoneyBet
-		playerBet = playerBet * 2;
-		
-		//Update playerBet from spinner
-		Component[] components = playerMoneyPanel.getComponents();
-		for (Component component : components) 
-		{
-			if (component.getName().equals("betAmount")) 
-			{
-				JSpinner spinner = ((JSpinner) component);
-				spinner.setValue(playerBet);
-			}
-		}
-		frame.repaint();
 		
 		//Automaticly Stand & end Round
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 		stand();
 	}
 
@@ -317,7 +292,7 @@ public class Gui {
 		System.out.println("#ClientGUI# Request new Card.");
 		client.sendMessage("draw");
 		
-		if(cardCnt == 2)
+		if(cardCnt == 0)
 		{
 			//Disable DoubleDown and Split Button
 			Component[] components = playerActionPanel.getComponents();
@@ -337,8 +312,8 @@ public class Gui {
 		System.out.println("#ClientGUI# Request to stand.");
 		client.sendMessage("stand");
 		
-		Component[] actionComponents = playerActionPanel.getComponents();
-		for (Component component : actionComponents) 
+		Component[] components = playerActionPanel.getComponents();
+		for (Component component : components) 
 		{
 			if(component.getClass() == JButton.class && !component.getName().equals("reloadButton"))
 			{
@@ -352,25 +327,10 @@ public class Gui {
 				component.setEnabled(true);
 			}
 		}
-		
-		//Enable betSpinner
-		Component[] moneyComponents = playerMoneyPanel.getComponents();
-		for (Component component : moneyComponents) 
-		{
-			if (component.getName().equals("betAmount")) 
-			{
-				component.setEnabled(true);
-			}
-		}
 	}
 	
 	private void newRound() 
 	{
-		if (!(playerBet > 0 && playerBet < money)) 
-		{
-			return;
-		}
-		
 		System.out.println("#ClientGUI# Reset on Client.");
 		//Reset variables
 		cardCnt = 0;
@@ -378,34 +338,16 @@ public class Gui {
 		updateHandValue();
 		
 		//Reset cards
-		playerCardHand = new ArrayList<Card>();
 		for (int i = 0; i < playerHand.size(); i++) 
 		{
 			updateCard(i, "card_back");
 		}
 		
-		//Lock betSpinner
-		Component[] moneyComponents = playerMoneyPanel.getComponents();
-		for (Component component : moneyComponents) 
-		{
-			if (component.getName().equals("betAmount")) 
-			{
-				component.setEnabled(false);
-			}
-		}
-				
-		//Draw first two cards
-		drawCard();
-		try {Thread.sleep(200);}
-		catch (InterruptedException e) 
-		{e.printStackTrace();}
-		drawCard();
-		
 		//Reset Buttons
-		Component[] actionComponents = playerActionPanel.getComponents();
-		for (Component component : actionComponents) 
+		Component[] components = playerActionPanel.getComponents();
+		for (Component component : components) 
 		{
-			if(component.getClass() == JButton.class && !component.getName().equals("reloadButton") && !component.getName().equals("splitButton"))
+			if(component.getClass() == JButton.class && !component.getName().equals("reloadButton"))
 			{
 				//Set all Buttons to true
 				component.setEnabled(true);
@@ -416,54 +358,16 @@ public class Gui {
 				//Set reload Button false
 				component.setEnabled(false);
 			}
-			
-			if(component.getName().equals("splitButton"))
-			{
-				if (playerHand.size() == 2) 
-				{
-					Card card0 = playerCardHand.get(0);
-					Card card1 = playerCardHand.get(1);
-					
-					String str0 = card0.getName();
-					String str1 = card1.getName();
-					
-					String type0 = str0.split(" ")[0];
-					String type1 = str1.split(" ")[1];
-					
-					System.out.println(type0 + " = " + type1);
-					
-					if (type0.equals(type1)) 
-					{
-						component.setEnabled(true);
-					}
-				}
-			}
 		}
 		
 		//Repaint
 		frame.repaint();
 	}
-	
-	private void updateBet() 
-	{
-		//Update playerBet from spinner
-		Component[] components = playerMoneyPanel.getComponents();
-		for (Component component : components) 
-		{
-			if (component.getName().equals("betAmount")) 
-			{
-				JSpinner spinner = ((JSpinner) component);
-				playerBet = (int) spinner.getValue();
-			}
-		}
-	}
 
-
-	//PlayerLogic
+	//Player Hand Cards
 	public void setCard(Card card) 
 	{
 		updateCard(cardCnt, card.getName());
-		playerCardHand.add(card);
 		handValue += card.getValue();
 		cardCnt++;
 		
@@ -485,39 +389,7 @@ public class Gui {
 	public void updateCard(int pos, String type)
 	{
 		JLabel card = playerHand.get(pos);
-		//Gui	https://www.kenney.nl/assets/playing-cards-pack
 		card.setIcon(new ImageIcon(Gui.class.getResource("/resources/" + type + ".png")));
 		frame.repaint();
-	}
-
-	public void endRound(String gameStatus) 
-	{
-		System.out.println("#Client# Round state: " + gameStatus);
-		switch (gameStatus) 
-		{
-			case "win":
-				money += playerBet * 1.5;
-				break;
-				
-			case "loose":
-				money -= playerBet;
-				break;
-				
-			case "draw":
-				//Stays the same
-				break;
-		}
-		
-		//Update GUI
-		Component[] components = playerMoneyPanel.getComponents();
-		for (Component component : components) 
-		{
-			if (component.getName().equals("money")) 
-			{
-				JLabel label = (JLabel) component;
-				label.setText(Integer.toString(money));
-			}
-		}
-		
 	}
 }

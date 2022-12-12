@@ -26,24 +26,30 @@ public class CardHand
 	
 	public int getValue()
 	{
-		int value = 0;
+		int sum = 0;
 		
 		for (int i = 0; i < Hand.size(); i++) 
-		{
-			Card card = Hand.get(i);
-			
-			//Check Ass logic
-			//  Muss ein Ass sein,                  Wert der Karten mussueber 21 gelangen
-//			if (card.getName().startsWith("Ass") && value + 11 > 21) 
-//			{
-//				value += 1;
-//			}
-//			else
+		{												// ace calculator
+			int currentValue = Hand.get(i).getValue();
+			if(currentValue == 11)
 			{
-				value += card.getValue();
+				// Wenn der Wert der Karten des Spielers bereits 21 übersteigt, ist der Wert des Ass immer 1
+				if (currentValue > 21) {
+				    sum += 1;
+				}
+				// Ansonsten ist der Wert des Ass 11, es sei denn, das Blatt des Spielers würde dadurch über 21 hinausgehen, in diesem Fall ist der Wert 1
+				else {
+				    sum += (currentValue + 11 > 21) ? 1 : 11;
+				}
 			}
+			else
+			{
+				sum += currentValue;
+			}
+			
+			  
 		}
-		
-		return value;
-	}
+	
+		return sum;
+	}	
 }

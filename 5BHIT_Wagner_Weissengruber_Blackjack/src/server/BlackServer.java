@@ -5,7 +5,6 @@ import java.net.*;
 import java.util.ArrayList;
 
 import misc.CardDeck;
-import misc.CardHand;
 
 /*
  * Rudi Wagner
@@ -25,7 +24,6 @@ public class BlackServer
     	System.out.println("#Server# Server started!");
     	int port = 6868;		//Port festlegen
     	CardDeck deck = new CardDeck();
-    	CardHand hand = new CardHand();
  
     	//Oeffnen und warten auf Clients
     	try (ServerSocket serverSocket = new ServerSocket(port)) {
@@ -38,6 +36,7 @@ public class BlackServer
             while (true) {
             	//Check fuer gestoppte Threads --> gestoppte Threads werden gel�scht
             	checkStoppedThread();
+            	checkCardDeck();
             	try {
             		socket = serverSocket.accept();
             	}catch(SocketTimeoutException ste)
@@ -50,7 +49,6 @@ public class BlackServer
                 	System.out.println("#Server# New client connected");
                 	Thread clientRunnabel = new clientThread(socket, deck);
                 	saveConnection(socket, clientRunnabel);
-                	clientRunnabel.setName(socket.getInetAddress().toString());
                 	clientRunnabel.start();
                 	socket = null;
                 	System.out.println("#Server# Waiting for next client on port " + port);
@@ -62,6 +60,11 @@ public class BlackServer
     	}
     }
     
+    private static void checkCardDeck() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	public static void checkStoppedThread() 
     {	//Wenn ein gestoppter Thread gefunden wird, wird er aus der ArrayList entfernt
     	for (int i = 0; i < allThreads.size(); i++) 
