@@ -1,5 +1,6 @@
 package client;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -21,6 +22,7 @@ import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ActionEvent;
 import javax.swing.border.BevelBorder;
+import javax.swing.border.LineBorder;
 
 public class Gui {
 
@@ -42,6 +44,11 @@ public class Gui {
 	private int handValue = 0;
 	private int money = 5000;
 	private int playerBet = 0;
+	
+	//Colours
+	Color foregroundColor = new Color(136, 138, 145);
+	Color backgroundColor = new Color(48, 49, 54);
+	Color specialColor = new Color(55, 57, 63);
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -69,7 +76,8 @@ public class Gui {
 		frame = new JFrame();
 		frame.getContentPane().setLayout(null);
 		frame.setSize(1000, 700);
-		
+		frame.getContentPane().setBackground(backgroundColor);
+		frame.getContentPane().setForeground(foregroundColor);
 		frame.addComponentListener(new ComponentAdapter() {
 		    public void componentResized(ComponentEvent componentEvent) 
 		    {
@@ -83,6 +91,8 @@ public class Gui {
 		playerActionPanel.setBounds(10, 283, 964, 266);
 		frame.getContentPane().add(playerActionPanel);
 		playerActionPanel.setLayout(null);
+		playerActionPanel.setForeground(foregroundColor);
+		playerActionPanel.setBackground(backgroundColor);
 		
 			//Hit Button
 			JButton drawButton = new JButton("Hit");
@@ -91,6 +101,8 @@ public class Gui {
 			drawButton.setBounds(33, 50, 200, 170);
 			drawButton.addActionListener(e -> drawCard());
 			drawButton.setName("drawButton");
+			drawButton.setForeground(foregroundColor);
+			drawButton.setBackground(specialColor);
 			playerActionPanel.add(drawButton);
 			
 			//Stand Button
@@ -100,6 +112,8 @@ public class Gui {
 			standButton.setBounds(731, 50, 200, 170);
 			standButton.addActionListener(e -> stand());
 			standButton.setName("standButton");
+			standButton.setForeground(foregroundColor);
+			standButton.setBackground(specialColor);
 			playerActionPanel.add(standButton);
 			
 			//New Round Button
@@ -111,6 +125,8 @@ public class Gui {
 			reloadButton.setBounds(382, 231, 200, 21);
 			reloadButton.addActionListener(e -> newRound());
 			reloadButton.setName("reloadButton");
+			reloadButton.setForeground(foregroundColor);
+			reloadButton.setBackground(specialColor);
 			playerActionPanel.add(reloadButton);
 			
 			//Double Down Button
@@ -120,6 +136,8 @@ public class Gui {
 			doubleDownButton.setBounds(265, 50, 200, 170);
 			doubleDownButton.addActionListener(e -> doubleDown());
 			doubleDownButton.setName("doubleDownButton");
+			doubleDownButton.setForeground(foregroundColor);
+			doubleDownButton.setBackground(specialColor);
 			playerActionPanel.add(doubleDownButton);
 			
 			//Split Button
@@ -129,18 +147,26 @@ public class Gui {
 			splitButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
 			splitButton.setBounds(498, 50, 200, 170);
 			splitButton.setEnabled(false);
+			splitButton.setForeground(foregroundColor);
+			splitButton.setBackground(specialColor);
+			
 			playerActionPanel.add(splitButton);
 		
+		//Player Hand Panel
 		playerHandPanel = new JPanel();
 		playerHandPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		playerHandPanel.setLayout(null);
 		playerHandPanel.setBounds(10, 176, 964, 96);
+		playerHandPanel.setForeground(foregroundColor);
+		playerHandPanel.setBackground(backgroundColor);
 		frame.getContentPane().add(playerHandPanel);
 			
 		playerHandValueLabel = new JLabel("Current player-hand value: ");
 		playerHandValueLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		playerHandValueLabel.setBounds(10, 0, 357, 20);
 		playerHandValueLabel.setName("playerHandValueLabel");
+		playerHandValueLabel.setForeground(foregroundColor);
+		playerHandValueLabel.setBackground(backgroundColor);
 		playerHandPanel.add(playerHandValueLabel);
 			
 			//Set Player Hand Images
@@ -160,6 +186,7 @@ public class Gui {
 		topLabel.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		topLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		topLabel.setBounds(10, 10, 964, 80);
+		topLabel.setForeground(foregroundColor);
 		frame.getContentPane().add(topLabel);
 		
 		//Player Money Panel
@@ -167,18 +194,22 @@ public class Gui {
 		playerMoneyPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		playerMoneyPanel.setLayout(null);
 		playerMoneyPanel.setBounds(10, 101, 964, 64);
+		playerMoneyPanel.setForeground(foregroundColor);
+		playerMoneyPanel.setBackground(backgroundColor);
 		frame.getContentPane().add(playerMoneyPanel);
 		
 			JLabel lblMoney = new JLabel("Money:");
 			lblMoney.setFont(new Font("Tahoma", Font.PLAIN, 24));
 			lblMoney.setBounds(10, 11, 78, 42);
 			lblMoney.setName("moneyLabel");
+			lblMoney.setForeground(foregroundColor);
 			playerMoneyPanel.add(lblMoney);
 			
 			JLabel moneyLabel = new JLabel(Integer.toString(money));
 			moneyLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
 			moneyLabel.setBounds(98, 11, 282, 42);
 			moneyLabel.setName("money");
+			moneyLabel.setForeground(foregroundColor);
 			playerMoneyPanel.add(moneyLabel);
 			
 			//Spinner for Player Bet
@@ -187,13 +218,28 @@ public class Gui {
 			spinner.setBounds(718, 11, 236, 42);
 			spinner.setName("betAmount");
 			spinner.addChangeListener(e -> updateBet());
+			//Colour
+			spinner.getEditor().getComponent(0).setForeground(foregroundColor);
+			spinner.getEditor().getComponent(0).setBackground(backgroundColor);
+			spinner.setBorder(new LineBorder(foregroundColor, 1));
+			int n = spinner.getComponentCount();
+		    for (int i=0; i<n; i++)
+		    {
+		        Component c = spinner.getComponent(i);
+		        if (c instanceof JButton)
+		        {
+		            c.setForeground(foregroundColor); // Has no effect
+		            c.setBackground(specialColor);
+		        }
+		    }
 			playerMoneyPanel.add(spinner);
 			
 			JLabel spinnerLabel = new JLabel("Bet amount:");
 			spinnerLabel.setBounds(577, 11, 131, 42);
 			spinnerLabel.setName("betAmountLabel");
-			playerMoneyPanel.add(spinnerLabel);
+			spinnerLabel.setForeground(foregroundColor);
 			spinnerLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
+			playerMoneyPanel.add(spinnerLabel);
 	}
 
 	protected void OnResize() 
