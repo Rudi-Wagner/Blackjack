@@ -47,10 +47,7 @@ public class BlackClient extends Thread{
     	System.out.println("#Client# Client Started!");
     	//Connection Data
     	String hostname = "localhost";
-    	//Gui	https://www.kenney.nl/assets/playing-cards-pack
     	int port = 6868;
-    	
-    	
  
     	try {
     		//Intialize socket, output and writer
@@ -75,6 +72,9 @@ public class BlackClient extends Thread{
             writer = new PrintWriter(output, true);
             hand = new CardHand();
             
+            InputStream input = socket.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+            
             while (true) {
             	System.out.print("");	//Ohne dem gehts nimma xD
             	if (inputString.equals("draw")) 
@@ -83,18 +83,21 @@ public class BlackClient extends Thread{
                     writer.println(inputString);	//Send message to server
                     inputString = "";
      
-                    InputStream input = socket.getInputStream();
-                    BufferedReader reader = new BufferedReader(new InputStreamReader(input));
-     
                     String answer = reader.readLine();	//Server answer
-                    Card card = translateFromJson(answer);
+                    Card card = translateCardFromJson(answer);
                     window.setCard(card);
                     
                     System.out.println("#Client# Antwort vom Server: " + answer);
 				}
-            	else if (inputString.equals("stop"))
+            	else if (inputString.equals("stand"))
             	{
             		writer.println(getMsgStand());
+            		inputString = "";
+            		
+            		String answer = reader.readLine();	//Server answer
+            		JsonObj msgObj = translateFromJson(answer);
+            		String gameStatus = msgObj.getType();
+            		window.endRound(gameStatus);
             	}
             	else if (inputString.equals("quit"))
             	{
@@ -112,7 +115,7 @@ public class BlackClient extends Thread{
         }
     }
 
-	private Card translateFromJson(String msg) 
+	private Card translateCardFromJson(String msg) 
 	{
 		Gson gson = new Gson();
 		if (msg.contains("name") && msg.contains("value")) 
@@ -120,6 +123,17 @@ public class BlackClient extends Thread{
 			Card card = gson.fromJson(msg, Card.class);
 			hand.addCard(card);
 			return card;
+		}
+		return null;
+	}
+	
+	private JsonObj translateFromJson(String msg) 
+	{
+		Gson gson = new Gson();
+		if (msg.contains("type") && msg.contains("value")) 
+		{
+			JsonObj obj = gson.fromJson(msg, JsonObj.class);
+			return obj;
 		}
 		return null;
 	}
@@ -149,16 +163,15 @@ public class BlackClient extends Thread{
 		JsonObj obj = new JsonObj("draw", 0);
 		Gson gson = new Gson();
 		String jsondata = gson.toJson(obj);
-		System.out.println(jsondata);
 		return jsondata;
 	}
 	
 	private String getMsgStand()
 	{
 		JsonObj obj = new JsonObj("stand", hand.getValue());
+		hand = new CardHand();
 		Gson gson = new Gson();
 		String jsondata = gson.toJson(obj);
-		System.out.println(jsondata);
 		return jsondata;
 	}
 }

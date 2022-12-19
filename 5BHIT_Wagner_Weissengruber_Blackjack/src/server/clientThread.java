@@ -13,6 +13,7 @@ import com.google.gson.Gson;
 
 import misc.Card;
 import misc.CardDeck;
+import misc.CardHand;
 import misc.JsonObj;
 
 public class clientThread extends Thread
@@ -28,6 +29,7 @@ public class clientThread extends Thread
 	
 	private Socket socket;
 	private CardDeck deck;
+	private CardHand dealerHand;
 	
 	public clientThread(Socket givenSocket, CardDeck deck)
 	{
@@ -38,7 +40,7 @@ public class clientThread extends Thread
     public void run() 
     { 
     	boolean run = true;
-    	System.out.println("#ThreadLog# Thread " + this.getId() + " is now running!");
+    	System.out.println("#ThreadLog# Thread " + this.getName() + " is now running!");
     	while(run)
 		{
     		try {
@@ -58,12 +60,12 @@ public class clientThread extends Thread
 	                
 	                if(recievedMSG.equals("startSession"))
 	                { //Verbindungs start
-	                	System.out.println("#Thread# " + this.getId() + " Thread erhaelt nun Daten!");
+	                	System.out.println("#Thread# " + this.getName() + " Thread erhaelt nun Daten!");
 	                }
 	                else if(recievedMSG.equals("closeSession"))
 	                { //Abbruch der Verbindung falls der Client das fordert
 	                	run = false;
-	                	System.out.println("#Thread# " + this.getId() + " Client requested shutdown!");
+	                	System.out.println("#Thread# " + this.getName() + " Client requested shutdown!");
 	                	break;
 	                }
 	                else
@@ -75,14 +77,21 @@ public class clientThread extends Thread
 	                	{
 							case "draw":
 								Card card = deck.drawCard();
-								msg = cardToJson(card);
+								msg = gson.toJson(card);
 								break;
 							
 							case "stand":
 								int playerHandValue = jsondata.getValue();
-								@SuppressWarnings("unused") int dealerHandValue = 22;
+								
+								createDealerHand();
+								int dealerHandValue = dealerHand.getValue();
+								
 								//Vergleichen mit Server hand
 								System.out.println("#ThreadLog# Player's Hand is " + playerHandValue + " worth!");
+								
+								String state = getGameState(playerHandValue, dealerHandValue);
+								msg = gson.toJson(new JsonObj(state, dealerHandValue));
+								
 								break;
 								
 							default:
@@ -100,20 +109,52 @@ public class clientThread extends Thread
     			e.printStackTrace();
     		}
 		}
-		System.out.println("#ThreadLog# Thread " + this.getId() + " is now stopping!");
+		System.out.println("#ThreadLog# Thread " + this.getName() + " is now stopping!");
 		try {
 			socket.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
-		System.out.println("#Log# Socket ~" + socket.getRemoteSocketAddress() + "~ in Thread " + this.getId() + " has been closed!");
+		System.out.println("#Log# Socket ~" + socket.getRemoteSocketAddress() + "~ in Thread " + this.getName() + " has been closed!");
     }
 
-	private String cardToJson(Card card) 
+	private String getGameState(int playerHandValue, int dealerHandValue) 
 	{
-		Gson gson = new Gson();
-		String jsondata = gson.toJson(card);
-		return jsondata;
+		//Draw
+		//If both have more than 21 or their Value is equal
+		if ((dealerHandValue > 21 && playerHandValue > 21) ||
+			(dealerHandValue == playerHandValue)) 
+		{
+			return "draw";
+		}
+		
+		//Player Win
+		//Less than 22 and more than the dealer
+		if (playerHandValue < 22 && playerHandValue > dealerHandValue) 
+		{
+			return "win";
+		}
+		
+		//Player Loose
+		//More than 21 or less than the dealer
+		if (playerHandValue > 21 || playerHandValue < dealerHandValue) 
+		{
+			return "loose";
+		}
+		
+		//Couldn't calculate
+		return "draw";
+	}
+
+	private void createDealerHand() 
+	{
+		dealerHand = new CardHand();
+		
+		while (dealerHand.getValue() <= 16) 
+		{
+			Card card = deck.drawCard();
+			dealerHand.addCard(card);
+		}
 	}
 }
