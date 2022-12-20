@@ -4,29 +4,28 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Font;
-import java.util.ArrayList;
-
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JRootPane;
-import javax.swing.SwingConstants;
-
-import misc.Card;
-
-import javax.swing.JButton;
-import javax.swing.JSpinner;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-import java.awt.event.ActionEvent;
+import java.util.ArrayList;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.LineBorder;
 
+import misc.Card;
+import java.awt.Toolkit;
+
 public class Gui {
 
-	private JFrame frame;
+	private JFrame frmBlackjackJavaClient;
 	private BlackClient client;
 	
 	//Panels to access every Component later on
@@ -55,7 +54,7 @@ public class Gui {
 			public void run() {
 				try {
 					Gui window = new Gui(null);
-					window.frame.setVisible(true);
+					window.frmBlackjackJavaClient.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -68,17 +67,20 @@ public class Gui {
 		playerCardHand = new ArrayList<Card>();
 		this.client = client;
 		initialize();
-		frame.setVisible(true);
+		frmBlackjackJavaClient.setVisible(true);
 	}
 
 	private void initialize() 
 	{
-		frame = new JFrame();
-		frame.getContentPane().setLayout(null);
-		frame.setSize(1000, 700);
-		frame.getContentPane().setBackground(backgroundColor);
-		frame.getContentPane().setForeground(foregroundColor);
-		frame.addComponentListener(new ComponentAdapter() {
+		frmBlackjackJavaClient = new JFrame();
+		frmBlackjackJavaClient.setIconImage(Toolkit.getDefaultToolkit().getImage(Gui.class.getResource("/resources/card_joker_black.png")));
+		frmBlackjackJavaClient.setTitle("Blackjack Java Client");
+		frmBlackjackJavaClient.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmBlackjackJavaClient.getContentPane().setLayout(null);
+		frmBlackjackJavaClient.setSize(1000, 700);
+		frmBlackjackJavaClient.getContentPane().setBackground(backgroundColor);
+		frmBlackjackJavaClient.getContentPane().setForeground(foregroundColor);
+		frmBlackjackJavaClient.addComponentListener(new ComponentAdapter() {
 		    public void componentResized(ComponentEvent componentEvent) 
 		    {
 		        OnResize();
@@ -89,7 +91,7 @@ public class Gui {
 		playerActionPanel = new JPanel();
 		playerActionPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		playerActionPanel.setBounds(10, 283, 964, 266);
-		frame.getContentPane().add(playerActionPanel);
+		frmBlackjackJavaClient.getContentPane().add(playerActionPanel);
 		playerActionPanel.setLayout(null);
 		playerActionPanel.setForeground(foregroundColor);
 		playerActionPanel.setBackground(backgroundColor);
@@ -159,7 +161,7 @@ public class Gui {
 		playerHandPanel.setBounds(10, 176, 964, 96);
 		playerHandPanel.setForeground(foregroundColor);
 		playerHandPanel.setBackground(backgroundColor);
-		frame.getContentPane().add(playerHandPanel);
+		frmBlackjackJavaClient.getContentPane().add(playerHandPanel);
 			
 		playerHandValueLabel = new JLabel("Current player-hand value: ");
 		playerHandValueLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -187,7 +189,7 @@ public class Gui {
 		topLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		topLabel.setBounds(10, 10, 964, 80);
 		topLabel.setForeground(foregroundColor);
-		frame.getContentPane().add(topLabel);
+		frmBlackjackJavaClient.getContentPane().add(topLabel);
 		
 		//Player Money Panel
 		playerMoneyPanel = new JPanel();
@@ -196,7 +198,7 @@ public class Gui {
 		playerMoneyPanel.setBounds(10, 101, 964, 64);
 		playerMoneyPanel.setForeground(foregroundColor);
 		playerMoneyPanel.setBackground(backgroundColor);
-		frame.getContentPane().add(playerMoneyPanel);
+		frmBlackjackJavaClient.getContentPane().add(playerMoneyPanel);
 		
 			JLabel lblMoney = new JLabel("Money:");
 			lblMoney.setFont(new Font("Tahoma", Font.PLAIN, 24));
@@ -244,19 +246,19 @@ public class Gui {
 
 	protected void OnResize() 
 	{
-		if (frame.getWidth() < 870) 
+		if (frmBlackjackJavaClient.getWidth() < 870) 
 		{
-			frame.setBounds(frame.getX(), frame.getY(), 870, frame.getHeight());
+			frmBlackjackJavaClient.setBounds(frmBlackjackJavaClient.getX(), frmBlackjackJavaClient.getY(), 870, frmBlackjackJavaClient.getHeight());
 		}
 		
-		System.out.println("#GUI# Resizing to fit frame size: width: " + frame.getWidth() + ", height: " + frame.getHeight());
+		System.out.println("#GUI# Resizing to fit frame size: width: " + frmBlackjackJavaClient.getWidth() + ", height: " + frmBlackjackJavaClient.getHeight());
 		//Resize TopLabel
-		topLabel.setBounds(topLabel.getX(), topLabel.getY(), frame.getWidth() - 20 - 16, topLabel.getHeight());
+		topLabel.setBounds(topLabel.getX(), topLabel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, topLabel.getHeight());
 		
 		//Resize PlayerHandPanel
 			Component[] handComponents = playerHandPanel.getComponents();
 			//Panel Size/Pos
-			playerHandPanel.setBounds(playerHandPanel.getX(), playerHandPanel.getY(), frame.getWidth() - 20 - 16, playerHandPanel.getHeight());
+			playerHandPanel.setBounds(playerHandPanel.getX(), playerHandPanel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, playerHandPanel.getHeight());
 			
 			//			  (Panel Width - Extra Spacing Left&Right - Button Widths) / spacingAmount
 			int handSpacing = (playerHandPanel.getWidth() - 20 - (11 * 64)) / 12;
@@ -275,7 +277,7 @@ public class Gui {
 		//Resize PlayerActionPanel
 			Component[] actionComponents = playerActionPanel.getComponents();
 			//Panel Size/Pos
-			playerActionPanel.setBounds(playerActionPanel.getX(), playerActionPanel.getY(), frame.getWidth() - 20 - 16, playerActionPanel.getHeight());
+			playerActionPanel.setBounds(playerActionPanel.getX(), playerActionPanel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, playerActionPanel.getHeight());
 			
 			//			  (Panel Width - Extra Spacing Left&Right - Button Widths) / spacingAmount
 			int actionSpacing = (playerActionPanel.getWidth() - 20 - (4 * 200)) / 5;
@@ -300,7 +302,7 @@ public class Gui {
 		//Resize PlayerMoneyPanel
 			Component[] moneyComponents = playerMoneyPanel.getComponents();
 			//Panel Size/Pos
-			playerMoneyPanel.setBounds(playerMoneyPanel.getX(), playerMoneyPanel.getY(), frame.getWidth() - 20 - 16, playerMoneyPanel.getHeight());
+			playerMoneyPanel.setBounds(playerMoneyPanel.getX(), playerMoneyPanel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, playerMoneyPanel.getHeight());
 			
 			int savePos = 0;
 			for (Component component : moneyComponents) 
@@ -347,7 +349,7 @@ public class Gui {
 				spinner.setValue(playerBet);
 			}
 		}
-		frame.repaint();
+		frmBlackjackJavaClient.repaint();
 		
 		//Automaticly Stand & end Round
 		try {
@@ -487,7 +489,7 @@ public class Gui {
 		}
 		
 		//Repaint
-		frame.repaint();
+		frmBlackjackJavaClient.repaint();
 	}
 	
 	private void updateBet() 
@@ -525,7 +527,7 @@ public class Gui {
 	private void updateHandValue() 
 	{
 		playerHandValueLabel.setText("Current player-hand value: " + handValue + "");
-		frame.repaint();
+		frmBlackjackJavaClient.repaint();
 	}
 
 	public void updateCard(int pos, String type)
@@ -533,7 +535,7 @@ public class Gui {
 		JLabel card = playerHand.get(pos);
 		//Gui	https://www.kenney.nl/assets/playing-cards-pack
 		card.setIcon(new ImageIcon(Gui.class.getResource("/resources/" + type + ".png")));
-		frame.repaint();
+		frmBlackjackJavaClient.repaint();
 	}
 
 	public void endRound(String gameStatus) 
