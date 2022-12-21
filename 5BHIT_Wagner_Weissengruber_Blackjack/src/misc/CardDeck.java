@@ -24,25 +24,36 @@ public class CardDeck
 	
 	public Card drawCard()
 	{
-		//Calculate Random Number
-		int max = CardDeck.size();
-		if (max < 0) 
+		if (CardDeck.isEmpty()) 
 		{
-			for (int i = 0; i < cardNames.length; i++) 
-			{
-				CardDeck.add(new Card(cardNames[i] + " of Hearts", cardValues[i]));
-				CardDeck.add(new Card(cardNames[i] + " of Spades", cardValues[i]));
-				CardDeck.add(new Card(cardNames[i] + " of Diamonds", cardValues[i]));
-				CardDeck.add(new Card(cardNames[i] + " of Clover", cardValues[i]));
-			}
+			shuffle();
 		}
 		
 		Random rand = new Random();
-		int randomNum = rand.nextInt(max);
+		int randomNum = rand.nextInt(CardDeck.size());
 		
 		//Retrieve Card according to random Int & remove it from the deck
 		Card card = CardDeck.get(randomNum);
 		CardDeck.remove(randomNum);
 		return card;
 	}
+
+	public int getCardDeckSize() 
+	{
+		return CardDeck.size();
+	}
+
+	public void shuffle() 
+	{
+		CardDeck.clear();
+		for (int i = 0; i < cardNames.length; i++) 
+		{
+			CardDeck.add(new Card(cardNames[i] + " of Hearts", cardValues[i]));
+			CardDeck.add(new Card(cardNames[i] + " of Spades", cardValues[i]));
+			CardDeck.add(new Card(cardNames[i] + " of Diamonds", cardValues[i]));
+			CardDeck.add(new Card(cardNames[i] + " of Clover", cardValues[i]));
+		}
+	}
+	
+	
 }

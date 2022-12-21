@@ -75,7 +75,7 @@ public class Gui {
 		frmBlackjackJavaClient = new JFrame();
 		frmBlackjackJavaClient.setIconImage(Toolkit.getDefaultToolkit().getImage(Gui.class.getResource("/resources/card_joker_black.png")));
 		frmBlackjackJavaClient.setTitle("Blackjack Java Client");
-		frmBlackjackJavaClient.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		frmBlackjackJavaClient.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmBlackjackJavaClient.getContentPane().setLayout(null);
 		frmBlackjackJavaClient.setSize(1000, 700);
 		frmBlackjackJavaClient.getContentPane().setBackground(backgroundColor);
