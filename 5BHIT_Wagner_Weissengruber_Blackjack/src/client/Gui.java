@@ -230,14 +230,13 @@ public class Gui {
 		        Component c = spinner.getComponent(i);
 		        if (c instanceof JButton)
 		        {
-		            c.setForeground(foregroundColor); // Has no effect
 		            c.setBackground(specialColor);
 		        }
 		    }
 			playerMoneyPanel.add(spinner);
 			
 			JLabel spinnerLabel = new JLabel("Bet amount:");
-			spinnerLabel.setBounds(577, 11, 131, 42);
+			spinnerLabel.setBounds(550, 11, 131, 42);
 			spinnerLabel.setName("betAmountLabel");
 			spinnerLabel.setForeground(foregroundColor);
 			spinnerLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
