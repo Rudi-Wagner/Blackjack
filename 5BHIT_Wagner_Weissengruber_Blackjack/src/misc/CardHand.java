@@ -35,32 +35,33 @@ public class CardHand
 		cardHand.clear();
 	}
 	
-	public int getValue()
+	public int getValue() 
 	{
-		int sum = 0;
-		
-		for (int i = 0; i < cardHand.size(); i++) 
-		{												// ace calculator
-			int currentValue = cardHand.get(i).getValue();
-			if(currentValue == 11)
-			{
-				// Wenn der Wert der Karten des Spielers bereits 21 übersteigt, ist der Wert des Ass immer 1
-				if (currentValue > 21) {
-				    sum += 1;
-				}
-				// Ansonsten ist der Wert des Ass 11, es sei denn, das Blatt des Spielers würde dadurch über 21 hinausgehen, in diesem Fall ist der Wert 1
-				else {
-				    sum += (currentValue + 11 > 21) ? 1 : 11;
-				}
-			}
-			else
-			{
-				sum += currentValue;
-			}
-			
-			  
+		int getvalue = 0;
+
+		// Iterate over each card in the hand
+		for (Card card : cardHand) {
+		  // If the card is an Ace, add 11 to the total value
+		  if (card.getName().equals("Ace")) {
+			  getvalue += 11;
+		  }
+		  // Otherwise, add the value of the card to the total value
+		  else {
+			  getvalue += card.getValue();
+		  }
 		}
-	
-		return sum;
-	}	
+
+		// If the total value of the hand is greater than 21 and there is an Ace
+		// in the hand, subtract 10 from the total value (since the Ace can count as
+		// either 1 or 11)
+		if (getvalue > 21) {
+		  for (Card card : cardHand) {
+		    if (card.getName().equals("Ace")) {
+		    	getvalue -= 10;
+		    
+		    }
+		  }
+		}
+		return getvalue;	
+	}
 }

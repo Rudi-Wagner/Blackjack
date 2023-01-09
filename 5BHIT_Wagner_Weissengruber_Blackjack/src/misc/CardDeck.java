@@ -12,14 +12,11 @@ public class CardDeck
 	
 	public CardDeck() 
 	{
-		//Initialize card deck
-		for (int i = 0; i < cardNames.length; i++) 
-		{
-			CardDeck.add(new Card(cardNames[i] + " of Hearts", cardValues[i]));
-			CardDeck.add(new Card(cardNames[i] + " of Spades", cardValues[i]));
-			CardDeck.add(new Card(cardNames[i] + " of Diamonds", cardValues[i]));
-			CardDeck.add(new Card(cardNames[i] + " of Clover", cardValues[i]));
-		}
+//		CardDeck.add(new Card("King of Spades", 10));
+//		CardDeck.add(new Card("King of Spades", 10));
+//		CardDeck.add(new Card("King of Hearts", 10));
+//		CardDeck.add(new Card("King of Hearts", 10));
+		shuffle();
 	}
 	
 	public Card drawCard()

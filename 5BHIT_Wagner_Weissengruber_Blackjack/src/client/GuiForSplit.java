@@ -23,25 +23,25 @@ import javax.swing.border.LineBorder;
 import misc.Card;
 import java.awt.Toolkit;
 
-public class Gui {
+public class GuiForSplit {
 
 	private JFrame frmBlackjackJavaClient;
 	private BlackClient client;
+	private Gui mainGui;
 	
 	//Panels to access every Component later on
 	private JPanel playerActionPanel;
 	private JPanel playerHandPanel;
-	private JPanel playerMoneyPanel;
 	private JLabel topLabel;
 	
 	//PlayerHand variables
 	private ArrayList<JLabel> playerHand;
 	private ArrayList<Card> playerCardHand;
 	private JLabel playerHandValueLabel;
+	private JLabel lblGameStatus;
 	
 	private int cardCnt = 0;
 	private int handValue = 0;
-	private int money = 5000;
 	private int playerBet = 0;
 	private GuiForSplit gui2;
 	
@@ -49,12 +49,13 @@ public class Gui {
 	Color foregroundColor = new Color(136, 138, 145);
 	Color backgroundColor = new Color(48, 49, 54);
 	Color specialColor = new Color(55, 57, 63);
+	
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Gui window = new Gui(null);
+					GuiForSplit window = new GuiForSplit(null, null, null);
 					window.frmBlackjackJavaClient.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -63,18 +64,22 @@ public class Gui {
 		});
 	}
 
-	public Gui(BlackClient client) {
+	public GuiForSplit(Gui mainGui, BlackClient client, Card card) 
+	{
 		playerHand = new ArrayList<JLabel>();
 		playerCardHand = new ArrayList<Card>();
 		this.client = client;
 		initialize();
 		frmBlackjackJavaClient.setVisible(true);
+		
+		setCard(card);
+		drawCard();
 	}
 
 	private void initialize() 
 	{
 		frmBlackjackJavaClient = new JFrame();
-		frmBlackjackJavaClient.setIconImage(Toolkit.getDefaultToolkit().getImage(Gui.class.getResource("/resources/card_joker_black.png")));
+		frmBlackjackJavaClient.setIconImage(Toolkit.getDefaultToolkit().getImage(GuiForSplit.class.getResource("/resources/card_joker_black.png")));
 		frmBlackjackJavaClient.setTitle("Blackjack Java Client");
 //		frmBlackjackJavaClient.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmBlackjackJavaClient.getContentPane().setLayout(null);
@@ -91,7 +96,7 @@ public class Gui {
 		//Player Action Panel (Middle Panel with Buttons)
 		playerActionPanel = new JPanel();
 		playerActionPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		playerActionPanel.setBounds(10, 283, 964, 266);
+		playerActionPanel.setBounds(10, 221, 964, 266);
 		frmBlackjackJavaClient.getContentPane().add(playerActionPanel);
 		playerActionPanel.setLayout(null);
 		playerActionPanel.setForeground(foregroundColor);
@@ -118,19 +123,6 @@ public class Gui {
 			standButton.setForeground(foregroundColor);
 			standButton.setBackground(specialColor);
 			playerActionPanel.add(standButton);
-			
-			//New Round Button
-			JButton reloadButton = new JButton("New Round!");
-			reloadButton.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-				}
-			});
-			reloadButton.setBounds(382, 231, 200, 21);
-			reloadButton.addActionListener(e -> newRound());
-			reloadButton.setName("reloadButton");
-			reloadButton.setForeground(foregroundColor);
-			reloadButton.setBackground(specialColor);
-			playerActionPanel.add(reloadButton);
 			
 			//Double Down Button
 			JButton doubleDownButton = new JButton("Double");
@@ -159,7 +151,7 @@ public class Gui {
 		playerHandPanel = new JPanel();
 		playerHandPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		playerHandPanel.setLayout(null);
-		playerHandPanel.setBounds(10, 176, 964, 96);
+		playerHandPanel.setBounds(10, 115, 964, 96);
 		playerHandPanel.setForeground(foregroundColor);
 		playerHandPanel.setBackground(backgroundColor);
 		frmBlackjackJavaClient.getContentPane().add(playerHandPanel);
@@ -177,7 +169,7 @@ public class Gui {
 			for(int i = 0; i < cards; i++)
 			{
 				JLabel card = new JLabel("");
-				card.setIcon(new ImageIcon(Gui.class.getResource("/resources/card_back.png")));
+				card.setIcon(new ImageIcon(GuiForSplit.class.getResource("/resources/card_back.png")));
 				card.setBounds(i * 74, 25, 64, 64);
 				card.setName("card" + i);
 				playerHand.add(card);
@@ -192,63 +184,14 @@ public class Gui {
 		topLabel.setForeground(foregroundColor);
 		frmBlackjackJavaClient.getContentPane().add(topLabel);
 		
-		//Player Money Panel
-		playerMoneyPanel = new JPanel();
-		playerMoneyPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		playerMoneyPanel.setLayout(null);
-		playerMoneyPanel.setBounds(10, 101, 964, 64);
-		playerMoneyPanel.setForeground(foregroundColor);
-		playerMoneyPanel.setBackground(backgroundColor);
-		frmBlackjackJavaClient.getContentPane().add(playerMoneyPanel);
-		
-			JLabel lblMoney = new JLabel("Money:");
-			lblMoney.setFont(new Font("Tahoma", Font.PLAIN, 24));
-			lblMoney.setBounds(10, 11, 78, 42);
-			lblMoney.setName("moneyLabel");
-			lblMoney.setForeground(foregroundColor);
-			playerMoneyPanel.add(lblMoney);
-			
-			JLabel moneyLabel = new JLabel("5000€");
-			moneyLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
-			moneyLabel.setBounds(98, 11, 131, 42);
-			moneyLabel.setName("money");
-			moneyLabel.setForeground(foregroundColor);
-			playerMoneyPanel.add(moneyLabel);
-			
-			//Spinner for Player Bet
-			JSpinner spinner = new JSpinner();
-			spinner.setFont(new Font("Tahoma", Font.PLAIN, 24));
-			spinner.setBounds(718, 11, 236, 42);
-			spinner.setName("betAmount");
-			spinner.addChangeListener(e -> updateBet());
-			//Colour
-			spinner.getEditor().getComponent(0).setForeground(foregroundColor);
-			spinner.getEditor().getComponent(0).setBackground(backgroundColor);
-			spinner.setBorder(new LineBorder(foregroundColor, 1));
-			int n = spinner.getComponentCount();
-		    for (int i=0; i<n; i++)
-		    {
-		        Component c = spinner.getComponent(i);
-		        if (c instanceof JButton)
-		        {
-		            c.setBackground(specialColor);
-		        }
-		    }
-			playerMoneyPanel.add(spinner);
-			
-			JLabel spinnerLabel = new JLabel("Bet amount:");
-			spinnerLabel.setBounds(550, 11, 131, 42);
-			spinnerLabel.setName("betAmountLabel");
-			spinnerLabel.setForeground(foregroundColor);
-			spinnerLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
-			playerMoneyPanel.add(spinnerLabel);
-			
-			JLabel lblGameStatus = new JLabel("");
-			lblGameStatus.setName("gameStatusLabel");
-			lblGameStatus.setForeground(new Color(136, 138, 145));
-			lblGameStatus.setFont(new Font("Tahoma", Font.PLAIN, 24));
-			lblGameStatus.setBounds(239, 11, 307, 42);
-			playerMoneyPanel.add(lblGameStatus);
+		lblGameStatus = new JLabel("");
+		lblGameStatus.setHorizontalAlignment(SwingConstants.CENTER);
+		lblGameStatus.setName("gameStatusLabel");
+		lblGameStatus.setForeground(new Color(136, 138, 145));
+		lblGameStatus.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblGameStatus.setBackground(new Color(48, 49, 54));
+		lblGameStatus.setBounds(339, 85, 357, 20);
+		frmBlackjackJavaClient.getContentPane().add(lblGameStatus);
 	}
 
 	protected void OnResize() 
@@ -305,62 +248,14 @@ public class Gui {
 					component.setLocation(x, y);
 				}
 			}
-		
-		//Resize PlayerMoneyPanel
-			Component[] moneyComponents = playerMoneyPanel.getComponents();
-			//Panel Size/Pos
-			playerMoneyPanel.setBounds(playerMoneyPanel.getX(), playerMoneyPanel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, playerMoneyPanel.getHeight());
-			
-			int savePos = 0;
-			for (Component component : moneyComponents) 
-			{
-				if(component.getName().equals("betAmount"))
-				{
-					int x = playerMoneyPanel.getWidth() - component.getWidth() - 10;
-					int y = component.getY();
-					component.setLocation(x, y);
-					savePos = component.getX();
-				}
-				if(component.getName().equals("betAmountLabel"))
-				{
-					int x = savePos - component.getWidth() - 10;
-					int y = component.getY();
-					component.setLocation(x, y);
-				}
-			}
 	}
 
 	//Button Actions
 	private void split() 
 	{
 		System.out.println("#ClientGUI# Request to split Hand.");
-		gui2 = new GuiForSplit(this, client, playerCardHand.get(1));
+		gui2 = new GuiForSplit(mainGui, client, playerCardHand.get(1));
 		playerCardHand.remove(1);
-		cardCnt--;
-		Component[] actionComponents = playerActionPanel.getComponents();
-		for (Component component : actionComponents) 
-		{
-			if(component.getName().equals("splitButton"))
-			{
-				component.setEnabled(false);
-			}
-		}
-		drawCard();
-	}
-	
-	public void addSplitMoney(int splitMoney) 
-	{
-		money += splitMoney;
-		
-		Component[] components = playerMoneyPanel.getComponents();
-		for (Component component : components) 
-		{
-			if (component.getName().equals("money")) 
-			{
-				JLabel label = (JLabel) component;
-				label.setText(Integer.toString(money) + "€");
-			}
-		}
 	}
 
 	private void doubleDown() 
@@ -373,15 +268,6 @@ public class Gui {
 		playerBet = playerBet * 2;
 		
 		//Update playerBet from spinner
-		Component[] components = playerMoneyPanel.getComponents();
-		for (Component component : components) 
-		{
-			if (component.getName().equals("betAmount")) 
-			{
-				JSpinner spinner = ((JSpinner) component);
-				spinner.setValue(playerBet);
-			}
-		}
 		frmBlackjackJavaClient.repaint();
 		
 		//Automaticly Stand & end Round
@@ -433,111 +319,7 @@ public class Gui {
 				component.setEnabled(true);
 			}
 		}
-		
-		//Enable betSpinner
-		Component[] moneyComponents = playerMoneyPanel.getComponents();
-		for (Component component : moneyComponents) 
-		{
-			if (component.getName().equals("betAmount")) 
-			{
-				component.setEnabled(true);
-			}
-		}
 	}
-	
-	private void newRound() 
-	{
-		if (!(playerBet > 0 && playerBet < money)) 
-		{
-			return;
-		}
-		
-		System.out.println("#ClientGUI# Reset on Client.");
-		//Reset variables
-		cardCnt = 0;
-		handValue = 0;
-		updateHandValue();
-		
-		//Reset cards
-		playerCardHand = new ArrayList<Card>();
-		for (int i = 0; i < playerHand.size(); i++) 
-		{
-			updateCard(i, "card_back");
-		}
-		
-		//Lock betSpinner & Reset GameStatus
-		Component[] moneyComponents = playerMoneyPanel.getComponents();
-		for (Component component : moneyComponents) 
-		{
-			if (component.getName().equals("betAmount")) 
-			{
-				component.setEnabled(false);
-			}
-			
-			if(component.getName().equals("gameStatusLabel"))
-			{
-				JLabel lbl = (JLabel) component;
-				lbl.setText("");
-			}
-		}
-				
-		//Draw first two cards
-		drawCard();
-		try {Thread.sleep(200);}
-		catch (InterruptedException e) 
-		{e.printStackTrace();}
-		drawCard();
-		
-		//Reset Buttons
-		Component[] actionComponents = playerActionPanel.getComponents();
-		for (Component component : actionComponents) 
-		{
-			if(component.getClass() == JButton.class && !component.getName().equals("reloadButton") && !component.getName().equals("splitButton"))
-			{
-				//Set all Buttons to true
-				component.setEnabled(true);
-			}
-			
-			if(component.getName().equals("reloadButton"))
-			{
-				//Set reload Button false
-				component.setEnabled(false);
-			}
-			
-			if(component.getName().equals("splitButton"))
-			{
-				component.setEnabled(false);
-				if(cardCnt == 2)
-				{
-					Card card1 = playerCardHand.get(0);
-					Card card2 = playerCardHand.get(1);
-					System.out.println("1: " + card1.getValue() + ", 2: " + card2.getValue());
-					if (card1.getValue() == card2.getValue()) 
-					{
-						component.setEnabled(true);
-					}
-				}
-			}
-		}
-		
-		//Repaint
-		frmBlackjackJavaClient.repaint();
-	}
-	
-	private void updateBet() 
-	{
-		//Update playerBet from spinner
-		Component[] components = playerMoneyPanel.getComponents();
-		for (Component component : components) 
-		{
-			if (component.getName().equals("betAmount")) 
-			{
-				JSpinner spinner = ((JSpinner) component);
-				playerBet = (int) spinner.getValue();
-			}
-		}
-	}
-
 
 	//PlayerLogic
 	public void setCard(Card card) 
@@ -566,7 +348,7 @@ public class Gui {
 	{
 		JLabel card = playerHand.get(pos);
 		//Gui	https://www.kenney.nl/assets/playing-cards-pack
-		card.setIcon(new ImageIcon(Gui.class.getResource("/resources/" + type + ".png")));
+		card.setIcon(new ImageIcon(GuiForSplit.class.getResource("/resources/" + type + ".png")));
 		frmBlackjackJavaClient.repaint();
 	}
 
@@ -574,6 +356,7 @@ public class Gui {
 	{
 		System.out.println("#Client# Round state: " + gameStatus);
 		String gameStatusMSG = "";
+		int money = 0;
 		switch (gameStatus) 
 		{
 			case "win":
@@ -593,20 +376,8 @@ public class Gui {
 		}
 		
 		//Update GUI
-		Component[] components = playerMoneyPanel.getComponents();
-		for (Component component : components) 
-		{
-			if (component.getName().equals("money")) 
-			{
-				JLabel label = (JLabel) component;
-				label.setText(Integer.toString(money) + "€");
-			}
-			
-			if(component.getName().equals("gameStatusLabel"))
-			{
-				JLabel lbl = (JLabel) component;
-				lbl.setText(gameStatusMSG);
-			}
-		}
+		lblGameStatus.setText(gameStatusMSG);;
+		
+		mainGui.addSplitMoney(money);
 	}
 }
