@@ -121,21 +121,21 @@ public class clientThread extends Thread
 
 	private String getGameState(int playerHandValue, int dealerHandValue) 
 	{
-		//Draw
+		System.out.println("D: " + dealerHandValue + ", P: " + playerHandValue);
 		//If both have more than 21 or their Value is equal
 		if ((dealerHandValue > 21 && playerHandValue > 21) ||
 			(dealerHandValue == playerHandValue)) 
 		{
 			return "draw";
 		}
-		
+		else
 		//Player Win
 		//Less than 22 and more than the dealer
 		if (playerHandValue < 22 && playerHandValue > dealerHandValue) 
 		{
 			return "win";
 		}
-		
+		else
 		//Player Loose
 		//More than 21 or less than the dealer
 		if (playerHandValue > 21 || playerHandValue < dealerHandValue) 

@@ -89,6 +89,18 @@ public class BlackClient extends Thread{
                     
                     System.out.println("#Client# Antwort vom Server: " + answer);
 				}
+            	else if (inputString.endsWith("drawSplit"))
+            	{	
+            		inputString = getMsgDraw();
+                    writer.println(inputString);	//Send message to server
+                    inputString = "";
+     
+                    String answer = reader.readLine();	//Server answer
+                    Card card = translateCardFromJson(answer);
+                    window.setCardForwarder(card);
+                    
+                    System.out.println("#Client# Antwort vom Server: " + answer);
+				}
             	else if (inputString.equals("stand"))
             	{
             		writer.println(getMsgStand());
@@ -97,7 +109,8 @@ public class BlackClient extends Thread{
             		String answer = reader.readLine();	//Server answer
             		JsonObj msgObj = translateFromJson(answer);
             		String gameStatus = msgObj.getType();
-            		window.endRound(gameStatus);
+            		int dealerHandValue = msgObj.getValue();
+            		window.endRound(gameStatus, dealerHandValue);
             	}
             	else if (inputString.equals("quit"))
             	{

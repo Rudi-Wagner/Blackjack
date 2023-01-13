@@ -8,6 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
@@ -66,6 +68,7 @@ public class GuiForSplit {
 
 	public GuiForSplit(Gui mainGui, BlackClient client, Card card) 
 	{
+		this.mainGui = mainGui;
 		playerHand = new ArrayList<JLabel>();
 		playerCardHand = new ArrayList<Card>();
 		this.client = client;
@@ -81,7 +84,13 @@ public class GuiForSplit {
 		frmBlackjackJavaClient = new JFrame();
 		frmBlackjackJavaClient.setIconImage(Toolkit.getDefaultToolkit().getImage(GuiForSplit.class.getResource("/resources/card_joker_black.png")));
 		frmBlackjackJavaClient.setTitle("Blackjack Java Client");
-//		frmBlackjackJavaClient.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmBlackjackJavaClient.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		frmBlackjackJavaClient.addWindowListener(new WindowAdapter() {
+		    @Override
+		    public void windowClosing(WindowEvent event) {
+		        OnClose();
+		    }
+		});
 		frmBlackjackJavaClient.getContentPane().setLayout(null);
 		frmBlackjackJavaClient.setSize(1000, 700);
 		frmBlackjackJavaClient.getContentPane().setBackground(backgroundColor);
@@ -104,7 +113,6 @@ public class GuiForSplit {
 		
 			//Hit Button
 			JButton drawButton = new JButton("Hit");
-			drawButton.setEnabled(false);
 			drawButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
 			drawButton.setBounds(33, 50, 200, 170);
 			drawButton.addActionListener(e -> drawCard());
@@ -115,7 +123,6 @@ public class GuiForSplit {
 			
 			//Stand Button
 			JButton standButton = new JButton("Stand");
-			standButton.setEnabled(false);
 			standButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
 			standButton.setBounds(731, 50, 200, 170);
 			standButton.addActionListener(e -> stand());
@@ -126,7 +133,6 @@ public class GuiForSplit {
 			
 			//Double Down Button
 			JButton doubleDownButton = new JButton("Double");
-			doubleDownButton.setEnabled(false);
 			doubleDownButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
 			doubleDownButton.setBounds(265, 50, 200, 170);
 			doubleDownButton.addActionListener(e -> doubleDown());
@@ -134,18 +140,6 @@ public class GuiForSplit {
 			doubleDownButton.setForeground(foregroundColor);
 			doubleDownButton.setBackground(specialColor);
 			playerActionPanel.add(doubleDownButton);
-			
-			//Split Button
-			JButton splitButton = new JButton("Split");
-			splitButton.addActionListener(e -> split());
-			splitButton.setName("splitButton");
-			splitButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
-			splitButton.setBounds(498, 50, 200, 170);
-			splitButton.setEnabled(false);
-			splitButton.setForeground(foregroundColor);
-			splitButton.setBackground(specialColor);
-			
-			playerActionPanel.add(splitButton);
 		
 		//Player Hand Panel
 		playerHandPanel = new JPanel();
@@ -193,6 +187,13 @@ public class GuiForSplit {
 		lblGameStatus.setBounds(339, 85, 357, 20);
 		frmBlackjackJavaClient.getContentPane().add(lblGameStatus);
 	}
+	
+	protected void OnClose()
+	{
+		this.mainGui.gui2 = null;
+		frmBlackjackJavaClient.setVisible(false);
+		frmBlackjackJavaClient.dispose();
+	}
 
 	protected void OnResize() 
 	{
@@ -230,7 +231,7 @@ public class GuiForSplit {
 			playerActionPanel.setBounds(playerActionPanel.getX(), playerActionPanel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, playerActionPanel.getHeight());
 			
 			//			  (Panel Width - Extra Spacing Left&Right - Button Widths) / spacingAmount
-			int actionSpacing = (playerActionPanel.getWidth() - 20 - (4 * 200)) / 5;
+			int actionSpacing = (playerActionPanel.getWidth() - 20 - (3 * 200)) / 4;
 			int actionNextX = 10;
 			for (Component component : actionComponents) 
 			{
@@ -251,12 +252,6 @@ public class GuiForSplit {
 	}
 
 	//Button Actions
-	private void split() 
-	{
-		System.out.println("#ClientGUI# Request to split Hand.");
-		gui2 = new GuiForSplit(mainGui, client, playerCardHand.get(1));
-		playerCardHand.remove(1);
-	}
 
 	private void doubleDown() 
 	{
@@ -282,7 +277,7 @@ public class GuiForSplit {
 	private void drawCard() 
 	{
 		System.out.println("#ClientGUI# Request new Card.");
-		client.sendMessage("draw");
+		client.sendMessage("drawSplit");
 		
 		if(cardCnt == 2)
 		{
@@ -328,6 +323,26 @@ public class GuiForSplit {
 		playerCardHand.add(card);
 		handValue += card.getValue();
 		cardCnt++;
+		
+		//Check for duplicate Cards to enable Split
+		if (cardCnt == 2 ) 
+		{
+			Component[] actionComponents = playerActionPanel.getComponents();
+			for (Component component : actionComponents) 
+			{
+				if(component.getName().equals("splitButton"))
+				{
+					component.setEnabled(false);
+					
+					Card card1 = playerCardHand.get(0);
+					Card card2 = playerCardHand.get(1);
+					if (card1.getValue() == card2.getValue()) 
+					{
+						component.setEnabled(true);
+					}
+				}
+			}
+		}
 		
 		updateHandValue();
 		

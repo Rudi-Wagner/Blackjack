@@ -8,6 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
@@ -36,14 +38,14 @@ public class Gui {
 	
 	//PlayerHand variables
 	private ArrayList<JLabel> playerHand;
-	private ArrayList<Card> playerCardHand;
+	public ArrayList<Card> playerCardHand;
 	private JLabel playerHandValueLabel;
 	
 	private int cardCnt = 0;
 	private int handValue = 0;
 	private int money = 5000;
 	private int playerBet = 0;
-	private GuiForSplit gui2;
+	public GuiForSplit gui2 = null;
 	
 	//Colours
 	Color foregroundColor = new Color(136, 138, 145);
@@ -76,7 +78,13 @@ public class Gui {
 		frmBlackjackJavaClient = new JFrame();
 		frmBlackjackJavaClient.setIconImage(Toolkit.getDefaultToolkit().getImage(Gui.class.getResource("/resources/card_joker_black.png")));
 		frmBlackjackJavaClient.setTitle("Blackjack Java Client");
-//		frmBlackjackJavaClient.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmBlackjackJavaClient.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		frmBlackjackJavaClient.addWindowListener(new WindowAdapter() {
+		    @Override
+		    public void windowClosing(WindowEvent event) {
+		        OnClose();
+		    }
+		});
 		frmBlackjackJavaClient.getContentPane().setLayout(null);
 		frmBlackjackJavaClient.setSize(1000, 700);
 		frmBlackjackJavaClient.getContentPane().setBackground(backgroundColor);
@@ -251,6 +259,17 @@ public class Gui {
 			playerMoneyPanel.add(lblGameStatus);
 	}
 
+	protected void OnClose()
+	{
+		client.sendMessage("quit");
+		if(this.gui2 != null)
+		{
+			this.gui2.OnClose();
+		}
+		frmBlackjackJavaClient.setVisible(false);
+		frmBlackjackJavaClient.dispose();
+	}
+	
 	protected void OnResize() 
 	{
 		if (frmBlackjackJavaClient.getWidth() < 870) 
@@ -337,6 +356,9 @@ public class Gui {
 		gui2 = new GuiForSplit(this, client, playerCardHand.get(1));
 		playerCardHand.remove(1);
 		cardCnt--;
+		updateCard(1, "card_back");
+		
+		//Disable Button
 		Component[] actionComponents = playerActionPanel.getComponents();
 		for (Component component : actionComponents) 
 		{
@@ -345,7 +367,14 @@ public class Gui {
 				component.setEnabled(false);
 			}
 		}
+		
+		//Draw Automaticly & reset Value
 		drawCard();
+		handValue = 0;
+		for (int i = 0; i < playerCardHand.size(); i++) 
+		{
+			handValue += playerCardHand.get(i).getValue();
+		}
 	}
 	
 	public void addSplitMoney(int splitMoney) 
@@ -503,21 +532,6 @@ public class Gui {
 				//Set reload Button false
 				component.setEnabled(false);
 			}
-			
-			if(component.getName().equals("splitButton"))
-			{
-				component.setEnabled(false);
-				if(cardCnt == 2)
-				{
-					Card card1 = playerCardHand.get(0);
-					Card card2 = playerCardHand.get(1);
-					System.out.println("1: " + card1.getValue() + ", 2: " + card2.getValue());
-					if (card1.getValue() == card2.getValue()) 
-					{
-						component.setEnabled(true);
-					}
-				}
-			}
 		}
 		
 		//Repaint
@@ -547,6 +561,26 @@ public class Gui {
 		handValue += card.getValue();
 		cardCnt++;
 		
+		//Check for duplicate Cards to enable Split
+		if (cardCnt == 2 && gui2 == null) 
+		{
+			Component[] actionComponents = playerActionPanel.getComponents();
+			for (Component component : actionComponents) 
+			{
+				if(component.getName().equals("splitButton"))
+				{
+					component.setEnabled(false);
+					
+					Card card1 = playerCardHand.get(0);
+					Card card2 = playerCardHand.get(1);
+					if (card1.getValue() == card2.getValue()) 
+					{
+						component.setEnabled(true);
+					}
+				}
+			}
+		}
+		
 		updateHandValue();
 		
 		if (handValue >= 21 || cardCnt >= 11) 
@@ -554,6 +588,12 @@ public class Gui {
 			//Automaticly stand and stop the user from hitting again
 			stand();
 		}
+	}
+	
+	public void setCardForwarder(Card card) 
+	{
+		System.out.println("#ClientGUI# Message forwarded");
+		gui2.setCard(card);
 	}
 	
 	private void updateHandValue() 
@@ -570,7 +610,7 @@ public class Gui {
 		frmBlackjackJavaClient.repaint();
 	}
 
-	public void endRound(String gameStatus) 
+	public void endRound(String gameStatus, int dealerHandValue) 
 	{
 		System.out.println("#Client# Round state: " + gameStatus);
 		String gameStatusMSG = "";
@@ -578,17 +618,17 @@ public class Gui {
 		{
 			case "win":
 				money += playerBet * 1.5;
-				gameStatusMSG = " You WON " + (int)(playerBet * 1.5) + "€";
+				gameStatusMSG = " You WON " + (int)(playerBet * 1.5) + "€ Dealer has:" + dealerHandValue;
 				break;
 				
 			case "loose":
 				money -= playerBet;
-				gameStatusMSG = " You LOST " + playerBet + "€";
+				gameStatusMSG = " You LOST " + playerBet + "€ Dealer has:" + dealerHandValue;
 				break;
 				
 			case "draw":
 				//Stays the same
-				gameStatusMSG = " DRAW";
+				gameStatusMSG = " DRAW  Dealer has:" + dealerHandValue;
 				break;
 		}
 		

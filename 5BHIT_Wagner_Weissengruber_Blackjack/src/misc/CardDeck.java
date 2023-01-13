@@ -12,11 +12,16 @@ public class CardDeck
 	
 	public CardDeck() 
 	{
-//		CardDeck.add(new Card("King of Spades", 10));
-//		CardDeck.add(new Card("King of Spades", 10));
-//		CardDeck.add(new Card("King of Hearts", 10));
-//		CardDeck.add(new Card("King of Hearts", 10));
-		shuffle();
+		CardDeck.add(new Card("King of Spades", 10));
+		CardDeck.add(new Card("King of Spades", 10));
+		CardDeck.add(new Card("King of Hearts", 10));
+		CardDeck.add(new Card("King of Hearts", 10));
+		CardDeck.add(new Card("King of Diamonds", 10));
+		CardDeck.add(new Card("King of Diamonds", 10));
+		CardDeck.add(new Card("King of Clover", 10));
+		CardDeck.add(new Card("King of Clover", 10));
+		
+//		shuffle();
 	}
 	
 	public Card drawCard()
