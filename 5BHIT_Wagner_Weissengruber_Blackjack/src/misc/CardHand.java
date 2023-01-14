@@ -25,6 +25,11 @@ public class CardHand
 		cardHand.add(card);
 	}
 	
+	public Card getCardAt(int pos)
+	{
+		return cardHand.get(pos);
+	}
+	
 	public int getCardHandSize()
 	{
 		return cardHand.size();

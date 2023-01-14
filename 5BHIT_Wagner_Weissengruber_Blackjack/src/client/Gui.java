@@ -261,7 +261,7 @@ public class Gui {
 
 	protected void OnClose()
 	{
-		client.sendMessage("quit");
+		client.sendMessage("quit", false);
 		if(this.gui2 != null)
 		{
 			this.gui2.OnClose();
@@ -354,6 +354,7 @@ public class Gui {
 	{
 		System.out.println("#ClientGUI# Request to split Hand.");
 		gui2 = new GuiForSplit(this, client, playerCardHand.get(1));
+		client.doSplit(gui2);
 		playerCardHand.remove(1);
 		cardCnt--;
 		updateCard(1, "card_back");
@@ -425,7 +426,7 @@ public class Gui {
 	private void drawCard() 
 	{
 		System.out.println("#ClientGUI# Request new Card.");
-		client.sendMessage("draw");
+		client.sendMessage("draw", false);
 		
 		if(cardCnt == 2)
 		{
@@ -445,7 +446,7 @@ public class Gui {
 	private void stand() 
 	{
 		System.out.println("#ClientGUI# Request to stand.");
-		client.sendMessage("stand");
+		client.sendMessage("stand", false);
 		
 		Component[] actionComponents = playerActionPanel.getComponents();
 		for (Component component : actionComponents) 
@@ -588,12 +589,6 @@ public class Gui {
 			//Automaticly stand and stop the user from hitting again
 			stand();
 		}
-	}
-	
-	public void setCardForwarder(Card card) 
-	{
-		System.out.println("#ClientGUI# Message forwarded");
-		gui2.setCard(card);
 	}
 	
 	private void updateHandValue() 

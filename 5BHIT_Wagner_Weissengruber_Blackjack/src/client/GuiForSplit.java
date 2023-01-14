@@ -277,7 +277,7 @@ public class GuiForSplit {
 	private void drawCard() 
 	{
 		System.out.println("#ClientGUI# Request new Card.");
-		client.sendMessage("drawSplit");
+		client.sendMessage("draw", true);
 		
 		if(cardCnt == 2)
 		{
@@ -297,7 +297,7 @@ public class GuiForSplit {
 	private void stand() 
 	{
 		System.out.println("#ClientGUI# Request to stand.");
-		client.sendMessage("stand");
+		client.sendMessage("stand", true);
 		
 		Component[] actionComponents = playerActionPanel.getComponents();
 		for (Component component : actionComponents) 
@@ -367,7 +367,7 @@ public class GuiForSplit {
 		frmBlackjackJavaClient.repaint();
 	}
 
-	public void endRound(String gameStatus) 
+	public void endRound(String gameStatus, int dealerHandValue) 
 	{
 		System.out.println("#Client# Round state: " + gameStatus);
 		String gameStatusMSG = "";
@@ -376,17 +376,17 @@ public class GuiForSplit {
 		{
 			case "win":
 				money += playerBet * 1.5;
-				gameStatusMSG = " You WON " + (int)(playerBet * 1.5) + "€";
+				gameStatusMSG = " You WON " + (int)(playerBet * 1.5) + "€ Dealer has:" + dealerHandValue;
 				break;
 				
 			case "loose":
 				money -= playerBet;
-				gameStatusMSG = " You LOST " + playerBet + "€";
+				gameStatusMSG = " You LOST " + playerBet + "€ Dealer has:" + dealerHandValue;
 				break;
 				
 			case "draw":
 				//Stays the same
-				gameStatusMSG = " DRAW";
+				gameStatusMSG = " DRAW  Dealer has:" + dealerHandValue;
 				break;
 		}
 		
