@@ -371,11 +371,7 @@ public class Gui {
 		
 		//Draw Automaticly & reset Value
 		drawCard();
-		handValue = 0;
-		for (int i = 0; i < playerCardHand.size(); i++) 
-		{
-			handValue += playerCardHand.get(i).getValue();
-		}
+		handValue = this.client.getHandValue(false);
 	}
 	
 	public void addSplitMoney(int splitMoney) 
@@ -564,7 +560,7 @@ public class Gui {
 	{
 		updateCard(cardCnt, card.getName());
 		playerCardHand.add(card);
-		handValue += card.getValue();
+		handValue = this.client.getHandValue(false);
 		cardCnt++;
 		
 		//Check for duplicate Cards to enable Split

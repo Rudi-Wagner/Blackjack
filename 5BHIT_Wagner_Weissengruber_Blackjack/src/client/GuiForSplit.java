@@ -324,7 +324,7 @@ public class GuiForSplit {
 	{
 		updateCard(cardCnt, card.getName());
 		playerCardHand.add(card);
-		handValue += card.getValue();
+		handValue = this.client.getHandValue(true);
 		cardCnt++;
 		
 		//Check for duplicate Cards to enable Split

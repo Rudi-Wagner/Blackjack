@@ -42,31 +42,31 @@ public class CardHand
 	
 	public int getValue() 
 	{
-		int getvalue = 0;
-
-		// Iterate over each card in the hand
-		for (Card card : cardHand) {
-		  // If the card is an Ace, add 11 to the total value
-		  if (card.getName().equals("Ace")) {
-			  getvalue += 11;
-		  }
-		  // Otherwise, add the value of the card to the total value
-		  else {
-			  getvalue += card.getValue();
-		  }
+		int value = 0;
+		
+		for (int i = 0; i < cardHand.size(); i++) 
+		{
+			Card card = cardHand.get(i);
+			
+			//Normal dazu rechnen
+			if (value + card.getValue() <= 21) 
+			{
+				value += card.getValue();
+			}
+			else
+			{
+				//Hinzurechnen bei einem Ass
+				if (card.getValue() == 11) 
+				{
+					value += 1;
+				}
+				else
+				{
+					value += card.getValue();
+				}
+			}
 		}
-
-		// If the total value of the hand is greater than 21 and there is an Ace
-		// in the hand, subtract 10 from the total value (since the Ace can count as
-		// either 1 or 11)
-		if (getvalue > 21) {
-		  for (Card card : cardHand) {
-		    if (card.getName().equals("Ace")) {
-		    	getvalue -= 10;
-		    
-		    }
-		  }
-		}
-		return getvalue;	
+		
+		return value;
 	}
 }

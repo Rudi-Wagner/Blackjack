@@ -83,7 +83,7 @@ public class clientThread extends Thread
 							case "stand":
 								int playerHandValue = jsondata.getValue();
 								
-								createDealerHand();
+								createDealerHand(playerHandValue);
 								int dealerHandValue = dealerHand.getValue();
 								
 								//Vergleichen mit Server hand
@@ -124,22 +124,21 @@ public class clientThread extends Thread
 	{
 		System.out.println("D: " + dealerHandValue + ", P: " + playerHandValue);
 		//If both have more than 21 or their Value is equal
-		if ((dealerHandValue > 21 && playerHandValue > 21) ||
-			(dealerHandValue == playerHandValue)) 
+		if (dealerHandValue == playerHandValue)
 		{
 			return "draw";
 		}
 		else
 		//Player Win
 		//Less than 22 and more than the dealer
-		if (playerHandValue < 22 && playerHandValue > dealerHandValue) 
+		if (playerHandValue == 21 || playerHandValue > dealerHandValue && playerHandValue <= 21 || dealerHandValue > 21) 
 		{
 			return "win";
 		}
 		else
 		//Player Loose
 		//More than 21 or less than the dealer
-		if (playerHandValue > 21 || playerHandValue < dealerHandValue) 
+		if (21 < playerHandValue || playerHandValue < dealerHandValue && dealerHandValue <= 21)
 		{
 			return "loose";
 		}
@@ -148,9 +147,17 @@ public class clientThread extends Thread
 		return "draw";
 	}
 
-	private void createDealerHand() 
+	private void createDealerHand(int playerHandValue) 
 	{
 		dealerHand = new CardHand();
+		//Draw first two
+		dealerHand.addCard(deck.drawCard());
+		dealerHand.addCard(deck.drawCard());
+		
+		if(playerHandValue > 21)
+		{
+			return;
+		}
 		
 		while (dealerHand.getValue() <= 16) 
 		{

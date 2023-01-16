@@ -240,4 +240,13 @@ public class BlackClient extends Thread{
 		handSplitted.addCard(card2);
 	}
 	
+	public int getHandValue(boolean doForSplitted)
+	{
+		if (doForSplitted) 
+		{
+			return handSplitted.getValue();
+		}
+		return hand.getValue();
+	}
+	
 }

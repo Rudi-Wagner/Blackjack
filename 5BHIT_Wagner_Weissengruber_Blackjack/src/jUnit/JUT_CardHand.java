@@ -69,10 +69,11 @@ public class JUT_CardHand extends TestCase
 	 */
 	public void testCase_4()
 	{
+		System.out.println("Case 4");
 		cardHand.clearHand();
 		cardHand.addCard(new Card("Test Card1", 10));
 		cardHand.addCard(new Card("Test Card2", 5));
-		cardHand.addCard(new Card("Test Card Ace", 11));
+		cardHand.addCard(new Card("Ace of Spades", 11));
 		assertEquals(16, cardHand.getValue());
 	}
 	
@@ -83,6 +84,7 @@ public class JUT_CardHand extends TestCase
 	 */
 	public void testCase_5()
 	{
+		System.out.println("Case 5");
 		cardHand.clearHand();
 		cardHand.addCard(new Card("Test Card1", 5));
 		cardHand.addCard(new Card("Test Card Ace", 11));
