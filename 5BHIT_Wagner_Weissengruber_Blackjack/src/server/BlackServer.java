@@ -5,7 +5,6 @@ import java.net.*;
 import java.util.ArrayList;
 
 import misc.CardDeck;
-import misc.CardHand;
 
 /*
  * Rudi Wagner
@@ -25,7 +24,6 @@ public class BlackServer
     	System.out.println("#Server# Server started!");
     	int port = 6868;		//Port festlegen
     	CardDeck deck = new CardDeck();
-    	CardHand hand = new CardHand();
  
     	//Oeffnen und warten auf Clients
     	try (ServerSocket serverSocket = new ServerSocket(port)) {

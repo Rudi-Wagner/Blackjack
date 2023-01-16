@@ -90,6 +90,7 @@ public class clientThread extends Thread
 								System.out.println("#ThreadLog# Player's Hand is " + playerHandValue + " worth!");
 								
 								String state = getGameState(playerHandValue, dealerHandValue);
+								System.out.println(state);
 								msg = gson.toJson(new JsonObj(state, dealerHandValue));
 								
 								break;

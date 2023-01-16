@@ -94,6 +94,10 @@ public class BlackClient extends Thread{
                         hand.addCard(card);
                         window.setCard(card);
                         
+                        synchronized(window) {
+                            window.notify();
+                        }
+
                         System.out.println("#Client# Antwort vom Server: " + answer);
 					}
             		else
@@ -106,6 +110,10 @@ public class BlackClient extends Thread{
                         Card card = translateCardFromJson(answer);
                         handSplitted.addCard(card);
                         window2.setCard(card);
+                        
+                        synchronized(window2) {
+                            window2.notify();
+                        }
                         
                         System.out.println("#Client# Antwort vom Server: " + answer);
             		}

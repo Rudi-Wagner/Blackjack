@@ -51,7 +51,7 @@ public class Gui {
 	Color foregroundColor = new Color(136, 138, 145);
 	Color backgroundColor = new Color(48, 49, 54);
 	Color specialColor = new Color(55, 57, 63);
-
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -513,9 +513,14 @@ public class Gui {
 				
 		//Draw first two cards
 		drawCard();
-		try {Thread.sleep(200);}
-		catch (InterruptedException e) 
-		{e.printStackTrace();}
+		
+		synchronized(this) {
+			while(playerCardHand.size() < 1 ) 
+			{
+				System.out.print("");
+			}
+		}
+		
 		drawCard();
 		
 		//Reset Buttons

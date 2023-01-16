@@ -4,8 +4,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.Toolkit;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.event.WindowAdapter;
@@ -17,13 +16,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JSpinner;
 import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
-import javax.swing.border.LineBorder;
 
 import misc.Card;
-import java.awt.Toolkit;
 
 public class GuiForSplit {
 
@@ -45,7 +41,6 @@ public class GuiForSplit {
 	private int cardCnt = 0;
 	private int handValue = 0;
 	private int playerBet = 0;
-	private GuiForSplit gui2;
 	
 	//Colours
 	Color foregroundColor = new Color(136, 138, 145);
@@ -76,6 +71,14 @@ public class GuiForSplit {
 		frmBlackjackJavaClient.setVisible(true);
 		
 		setCard(card);
+		
+		synchronized(this) {
+			while(playerCardHand.size() < 1 ) 
+			{
+				System.out.print("");
+			}
+		}
+		
 		drawCard();
 	}
 
@@ -276,7 +279,7 @@ public class GuiForSplit {
 
 	private void drawCard() 
 	{
-		System.out.println("#ClientGUI# Request new Card.");
+		System.out.println("#Client2GUI# Request new Card.");
 		client.sendMessage("draw", true);
 		
 		if(cardCnt == 2)
