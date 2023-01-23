@@ -519,6 +519,13 @@ public class Gui {
 		
 		drawCard();
 		
+		synchronized(this) {
+			while(playerCardHand.size() < 2 ) 
+			{
+				System.out.print("");
+			}
+		}
+		
 		//Reset Buttons
 		Component[] actionComponents = playerActionPanel.getComponents();
 		for (Component component : actionComponents) 
