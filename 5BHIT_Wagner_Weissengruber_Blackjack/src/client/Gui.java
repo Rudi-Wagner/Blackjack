@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
@@ -23,7 +24,6 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.LineBorder;
 
 import misc.Card;
-import java.awt.Toolkit;
 
 public class Gui {
 
@@ -40,6 +40,7 @@ public class Gui {
 	private ArrayList<JLabel> playerHand;
 	public ArrayList<Card> playerCardHand;
 	private JLabel playerHandValueLabel;
+	private JLabel lblGameStatus;
 	
 	private int cardCnt = 0;
 	private int handValue = 0;
@@ -245,18 +246,21 @@ public class Gui {
 			playerMoneyPanel.add(spinner);
 			
 			JLabel spinnerLabel = new JLabel("Bet amount:");
-			spinnerLabel.setBounds(550, 11, 131, 42);
+			spinnerLabel.setHorizontalAlignment(SwingConstants.TRAILING);
+			spinnerLabel.setBounds(565, 11, 143, 42);
 			spinnerLabel.setName("betAmountLabel");
 			spinnerLabel.setForeground(foregroundColor);
 			spinnerLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
 			playerMoneyPanel.add(spinnerLabel);
 			
-			JLabel lblGameStatus = new JLabel("");
+			lblGameStatus = new JLabel("");
+			lblGameStatus.setBounds(10, 68, 966, 33);
+			lblGameStatus.setHorizontalAlignment(SwingConstants.CENTER);
+			lblGameStatus.setVerticalAlignment(SwingConstants.TOP);
 			lblGameStatus.setName("gameStatusLabel");
 			lblGameStatus.setForeground(new Color(136, 138, 145));
 			lblGameStatus.setFont(new Font("Tahoma", Font.PLAIN, 24));
-			lblGameStatus.setBounds(239, 11, 307, 42);
-			playerMoneyPanel.add(lblGameStatus);
+			frmBlackjackJavaClient.getContentPane().add(lblGameStatus);
 	}
 
 	protected void OnClose()
@@ -280,6 +284,7 @@ public class Gui {
 		System.out.println("#GUI# Resizing to fit frame size: width: " + frmBlackjackJavaClient.getWidth() + ", height: " + frmBlackjackJavaClient.getHeight());
 		//Resize TopLabel
 		topLabel.setBounds(topLabel.getX(), topLabel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, topLabel.getHeight());
+		lblGameStatus.setBounds(lblGameStatus.getX(), lblGameStatus.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, lblGameStatus.getHeight());
 		
 		//Resize PlayerHandPanel
 			Component[] handComponents = playerHandPanel.getComponents();
@@ -473,7 +478,7 @@ public class Gui {
 	
 	private void newRound() 
 	{
-		if (!(playerBet > 0 && playerBet < money)) 
+		if (!(playerBet > 0 && playerBet <= money)) 
 		{
 			return;
 		}
@@ -499,13 +504,8 @@ public class Gui {
 			{
 				component.setEnabled(false);
 			}
-			
-			if(component.getName().equals("gameStatusLabel"))
-			{
-				JLabel lbl = (JLabel) component;
-				lbl.setText("");
-			}
 		}
+		lblGameStatus.setText("");
 				
 		//Draw first two cards
 		drawCard();
@@ -518,13 +518,6 @@ public class Gui {
 		}
 		
 		drawCard();
-		
-		synchronized(this) {
-			while(playerCardHand.size() < 2 ) 
-			{
-				System.out.print("");
-			}
-		}
 		
 		//Reset Buttons
 		Component[] actionComponents = playerActionPanel.getComponents();
@@ -644,12 +637,7 @@ public class Gui {
 				JLabel label = (JLabel) component;
 				label.setText(Integer.toString(money) + "€");
 			}
-			
-			if(component.getName().equals("gameStatusLabel"))
-			{
-				JLabel lbl = (JLabel) component;
-				lbl.setText(gameStatusMSG);
-			}
 		}
+		lblGameStatus.setText(gameStatusMSG);
 	}
 }
