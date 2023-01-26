@@ -2,91 +2,81 @@
 
 
 
-## Getting started
+##Haupt-Funktionalität:
+Dieses Programm ist dafür da, Black Jack am Computer zu ohne echtes Risiko spielen.
+Dabei verbindet sich der Client mit einem Server, der dann die Karten austeilt und als Dealer fungiert.
+Es können mehrere Spieler gleichzeitig auf einem Server spielen, aber nicht miteinander Interagieren.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+##Black Jack Regeln:
+Blackjack ist ein Kartenspiel, bei dem das Ziel des Spiels darin besteht, eine Hand mit einem Wert von 21 oder möglichst nah an 21 zu erreichen, ohne diesen Wert zu überschreiten. Jeder Spieler spielt gegen den Dealer. Jeder Spieler erhält zu Beginn des Spiels zwei Karten, wobei eine der Karten des Dealers verdeckt bleibt. Der Wert der Karten in einer Hand besteht aus der Summe der Werte aller Karten in der Hand. Die Karten 2 bis 10 haben ihren numerischen Wert, Buben, Damen und Könige sind 10 Punkte wert, und Asse können entweder 1 oder 11 Punkte wert sein.
+In Blackjack gibt es verschiedene Befehle, die der Spieler während des Spiels verwenden kann:
+    I.	"Hit": Der Spieler möchte eine weitere Karte vom Dealer erhalten, um seine Hand zu verbessern.
+    II.	"Stand": Der Spieler ist zufrieden mit seiner Hand und möchte keine weiteren Karten erhalten.
+    III."Double": Der Spieler verdoppelt seinen Einsatz und erhält nur noch eine weitere Karte.
+    IV.	"Split": Wenn der Spieler zwei Karten mit dem gleichen Wert hat, kann er sie teilen und zwei separate Hände spielen.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+##Setup & Starten des Programms:
+Bei diesem Programm gibt es zwei Komponenten, den Client und den Server. Beide müssen individuell gestartet werden, funktionieren aber nur gemeinsam. Dabei ist es egal ob diese zwei Teile am selben oder auf unterschiedlichen PCs gestartet werde, sie müssen nur im selben Netzwerk sein.
+###Server:
+    •	Der Server stellt den Dienst standardmäßig auf dem Port „6868“ zur Verfügung.
+    •	Er hat keine grafische Oberfläche, gibt aber alle wichtigen Aktivitäten über die Konsole aus.
+###Client:
+    •	Der Client muss sich demnach auf die IP-Adresse + Port des Servers verbinden.
+    •	Die grafische Oberfläche wir automatisch vom Client selbst gestartet und synchronisiert sich ständig mit dem Thread, der mit dem Server kommuniziert.
+Zurzeit sind alle Verbindungsdetails (IP & Port) im Code selbst enthalten.
+ 
+##Aufbau & Komponenten:
+###Server:
+Der Server an sich besteht aus zwei Teilen, die die Clients verwalten und die Last verteilen.
+    •	Der Hauptteil <BlackServer> ist ein Endlos-Thread der jede Anfrage eines Clients übernimmt. Dabei öffnet er einen ServerSocket auf der localhost-Adresse am Port 6868. 
+        Das der Server zwischen den einzelnen Anfragen weiter arbeiten kann wird ein Timeout gesetzt der den Server kurzzeitig weiterrechnen lässt.
+        Wenn ein Client eine Anfrage sendet startet der Server einen neuen Thread der Klasse <clientThread> dieser kümmert sich nun um die Kommunikation zum Client.
+        Außerdem wird die neue Verbindung in einer ArrayList gespeichert, die alle Aktiven Verbindungen beinhaltet, sowohl Socket als auch den Thread dazu.
 
-## Add your files
+    •	Der Nebenteil <clientThread> ebenfalls ein Endlos-Thread, dieser übernimmt die gesamte Kommunikation zum Client und die zugehörige Server-Logik.
+        Dabei wird die Kommunikation über einen BufferedReader und einen PrintWriter abgewickelt.
+        Falls nun eine Nachricht übertrage wird reagiert der Server entsprechend:
+        I.	„startSession“
+            Der aller erste Befehl, der von einem Client gesendet wird, er bereitet den Server vor und stellt sicher das der Server Einsatzbereit ist.
+        II.	"closeSession"
+            Der letzte Befehl, den der Client sendet, er beendet die Schleife und den Thread, danach wird der Eintrag (de aktiven Verbindung) im Hauptteil gelöscht.
+        III.Json-Message
+            Alle anderen Nachrichten sind als JSON codiert, sie beinhalten die Daten und Anfragen vom Client. Der JSON String besteht aus zwei Teilen „Type“ und „Value“.
+            Der Client schickt zwei Befehle über die JSON-Nachricht:
+            i.	„draw“
+                Hier fordert der Client eine neue Karte an, der Server zieht aus dem Kartendeck eine neue Karte, codiert diese als JSON-String und sendet ihn zurück. Dabei benutzen alle Threads des Hauptservers dasselbe Kartendeck. Wird eine Karte gezogen wird sie
+                logischerweise aus dem Deck entfernt, bis das Kartendeck neu gemischt wird.
+                Bsp. - Anfrage: „{"name":"draw","value":0}“
+                Bsp. - Antwort: „{"name":"10 of Clover","value":10}“
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+            ii.	„stand“
+                Mit dieser Nachricht beendet der User seinen Zug, und sendet den vollen Wert seiner Kartenhand mit. Der Server generiert nun auf Basis des Wertes der Spieler-Kartenhand seine eigene Dealer-Kartenhand. Mit beiden Werten wird nun der Spielausgang   
+                errechnet, der Server sendet also den Status {„draw“, „win“, „loose“} mit dem Wert der Dealer-Kartenhand zurück.
+                Bsp. - Anfrage: „{"name":"stand","value":0}“
+                Bsp. - Antwort: „{"name":"win","value":18}“
 
-```
-cd existing_repo
-git remote add origin https://git.htltraun.at/T80042/5bhit_wagner_weissengruber_blackjack.git
-git branch -M main
-git push -uf origin main
-```
 
-## Integrate with your tools
 
-- [ ] [Set up project integrations](https://git.htltraun.at/T80042/5bhit_wagner_weissengruber_blackjack/-/settings/integrations)
+###Client:
+Der Client besteht ebenfalls aus zwei Teilen:
+    •	Der <BlackClient>, ein Endlos-Thread, der als erstes die Kommunikation mit dem Server aufbaut und dann die Eingaben des Users weiterleitet. Er startet auch direkt den zweiten Teil die GUI. Auch hier wird die Kommunikation über einen BufferedReader und     einen PrintWriter abgewickelt.
+        Der Client fungiert nur als Übersetzer, er codiert alle Nachrichten zu und von JSON und gibt alle Daten an die GUI weiter. Beide Befehle {„draw“, „stand“} müssen zwei Mal behandelt werden, da der User auch die Möglichkeit hat seine Karten zu splitten.
+        Beim Ziehen einer Karte muss der GUI-Thread und der Client-Thread synchronisiert werden, damit alles reibungslos abläuft.
 
-## Collaborate with your team
+    •	Die <GUI> ist natürlich ihr eigener Thread und stellt das User-Interface zur Verfügung.
+        Darin werden alle bekannten Möglichkeiten eines Black Jack-Spiels implementiert. Es gibt vier Knöpfe für die Funktionen „Draw“, „Stand“, „Double“ und „Split“. Darüber hinaus gibt es ein Eingabefeld für den Wetteinsatz der nach jeder Runde neu berechnet und Angezeigt wird.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+##Miscellaneous:
+Das sind alle Teile die für die Logik der Karten wichtig sind. Dazu gehören das Kartendeck, die Kartenhand und die Karte an sich. Prinzipiell sind alle drei nur einzelne Java-Objekte die in den anderen als ArrayList benutzt werden.
+    •  	Kartendeck
+        Das Kartendeck besteht aus einer ArrayList, die mit allen Arten von Karten initialisiert wird, also Ass bis König und von Herz bis Kreuz. Bei jeder neuen Ziehung einer Karte wird über einen zufälligen Wert die Karte bestimmt. Wenn das Deck leer ist wird es automatisch neu befüllt. 
+    •	Kartenhand
+        Die Kartenhand besteht ebenfalls aus einer ArrayList von Karten, die gezogen wurden. Dabei gibt es aber die Methoden, die die ganze Hand als JSON oder den gesamten Wert der Hand zurückgibt.
+    •	Karte
+        Die Karte ist ein einfache Objekt, mit dem Karten Namen und dem Karten Wert.
+Es gibt auch noch ein Java-Objekt <JsonObj> das für die Umwandlung zum JSON-String benötigt wird.
 
-## Test and Deploy
+##Externe Ressourcen:
+Es gibt nur eine Library die über Maven zusätzlich geladen wird und zwar GSON von Google.
+Weitere Ressourcen die genutzt werden sind die Grafiken der Karten von „https://www.kenney.nl/assets/playing-cards-pack“
 
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
