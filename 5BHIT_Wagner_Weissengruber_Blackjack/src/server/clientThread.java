@@ -55,8 +55,11 @@ public class clientThread extends Thread
 	            String recievedMSG;
 	            
 	            do {
-	            	Thread.sleep(1000);
 	                recievedMSG = reader.readLine();
+	                if(recievedMSG.isBlank()) //Finished loop early if blank
+	                {
+	                	continue;
+	                }
 	                
 	                if(recievedMSG.equals("startSession"))
 	                { //Verbindungs start
@@ -90,7 +93,6 @@ public class clientThread extends Thread
 								System.out.println("#ThreadLog# Player's Hand is " + playerHandValue + " worth!");
 								
 								String state = getGameState(playerHandValue, dealerHandValue);
-								System.out.println(state);
 								msg = gson.toJson(new JsonObj(state, dealerHandValue));
 								
 								break;
@@ -106,8 +108,6 @@ public class clientThread extends Thread
     		} catch (IOException ex) {
                 System.out.println("Server exception: " + ex.getMessage());
                 ex.printStackTrace();
-            } catch (InterruptedException e) {
-    			e.printStackTrace();
     		}
 		}
 		System.out.println("#ThreadLog# Thread " + this.getName() + " is now stopping!");

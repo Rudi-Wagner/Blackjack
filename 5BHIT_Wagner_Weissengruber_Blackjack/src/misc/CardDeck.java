@@ -11,16 +11,7 @@ public class CardDeck
 	private int[] cardValues 	= { 11	,  2 ,  3 ,  4 ,  5 ,  6 ,  7 ,  8 ,  9 ,  10 ,   10  ,   10   ,   10  };
 	
 	public CardDeck() 
-	{
-//		CardDeck.add(new Card("King of Spades", 10));
-//		CardDeck.add(new Card("King of Spades", 10));
-//		CardDeck.add(new Card("King of Hearts", 10));
-//		CardDeck.add(new Card("King of Hearts", 10));
-//		CardDeck.add(new Card("King of Diamonds", 10));
-//		CardDeck.add(new Card("King of Diamonds", 10));
-//		CardDeck.add(new Card("King of Clover", 10));
-//		CardDeck.add(new Card("King of Clover", 10));
-		
+	{	
 		shuffle();
 	}
 	
