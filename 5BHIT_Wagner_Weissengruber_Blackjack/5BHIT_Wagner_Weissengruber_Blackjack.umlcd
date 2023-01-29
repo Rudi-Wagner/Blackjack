@@ -1,0 +1,2292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_VcOLwKAGEe2yhtolEJTpxQ">
+  <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vbz8EKAGEe2yhtolEJTpxQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_XLFhUKAGEe2yhtolEJTpxQ" targetItem="_XLJzAqAGEe2yhtolEJTpxQ" sourceItem="_XLE6QKAGEe2yhtolEJTpxQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLHWgKAGEe2yhtolEJTpxQ" sourceAnchor="207.0,0.0" targetAnchor="243.0,327.0" target="_XLJy0qAGEe2yhtolEJTpxQ" source="_XLZDWaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn20BKAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLHWgaAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn20BqAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLHWgqAGEe2yhtolEJTpxQ" text="">
+      <visualProperties xmi:id="_XWdq4KAGEe2yhtolEJTpxQ" position="-7.106208517198866,160.92113068975914"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XLHWg6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn20BaAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWdD0qAGEe2yhtolEJTpxQ" position="3.7067773968689153,-76.09404533314091"/>
+      <visibility xmi:id="_XLHWhKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLHWhaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLHWhqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="client" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSMQqAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWdq4aAGEe2yhtolEJTpxQ" position="-9.49540933437737,359.9665213039973"/>
+      <stereotypes xmi:id="_XLHWh6AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSMQ6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLHWiKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLHWiaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLHWiqAGEe2yhtolEJTpxQ" sourceAnchor="222.0,0.0" targetAnchor="0.0,193.0" target="_XLJy0qAGEe2yhtolEJTpxQ" source="_XLr-QKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn7FcaAGEe2yhtolEJTpxQ"/>
+    <bendpoints xmi:id="_XWaAgaAGEe2yhtolEJTpxQ" sourceY="-189" targetX="-319"/>
+    <stereotypes xmi:id="_XLHWi6AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn7Fc6AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLHWjKAGEe2yhtolEJTpxQ" text="">
+      <visualProperties xmi:id="_XWfgEKAGEe2yhtolEJTpxQ" position="-9.604734871446738,16.691043412477768"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XLHWjaAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn7FcqAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWe5AaAGEe2yhtolEJTpxQ" position="3.759661135844169,-71.50734670542732"/>
+      <visibility xmi:id="_XLHWjqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLHWj6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLHWkKAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="client" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnV2oqAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWfgEaAGEe2yhtolEJTpxQ" position="-330.11079042335064,-120.0007419096778"/>
+      <stereotypes xmi:id="_XLHWkaAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnV2o6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLHWkqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLHWk6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLH9kKAGEe2yhtolEJTpxQ" source="_XLJy0qAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn0XwKAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLH9kaAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn0-0KAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLH9kqAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLH9k6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn0XwaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLH9lKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLH9laAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLH9lqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="output" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnPwAKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLH9l6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLH9mKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLIkoKAGEe2yhtolEJTpxQ" source="_XLJy0qAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn0-0aAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLIkoaAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn0-06AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLIkoqAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLIko6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn0-0qAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLIkpKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLIkpaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLIkpqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="writer" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQXEKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLIkp6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLIkqKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLIkqaAGEe2yhtolEJTpxQ" sourceAnchor="213.0,327.0" targetAnchor="177.0,0.0" target="_XLZDWaAGEe2yhtolEJTpxQ" source="_XLJy0qAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn0-1KAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLIkqqAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn1l4KAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLIkq6AGEe2yhtolEJTpxQ" text="">
+      <visualProperties xmi:id="_XWankaAGEe2yhtolEJTpxQ" position="-8.096093420322802,-175.0836755928567"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XLIkrKAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn0-1aAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWankKAGEe2yhtolEJTpxQ" position="4.509648214060633,24.03265139880415"/>
+      <visibility xmi:id="_XLIkraAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLIkrqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLIkr6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="window" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQXEqAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWankqAGEe2yhtolEJTpxQ" position="-17.293222603131056,-411.9569788609116"/>
+      <visibility xmi:id="_XLIksKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLIksaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLIksqAGEe2yhtolEJTpxQ" sourceAnchor="171.0,327.0" targetAnchor="445.0,268.0" target="_XLr-QKAGEe2yhtolEJTpxQ" source="_XLJy0qAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn1l4aAGEe2yhtolEJTpxQ"/>
+    <bendpoints xmi:id="_XWZZcKAGEe2yhtolEJTpxQ" sourceY="323" targetX="267"/>
+    <stereotypes xmi:id="_XLIks6AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn1l46AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLIktKAGEe2yhtolEJTpxQ" text="">
+      <visualProperties xmi:id="_XWbOoaAGEe2yhtolEJTpxQ" position="-10.451902978927933,-157.06454450330511"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XLIktaAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn1l4qAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWbOoKAGEe2yhtolEJTpxQ" position="3.4969504683674018,28.66216453978734"/>
+      <visibility xmi:id="_XLIktqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLIkt6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLIkuKAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="window2" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQXFKAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWbOoqAGEe2yhtolEJTpxQ" position="247.29098608130286,-56.57877778323291"/>
+      <visibility xmi:id="_XLIkuaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLIkuqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLIku6AGEe2yhtolEJTpxQ" source="_XLJy0qAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn1l5KAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLIkvKAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn2M8KAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLIkvaAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLIkvqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn1l5aAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLIkv6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLIkwKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLIkwaAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="socket" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQ-IaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLIkwqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLIkw6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLJywKAGEe2yhtolEJTpxQ" sourceAnchor="0.0,163.0" targetAnchor="0.0,67.0" target="_XMCjkaAGEe2yhtolEJTpxQ" source="_XLJy0qAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn2M8aAGEe2yhtolEJTpxQ"/>
+    <bendpoints xmi:id="_XWZZcaAGEe2yhtolEJTpxQ" sourceX="-1408" targetX="-868" targetY="1418"/>
+    <bendpoints xmi:id="_XWZZcqAGEe2yhtolEJTpxQ" sourceX="-1408" sourceY="-1418" targetX="-868"/>
+    <stereotypes xmi:id="_XLJywaAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn2M86AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLJywqAGEe2yhtolEJTpxQ" text="">
+      <visualProperties xmi:id="_XWb1saAGEe2yhtolEJTpxQ" position="1252.4009397378607,707.8079126932032"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XLJyw6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn2M8qAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWb1sKAGEe2yhtolEJTpxQ" position="-60.394013480403586,-11.38287525104451"/>
+      <visibility xmi:id="_XLJyxKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLJyxaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLJyxqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="hand" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQ-JKAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWccwKAGEe2yhtolEJTpxQ" position="305.230008551305,1407.0290868173593"/>
+      <visibility xmi:id="_XLJyx6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLJyyKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLJyyaAGEe2yhtolEJTpxQ" sourceAnchor="342.0,193.0" targetAnchor="206.0,11.0" target="_XMCjkaAGEe2yhtolEJTpxQ" source="_XLJy0qAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn2M9KAGEe2yhtolEJTpxQ"/>
+    <bendpoints xmi:id="_XWZZc6AGEe2yhtolEJTpxQ" sourceX="586" targetX="1262" targetY="1504"/>
+    <bendpoints xmi:id="_XWZZdKAGEe2yhtolEJTpxQ" sourceX="586" sourceY="-1504" targetX="1262"/>
+    <stereotypes xmi:id="_XLJyyqAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn20AKAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLJyy6AGEe2yhtolEJTpxQ" text="">
+      <visualProperties xmi:id="_XWdD0KAGEe2yhtolEJTpxQ" position="-467.40093973786065,737.1920873067968"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XLJyzKAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn2M9aAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWccwaAGEe2yhtolEJTpxQ" position="45.3940134804036,-32.61712474895549"/>
+      <visibility xmi:id="_XLJyzaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLJyzqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLJyz6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="handSplitted" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQ-JqAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWdD0aAGEe2yhtolEJTpxQ" position="848.769991448695,1470.9709131826407"/>
+      <visibility xmi:id="_XLJy0KAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLJy0aAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLRHgKAGEe2yhtolEJTpxQ" sourceAnchor="222.0,536.0" targetAnchor="0.0,325.0" target="_XLZDWaAGEe2yhtolEJTpxQ" source="_XLr-QKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn7FdKAGEe2yhtolEJTpxQ"/>
+    <bendpoints xmi:id="_XWaAgqAGEe2yhtolEJTpxQ" sourceY="380" targetX="-355"/>
+    <stereotypes xmi:id="_XLTjw6AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn7sgKAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLTjwKAGEe2yhtolEJTpxQ" text="">
+      <visualProperties xmi:id="_XWgHIKAGEe2yhtolEJTpxQ" position="-23.631937528111223,-188.3596412084571"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XLTjwaAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn7FdaAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWfgEqAGEe2yhtolEJTpxQ" position="-17.00397355611676,33.644229326304185"/>
+      <visibility xmi:id="_XLUK0aAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLUK0KAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLTjwqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="mainGui" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnV2pKAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWgHIaAGEe2yhtolEJTpxQ" position="-393.82995133513253,-62.379018642749315"/>
+      <stereotypes xmi:id="_XLUK1KAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnV2paAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLUK06AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLUK0qAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLRukKAGEe2yhtolEJTpxQ" sourceAnchor="135.0,0.0" targetAnchor="445.0,298.0" target="_XLr-QKAGEe2yhtolEJTpxQ" source="_XLZDWaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn53UaAGEe2yhtolEJTpxQ"/>
+    <bendpoints xmi:id="_XWaAgKAGEe2yhtolEJTpxQ" sourceY="-293" targetX="267"/>
+    <stereotypes xmi:id="_XLTjx6AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn53U6AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLTjxKAGEe2yhtolEJTpxQ" text="">
+      <visualProperties xmi:id="_XWeR8KAGEe2yhtolEJTpxQ" position="-23.25719158285358,101.74368922457415"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XLTjxaAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn53UqAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWdq4qAGEe2yhtolEJTpxQ" position="-16.57717956290668,-66.20474586566945"/>
+      <visibility xmi:id="_XLUK1qAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLUK1aAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLTjxqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="gui2" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUog6AGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWe5AKAGEe2yhtolEJTpxQ" position="238.74325467165744,-58.0507002974216"/>
+      <visibility xmi:id="_XLUx4KAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLUK16AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLVY8KAGEe2yhtolEJTpxQ" source="_XLZDWaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn20AaAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLVY8aAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn20A6AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLVY8qAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLVY86AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn20AqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLVY9KAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLVY9aAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLVY9qAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="frmBlackjackJavaClient" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSMQKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLVY96AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLVY-KAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLVY-aAGEe2yhtolEJTpxQ" source="_XLZDWaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn20B6AGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLVY-qAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn3bEaAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLVY-6AGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLVY_KAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn3bEKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLVY_aAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLVY_qAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLVY_6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="playerActionPanel" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSMRKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLVZAKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLVZAaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLWAAKAGEe2yhtolEJTpxQ" source="_XLZDWaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn3bEqAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLWAAaAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn4CIKAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLWAAqAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLWAA6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn3bE6AGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLWABKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLWABaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLWABqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="playerHandPanel" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSMRqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLWAB6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLWACKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLWACaAGEe2yhtolEJTpxQ" source="_XLZDWaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn4CIaAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLWACqAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn4CI6AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLWAC6AGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLWADKAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn4CIqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLWADaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLWADqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLWAD6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="playerMoneyPanel" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSzUKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLWAEKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLWAEaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLWAEqAGEe2yhtolEJTpxQ" source="_XLZDWaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn4CJKAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLWAE6AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn4pMKAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLWAFKAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLWAFaAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn4CJaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLWAFqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLWAF6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLWAGKAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="topLabel" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSzUqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLWAGaAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLWAGqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLWnEKAGEe2yhtolEJTpxQ" source="_XLZDWaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn4pMaAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLWnEaAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn4pM6AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLWnEqAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLWnE6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn4pMqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLWnFKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLWnFaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLWnFqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="playerHand" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSzVKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLWnF6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLWnGKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLWnGaAGEe2yhtolEJTpxQ" source="_XLZDWaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn5QQKAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLWnGqAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn5QQqAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLWnG6AGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLWnHKAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn5QQaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLWnHaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLWnHqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLWnH6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="playerCardHand" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnTaYaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLWnIKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLWnIaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLXOIKAGEe2yhtolEJTpxQ" source="_XLZDWaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn5QQ6AGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLXOIaAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn5QRaAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLXOIqAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLXOI6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn5QRKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLXOJKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLXOJaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLXOJqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="playerHandValueLabel" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnTaZKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLXOJ6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLXOKKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLX1MKAGEe2yhtolEJTpxQ" source="_XLZDWaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn5QRqAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLX1MaAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn53UKAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLX1MqAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLX1M6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn5QR6AGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLX1NKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLX1NaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLX1NqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="lblGameStatus" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUBcKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLX1N6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLX1OKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLX1OaAGEe2yhtolEJTpxQ" source="_XLZDWaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn53VKAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLX1OqAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn6eYKAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLX1O6AGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLX1PKAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn53VaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLX1PaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLX1PqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLX1P6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="foregroundColor" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUohqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLX1QKAGEe2yhtolEJTpxQ" label="~"/>
+      <cardinality xmi:id="_XLX1QaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLYcQKAGEe2yhtolEJTpxQ" source="_XLZDWaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn6eYaAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLYcQaAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn6eY6AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLYcQqAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLYcQ6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn6eYqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLYcRKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLYcRaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLYcRqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="backgroundColor" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUoiaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLYcR6AGEe2yhtolEJTpxQ" label="~"/>
+      <cardinality xmi:id="_XLYcSKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLZDUKAGEe2yhtolEJTpxQ" source="_XLZDWaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn6eZKAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLZDUaAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn6eZqAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLZDUqAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLZDU6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn6eZaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZDVKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLZDVaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLZDVqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="specialColor" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnVPkaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZDV6AGEe2yhtolEJTpxQ" label="~"/>
+      <cardinality xmi:id="_XLZDWKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLkpgKAGEe2yhtolEJTpxQ" source="_XLr-QKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn6eZ6AGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLnFw6AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn7FcKAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLnFwKAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLnFwaAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn6eaKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLo68aAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLo68KAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLnFwqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="frmBlackjackJavaClient" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnV2oKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLo686AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLo68qAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLkpgaAGEe2yhtolEJTpxQ" source="_XLr-QKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn7sgaAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLnFx6AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn7sg6AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLnFxKAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLnFxaAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn7sgqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLo69qAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLo69aAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLnFxqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="playerActionPanel" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnV2pqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLo6-KAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLo696AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLkpgqAGEe2yhtolEJTpxQ" source="_XLr-QKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn7shKAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLnFy6AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn8TkKAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLnFyKAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLnFyaAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn7shaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLo6-6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLo6-qAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLnFyqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="playerHandPanel" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VndLYaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLo6_aAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLo6_KAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLkpg6AGEe2yhtolEJTpxQ" source="_XLr-QKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn8TkaAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLns06AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn8Tk6AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLns0KAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLns0aAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn8TkqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLo7AKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLo6_6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLns0qAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="topLabel" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VndycKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLo7AqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLo7AaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLkphKAGEe2yhtolEJTpxQ" source="_XLr-QKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn8TlKAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLns16AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn86oKAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLns1KAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLns1aAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn8TlaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLo7BaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLo7BKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLns1qAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="playerHand" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VndycqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLo7B6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLo7BqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLlQkKAGEe2yhtolEJTpxQ" source="_XLr-QKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn86oaAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLns26AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn86o6AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLns2KAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLns2aAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn86oqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLpiA6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLpiAqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLns2qAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="playerCardHand" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnfAkKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLpiBaAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLpiBKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLlQkaAGEe2yhtolEJTpxQ" source="_XLr-QKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn86pKAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLns36AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn9hsKAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLns3KAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLns3aAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn86paAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLpiCaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLpiCKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLns3qAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="playerHandValueLabel" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnfAk6AGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLpiC6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLpiCqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLlQkqAGEe2yhtolEJTpxQ" source="_XLr-QKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn9hsaAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLns46AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn9hs6AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLns4KAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLns4aAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn9hsqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLpiDqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLpiDaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLns4qAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="lblGameStatus" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnfnoKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLpiEKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLpiD6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLlQk6AGEe2yhtolEJTpxQ" source="_XLr-QKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn9htKAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLoT4qAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-IwKAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLns5KAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLoT4KAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn9htaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLpiE6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLpiEqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLoT4aAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="foregroundColor" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VngOtKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLpiFaAGEe2yhtolEJTpxQ" label="~"/>
+      <cardinality xmi:id="_XLpiFKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLlQlKAGEe2yhtolEJTpxQ" source="_XLr-QKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-IwaAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLoT5qAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-Iw6AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLoT46AGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLoT5KAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-IwqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLqJEqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLqJEaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLoT5aAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="backgroundColor" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VngOt6AGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLqJFKAGEe2yhtolEJTpxQ" label="~"/>
+      <cardinality xmi:id="_XLqJE6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XLlQlaAGEe2yhtolEJTpxQ" source="_XLr-QKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-IxKAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XLoT6qAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-IxqAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XLoT56AGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XLoT6KAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-IxaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLqJF6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLqJFqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XLoT6aAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="specialColor" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vng1wqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLqJGaAGEe2yhtolEJTpxQ" label="~"/>
+      <cardinality xmi:id="_XLqJGKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XL1IMKAGEe2yhtolEJTpxQ" sourceAnchor="64.0,92.0" targetAnchor="170.0,175.0" target="_XL9EBqAGEe2yhtolEJTpxQ" source="_XL1IOaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-Ix6AGEe2yhtolEJTpxQ"/>
+    <bendpoints xmi:id="_XWaAg6AGEe2yhtolEJTpxQ" sourceY="25" targetX="947" targetY="172"/>
+    <bendpoints xmi:id="_XWaAhKAGEe2yhtolEJTpxQ" sourceX="-947" sourceY="25" targetY="172"/>
+    <stereotypes xmi:id="_XL1IMaAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-v0KAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XL1IMqAGEe2yhtolEJTpxQ" text="">
+      <visualProperties xmi:id="_XWguMKAGEe2yhtolEJTpxQ" position="460.1170089376827,-2.231512336222636"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XL1IM6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-IyKAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWgHIqAGEe2yhtolEJTpxQ" position="1.4741795512148315,34.02744774222424"/>
+      <visibility xmi:id="_XL1INKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL1INaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XL1INqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="cardDeck" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vnhc0KAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWguMaAGEe2yhtolEJTpxQ" position="924.2899165521955,128.12045094457744"/>
+      <visibility xmi:id="_XL1IN6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XL1IOKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XL4LgKAGEe2yhtolEJTpxQ" sourceAnchor="109.0,0.0" targetAnchor="103.0,194.0" target="_XMCjkaAGEe2yhtolEJTpxQ" source="_XL5Zo6AGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-v0aAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XL4ymKAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-v06AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XL4ylaAGEe2yhtolEJTpxQ" text="">
+      <visualProperties xmi:id="_XWhVQaAGEe2yhtolEJTpxQ" position="-25.351243429800036,147.67631189426288"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XL4ylqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-v0qAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWhVQKAGEe2yhtolEJTpxQ" position="-17.89955014853865,-76.44487671757622"/>
+      <visibility xmi:id="_XL4ymqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL4ymaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XL4yl6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="cardHand" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VniD4aAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWhVQqAGEe2yhtolEJTpxQ" position="-44.38478867417814,349.31789319438235"/>
+      <visibility xmi:id="_XL5ZoaAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XL5ZoKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_XL4LgqAGEe2yhtolEJTpxQ" targetItem="_XL5ZrqAGEe2yhtolEJTpxQ" sourceItem="_XL4LgaAGEe2yhtolEJTpxQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_XL4LhKAGEe2yhtolEJTpxQ" targetItem="_XL5ZsaAGEe2yhtolEJTpxQ" sourceItem="_XL4Lg6AGEe2yhtolEJTpxQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_XL4ykKAGEe2yhtolEJTpxQ" targetItem="_XL5ZtKAGEe2yhtolEJTpxQ" sourceItem="_XL4LhaAGEe2yhtolEJTpxQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_XL4ykqAGEe2yhtolEJTpxQ" targetItem="_XL5Zt6AGEe2yhtolEJTpxQ" sourceItem="_XL4ykaAGEe2yhtolEJTpxQ"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_XL4ylKAGEe2yhtolEJTpxQ" targetItem="_XL5ZuqAGEe2yhtolEJTpxQ" sourceItem="_XL4yk6AGEe2yhtolEJTpxQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XL714KAGEe2yhtolEJTpxQ" source="_XL9EBqAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-v1KAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XL8c86AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn_W4KAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XL8c8KAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XL8c8aAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn-v1aAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL9EAaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL9EAKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XL8c8qAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="CardDeck" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vniq8qAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL9EA6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL9EAqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XMAuYKAGEe2yhtolEJTpxQ" source="_XMCjkaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn_W4aAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XMB8gaAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn_W46AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XMBVcKAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XMBVcaAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn_W4qAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMB8g6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMB8gqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XMB8gKAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="cardHand" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnkgIqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMB8haAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMB8hKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XMJ4UKAGEe2yhtolEJTpxQ" sourceAnchor="0.0,69.0" targetAnchor="140.0,175.0" target="_XL9EBqAGEe2yhtolEJTpxQ" source="_XMMUkKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VoAlAaAGEe2yhtolEJTpxQ"/>
+    <bendpoints xmi:id="_XWaAhaAGEe2yhtolEJTpxQ" sourceX="-322" targetY="293"/>
+    <stereotypes xmi:id="_XMKfZaAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VoAlA6AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XMKfYqAGEe2yhtolEJTpxQ" text="">
+      <visualProperties xmi:id="_XWh8UaAGEe2yhtolEJTpxQ" position="208.37662541804207,-13.491443560927507"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XMKfY6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VoAlAqAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWh8UKAGEe2yhtolEJTpxQ" position="-51.20359007314562,-32.0746477967557"/>
+      <visibility xmi:id="_XMLGdaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMLGdKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XMKfZKAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="deck" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vnm8YqAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWh8UqAGEe2yhtolEJTpxQ" position="151.41212694979254,260.93259646705224"/>
+      <visibility xmi:id="_XMLGd6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XMLGdqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XMKfYKAGEe2yhtolEJTpxQ" sourceAnchor="320.0,0.0" targetAnchor="0.0,97.0" target="_XMCjkaAGEe2yhtolEJTpxQ" source="_XMMUkKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VoAlBKAGEe2yhtolEJTpxQ"/>
+    <bendpoints xmi:id="_XWaAhqAGEe2yhtolEJTpxQ" sourceY="-778" targetX="-71"/>
+    <stereotypes xmi:id="_XMKfaaAGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VoBMEKAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XMKfZqAGEe2yhtolEJTpxQ" text="">
+      <visualProperties xmi:id="_XWijYaAGEe2yhtolEJTpxQ" position="-17.118372970494534,705.5871360891883"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XMKfZ6AGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VoAlBaAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWijYKAGEe2yhtolEJTpxQ" position="-0.9525405641935549,-63.978199314477365"/>
+      <visibility xmi:id="_XMLtgqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMLtgaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XMKfaKAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="dealerHand" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnnjcKAGEe2yhtolEJTpxQ"/>
+      <visualProperties xmi:id="_XWijYqAGEe2yhtolEJTpxQ" position="-103.04186303557731,666.8423274050299"/>
+      <visibility xmi:id="_XMLthKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XMLtg6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XMKfYaAGEe2yhtolEJTpxQ" source="_XMMUkKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn_99KAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XMLGc6AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VoAlAKAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XMLGcKAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XMLGcaAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn_99aAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMLth6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMLthqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XMLGcqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="socket" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vnm8YKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMLtiaAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XMLtiKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_XMP-8aAGEe2yhtolEJTpxQ" targetItem="_XMSbMKAGEe2yhtolEJTpxQ" sourceItem="_XMP-8KAGEe2yhtolEJTpxQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XMQmAKAGEe2yhtolEJTpxQ" source="_XMSbMKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn_W5KAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XMRNE6AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn_98KAGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XMRNEKAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XMRNEaAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn_W5aAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMRNGaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMRNGKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XMRNEqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="allSockets" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnluQqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMRNG6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMRNGqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XMQmAaAGEe2yhtolEJTpxQ" source="_XMSbMKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn_98aAGEe2yhtolEJTpxQ"/>
+    <stereotypes xmi:id="_XMRNF6AGEe2yhtolEJTpxQ" name="Reference">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn_986AGEe2yhtolEJTpxQ"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XMRNFKAGEe2yhtolEJTpxQ" text=""/>
+    <sourceRole xmi:id="_XMRNFaAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vn_98qAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMR0I6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMR0IqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XMRNFqAGEe2yhtolEJTpxQ" aggregationKind="NONE" name="allThreads" navigable="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnmVUaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMR0JaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMR0JKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_XLE6QKAGEe2yhtolEJTpxQ" sourceConnectionVisual="_XLFhUKAGEe2yhtolEJTpxQ" text="Rudi Wagner&#xD;&#xA;&#x9; * Paul Weissengruber&#xD;&#xA;&#x9; * 5 BHIT&#xD;&#xA;&#x9; * Blackjack&#xD;&#xA;&#x9; * Client" item="_XLJzAqAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnwGUKAGEe2yhtolEJTpxQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_XL4LgaAGEe2yhtolEJTpxQ" sourceConnectionVisual="_XL4LgqAGEe2yhtolEJTpxQ" text="Basic tests on standard Methods" item="_XL5ZrqAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnwGUaAGEe2yhtolEJTpxQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_XL4Lg6AGEe2yhtolEJTpxQ" sourceConnectionVisual="_XL4LhKAGEe2yhtolEJTpxQ" text="Test getValue() Method&#xD;&#xA;&#x9; * Normal Value without Aces&#xD;&#xA;&#x9; * 5 + 5 + 5 = 15" item="_XL5ZsaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnwGUqAGEe2yhtolEJTpxQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_XL4LhaAGEe2yhtolEJTpxQ" sourceConnectionVisual="_XL4ykKAGEe2yhtolEJTpxQ" text="Test getValue() Method&#xD;&#xA;&#x9; * Normal Value with Ace at first place&#xD;&#xA;&#x9; * 11 + 5 + 5 = 21" item="_XL5ZtKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnwtYKAGEe2yhtolEJTpxQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_XL4ykaAGEe2yhtolEJTpxQ" sourceConnectionVisual="_XL4ykqAGEe2yhtolEJTpxQ" text="Test getValue() Method&#xD;&#xA;&#x9; * Normal Value with Ace at last place&#xD;&#xA;&#x9; * 10 + 5 + 11 > 21 --> deswegen soll das Ass als 1 gewertet werden&#xD;&#xA;&#x9; * also 10 + 5 + 1 = 16" item="_XL5Zt6AGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnwtYaAGEe2yhtolEJTpxQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_XL4yk6AGEe2yhtolEJTpxQ" sourceConnectionVisual="_XL4ylKAGEe2yhtolEJTpxQ" text="Test getValue() Method&#xD;&#xA;&#x9; * Normal Value with Ace in the middle&#xD;&#xA;&#x9; * 5 + 11 + 5 = 21" item="_XL5ZuqAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnwtYqAGEe2yhtolEJTpxQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_XMP-8KAGEe2yhtolEJTpxQ" sourceConnectionVisual="_XMP-8aAGEe2yhtolEJTpxQ" text="Rudi Wagner&#xD;&#xA;Paul Weissengruber&#xD;&#xA;5 BHIT&#xD;&#xA;Blackjack&#xD;&#xA;Server" item="_XMSbMKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnwtY6AGEe2yhtolEJTpxQ"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XLJy0qAGEe2yhtolEJTpxQ" name="BlackClient" associationsIn="_XLHWgKAGEe2yhtolEJTpxQ _XLHWiqAGEe2yhtolEJTpxQ" associationsOut="_XLH9kKAGEe2yhtolEJTpxQ _XLIkoKAGEe2yhtolEJTpxQ _XLIkqaAGEe2yhtolEJTpxQ _XLIksqAGEe2yhtolEJTpxQ _XLIku6AGEe2yhtolEJTpxQ _XLJywKAGEe2yhtolEJTpxQ _XLJyyaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlSoMKAGEe2yhtolEJTpxQ"/>
+    <visualProperties xmi:id="_XLJy06AGEe2yhtolEJTpxQ" position="30.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XLJy1KAGEe2yhtolEJTpxQ" label="+"/>
+    <attributes xmi:id="_XLJy1aAGEe2yhtolEJTpxQ" name="output">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnPwAKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLJy1qAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnPwAaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLJy16AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLJy2KAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLJy2aAGEe2yhtolEJTpxQ" name="OutputStream">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm1gU6AGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLJy2qAGEe2yhtolEJTpxQ" name="writer">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQXEKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLJy26AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQXEaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLJy3KAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLJy3aAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLJy3qAGEe2yhtolEJTpxQ" name="PrintWriter">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm2HYaAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLJy36AGEe2yhtolEJTpxQ" name="window" staticAttribute="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQXEqAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLJy4KAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQXE6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLJy4aAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLJy4qAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLJy46AGEe2yhtolEJTpxQ" name="Gui">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlXgsKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLJy5KAGEe2yhtolEJTpxQ" name="window2" staticAttribute="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQXFKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLJy5aAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQ-IKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLJy5qAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLJy56AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLJy6KAGEe2yhtolEJTpxQ" name="GuiForSplit">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VleOYKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLJy6aAGEe2yhtolEJTpxQ" defaultValue="null" name="socket">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQ-IaAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLJy6qAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQ-I6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLJy66AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLJy7KAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLJy7aAGEe2yhtolEJTpxQ" name="Socket">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm2HY6AGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLJy7qAGEe2yhtolEJTpxQ" name="hand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQ-JKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLJy76AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQ-JaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLJy8KAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLJy8aAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLJy8qAGEe2yhtolEJTpxQ" name="CardHand">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmKMKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLJy86AGEe2yhtolEJTpxQ" name="handSplitted">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnQ-JqAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLJy9KAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnRlMKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLJy9aAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLJy9qAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLJy96AGEe2yhtolEJTpxQ" name="CardHand">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmKMKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLJy-KAGEe2yhtolEJTpxQ" defaultValue="false" name="doForSplitted">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnRlMaAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLJy-aAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnRlM6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLJy-qAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLJy-6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLJy_KAGEe2yhtolEJTpxQ" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLJy_aAGEe2yhtolEJTpxQ" defaultValue="&quot;&quot;" name="inputString">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnRlNKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLJy_qAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnRlNqAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLJy_6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLJzAKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLJzAaAGEe2yhtolEJTpxQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XLJzAqAGEe2yhtolEJTpxQ" comments="_XLE6QKAGEe2yhtolEJTpxQ" targetConnectionVisual="_XLFhUKAGEe2yhtolEJTpxQ" name="main" staticOperation="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlUdYKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLJzA6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLJzBKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XLJzBaAGEe2yhtolEJTpxQ" name="args">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlUdYaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLJzBqAGEe2yhtolEJTpxQ" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_XLJzB6AGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLJzCKAGEe2yhtolEJTpxQ" name="run">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVEcaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLJzCaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLJzCqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLJzC6AGEe2yhtolEJTpxQ" name="translateCardFromJson">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVEcqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLJzDKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLJzDaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLJzDqAGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm3VgKAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XLJzD6AGEe2yhtolEJTpxQ" name="Card">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlkVAKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLJzEKAGEe2yhtolEJTpxQ" name="msg">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVEc6AGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLJzEaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLJzEqAGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLJzE6AGEe2yhtolEJTpxQ" name="translateFromJson">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVEdKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLJzFKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLJzFaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLJzFqAGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm3VgaAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XLJzF6AGEe2yhtolEJTpxQ" name="JsonObj">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlnYUKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLJzGKAGEe2yhtolEJTpxQ" name="msg">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVEdaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLJzGaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLJzGqAGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLJzG6AGEe2yhtolEJTpxQ" name="shutdown">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVEdqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLJzHKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLJzHaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLJzHqAGEe2yhtolEJTpxQ" name="sendMessage">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVEd6AGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLJzH6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLJzIKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XLJzIaAGEe2yhtolEJTpxQ" name="msg">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVEeKAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLJzIqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLJzI6AGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLJzJKAGEe2yhtolEJTpxQ" name="doForSplitted">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVEeaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLJzJaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLJzJqAGEe2yhtolEJTpxQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLJzJ6AGEe2yhtolEJTpxQ" name="getMsgDraw">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVEeqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLJzKKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLJzKaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLJzKqAGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVrgKAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XLJzK6AGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XLJzLKAGEe2yhtolEJTpxQ" name="getMsgStand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVrgaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLJzLaAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLJzLqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLJzL6AGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVrg6AGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XLJzMKAGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLJzMaAGEe2yhtolEJTpxQ" name="handValue">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVrgqAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLJzMqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLJzM6AGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLJzNKAGEe2yhtolEJTpxQ" name="getHandValue">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVrhKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLJzNaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLJzNqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLJzN6AGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVrhqAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XLJzOKAGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLJzOaAGEe2yhtolEJTpxQ" name="doForSplitted">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlVrhaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLJzOqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLJzO6AGEe2yhtolEJTpxQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLJzPKAGEe2yhtolEJTpxQ" name="doSplit">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm3VgqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLJzPaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLJzPqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XLJzP6AGEe2yhtolEJTpxQ" name="gui">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm3Vg6AGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLJzQKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLJzQaAGEe2yhtolEJTpxQ" name="GuiForSplit">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VleOYKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XLZDWaAGEe2yhtolEJTpxQ" name="Gui" associationsIn="_XLIkqaAGEe2yhtolEJTpxQ _XLRHgKAGEe2yhtolEJTpxQ" associationsOut="_XLHWgKAGEe2yhtolEJTpxQ _XLRukKAGEe2yhtolEJTpxQ _XLVY8KAGEe2yhtolEJTpxQ _XLVY-aAGEe2yhtolEJTpxQ _XLWAAKAGEe2yhtolEJTpxQ _XLWACaAGEe2yhtolEJTpxQ _XLWAEqAGEe2yhtolEJTpxQ _XLWnEKAGEe2yhtolEJTpxQ _XLWnGaAGEe2yhtolEJTpxQ _XLXOIKAGEe2yhtolEJTpxQ _XLX1MKAGEe2yhtolEJTpxQ _XLX1OaAGEe2yhtolEJTpxQ _XLYcQKAGEe2yhtolEJTpxQ _XLZDUKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlXgsKAGEe2yhtolEJTpxQ"/>
+    <visualProperties xmi:id="_XLZDWqAGEe2yhtolEJTpxQ" position="66.0,1003.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XLZDW6AGEe2yhtolEJTpxQ" label="+"/>
+    <attributes xmi:id="_XLZDXKAGEe2yhtolEJTpxQ" name="frmBlackjackJavaClient">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSMQKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDXaAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSMQaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDXqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDX6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDYKAGEe2yhtolEJTpxQ" name="JFrame">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm81EaAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDYaAGEe2yhtolEJTpxQ" name="client">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSMQqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZDYqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDY6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDZKAGEe2yhtolEJTpxQ" name="BlackClient">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlSoMKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDZaAGEe2yhtolEJTpxQ" name="playerActionPanel">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSMRKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDZqAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSMRaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDZ6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDaKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDaaAGEe2yhtolEJTpxQ" name="JPanel">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm9cIKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDaqAGEe2yhtolEJTpxQ" name="playerHandPanel">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSMRqAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDa6AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSMR6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDbKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDbaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDbqAGEe2yhtolEJTpxQ" name="JPanel">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm9cIKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDb6AGEe2yhtolEJTpxQ" name="playerMoneyPanel">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSzUKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDcKAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSzUaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDcaAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDcqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDc6AGEe2yhtolEJTpxQ" name="JPanel">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm9cIKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDdKAGEe2yhtolEJTpxQ" name="topLabel">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSzUqAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDdaAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSzU6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDdqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDd6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDeKAGEe2yhtolEJTpxQ" name="JLabel">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm81E6AGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDeaAGEe2yhtolEJTpxQ" name="playerHand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSzVKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDeqAGEe2yhtolEJTpxQ" name="Generics">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnSzVaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XLZDe6AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnTaYKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDfKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDfaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDfqAGEe2yhtolEJTpxQ" name="ArrayList">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm7m9KAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDf6AGEe2yhtolEJTpxQ" name="playerCardHand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnTaYaAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDgKAGEe2yhtolEJTpxQ" name="Generics">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnTaYqAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XLZDgaAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnTaY6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDgqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLZDg6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDhKAGEe2yhtolEJTpxQ" name="ArrayList">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm7m9KAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDhaAGEe2yhtolEJTpxQ" name="playerHandValueLabel">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnTaZKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDhqAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnTaZaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDh6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDiKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDiaAGEe2yhtolEJTpxQ" name="JLabel">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm81E6AGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDiqAGEe2yhtolEJTpxQ" name="lblGameStatus">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUBcKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDi6AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUBcaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDjKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDjaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDjqAGEe2yhtolEJTpxQ" name="JLabel">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm81E6AGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDj6AGEe2yhtolEJTpxQ" defaultValue="0" name="cardCnt">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUBcqAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDkKAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUBdKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDkaAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDkqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDk6AGEe2yhtolEJTpxQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDlKAGEe2yhtolEJTpxQ" defaultValue="0" name="handValue">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUBdaAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDlaAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUBd6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDlqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDl6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDmKAGEe2yhtolEJTpxQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDmaAGEe2yhtolEJTpxQ" defaultValue="5000" name="money">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUBeKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDmqAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUBeqAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDm6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDnKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDnaAGEe2yhtolEJTpxQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDnqAGEe2yhtolEJTpxQ" defaultValue="0" name="playerBet">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUogKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDn6AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUogqAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDoKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDoaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDoqAGEe2yhtolEJTpxQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDo6AGEe2yhtolEJTpxQ" defaultValue="null" name="gui2">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUog6AGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDpKAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUohaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDpaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLZDpqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDp6AGEe2yhtolEJTpxQ" name="GuiForSplit">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VleOYKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDqKAGEe2yhtolEJTpxQ" defaultValue="new Color(136, 138, 145)" name="foregroundColor">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUohqAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDqaAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUoiKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDqqAGEe2yhtolEJTpxQ" label="~"/>
+      <cardinality xmi:id="_XLZDq6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDrKAGEe2yhtolEJTpxQ" name="Color">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm38kKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDraAGEe2yhtolEJTpxQ" defaultValue="new Color(48, 49, 54)" name="backgroundColor">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnUoiaAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDrqAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnVPkKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDr6AGEe2yhtolEJTpxQ" label="~"/>
+      <cardinality xmi:id="_XLZDsKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDsaAGEe2yhtolEJTpxQ" name="Color">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm38kKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLZDsqAGEe2yhtolEJTpxQ" defaultValue="new Color(55, 57, 63)" name="specialColor">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnVPkaAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLZDs6AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnVPk6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLZDtKAGEe2yhtolEJTpxQ" label="~"/>
+      <cardinality xmi:id="_XLZDtaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLZDtqAGEe2yhtolEJTpxQ" name="Color">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm38kKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XLZDt6AGEe2yhtolEJTpxQ" name="main" staticOperation="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlYu0KAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZDuKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLZDuaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XLZDuqAGEe2yhtolEJTpxQ" name="args">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlZ88KAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLZDu6AGEe2yhtolEJTpxQ" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_XLZDvKAGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLZDvaAGEe2yhtolEJTpxQ" name="initialize">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlZ88qAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZDvqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDv6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLZDwKAGEe2yhtolEJTpxQ" name="OnClose">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlZ886AGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZDwaAGEe2yhtolEJTpxQ" label="#"/>
+      <cardinality xmi:id="_XLZDwqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLZDw6AGEe2yhtolEJTpxQ" name="OnResize">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlakAKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZDxKAGEe2yhtolEJTpxQ" label="#"/>
+      <cardinality xmi:id="_XLZDxaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLZDxqAGEe2yhtolEJTpxQ" name="split">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlakAaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZDx6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZDyKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLZDyaAGEe2yhtolEJTpxQ" name="addSplitMoney">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlakAqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZDyqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLZDy6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XLZDzKAGEe2yhtolEJTpxQ" name="splitMoney">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlakA6AGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLZDzaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLZDzqAGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLZDz6AGEe2yhtolEJTpxQ" name="doubleDown">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlakBKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZD0KAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZD0aAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLZD0qAGEe2yhtolEJTpxQ" name="drawCard">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlakBaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZD06AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZD1KAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLZD1aAGEe2yhtolEJTpxQ" name="stand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlakBqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZD1qAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZD16AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLZD2KAGEe2yhtolEJTpxQ" name="newRound">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlakB6AGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZD2aAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZD2qAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLZD26AGEe2yhtolEJTpxQ" name="updateBet">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlakCKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZD3KAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZD3aAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLZD3qAGEe2yhtolEJTpxQ" name="updateHandValue">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlbLEKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZD36AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLZD4KAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLZD4aAGEe2yhtolEJTpxQ" name="updateCard">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlbLEaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZD4qAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLZD46AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XLZD5KAGEe2yhtolEJTpxQ" name="pos">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlbLEqAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLZD5aAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLZD5qAGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLZD56AGEe2yhtolEJTpxQ" name="type">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlbLE6AGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLZD6KAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLZD6aAGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLZD6qAGEe2yhtolEJTpxQ" name="endRound">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlbLFKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZD66AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLZD7KAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XLZD7aAGEe2yhtolEJTpxQ" name="gameStatus">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlbLFaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLZD7qAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLZD76AGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLZD8KAGEe2yhtolEJTpxQ" name="dealerHandValue">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlbLFqAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLZD8aAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLZD8qAGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLZD86AGEe2yhtolEJTpxQ" name="Gui">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm-qQKAGEe2yhtolEJTpxQ"/>
+      <keywords xmi:id="_XLZD9KAGEe2yhtolEJTpxQ" keyword="create"/>
+      <visibility xmi:id="_XLZD9aAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLZD9qAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLZD96AGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm-qRKAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XLZD-KAGEe2yhtolEJTpxQ" name="Gui">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlXgsKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLZD-aAGEe2yhtolEJTpxQ" name="client">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm-qQaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLZD-qAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLZD-6AGEe2yhtolEJTpxQ" name="BlackClient">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlSoMKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLZD_KAGEe2yhtolEJTpxQ" name="setCard">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm_RUKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLZD_aAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLZD_qAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XLZD_6AGEe2yhtolEJTpxQ" name="card">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm_RUaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLZEAKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLZEAaAGEe2yhtolEJTpxQ" name="Card">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlkVAKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XLr-QKAGEe2yhtolEJTpxQ" name="GuiForSplit" associationsIn="_XLIksqAGEe2yhtolEJTpxQ _XLRukKAGEe2yhtolEJTpxQ" associationsOut="_XLHWiqAGEe2yhtolEJTpxQ _XLRHgKAGEe2yhtolEJTpxQ _XLkpgKAGEe2yhtolEJTpxQ _XLkpgaAGEe2yhtolEJTpxQ _XLkpgqAGEe2yhtolEJTpxQ _XLkpg6AGEe2yhtolEJTpxQ _XLkphKAGEe2yhtolEJTpxQ _XLlQkKAGEe2yhtolEJTpxQ _XLlQkaAGEe2yhtolEJTpxQ _XLlQkqAGEe2yhtolEJTpxQ _XLlQk6AGEe2yhtolEJTpxQ _XLlQlKAGEe2yhtolEJTpxQ _XLlQlaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VleOYKAGEe2yhtolEJTpxQ"/>
+    <visualProperties xmi:id="_XLr-QaAGEe2yhtolEJTpxQ" position="-511.0,412.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XLr-QqAGEe2yhtolEJTpxQ" label="+"/>
+    <attributes xmi:id="_XLr-Q6AGEe2yhtolEJTpxQ" name="frmBlackjackJavaClient">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnV2oKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLr-RKAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnV2oaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLr-RaAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-RqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-R6AGEe2yhtolEJTpxQ" name="JFrame">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm81EaAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-SKAGEe2yhtolEJTpxQ" name="client">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnV2oqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLr-SaAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-SqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-S6AGEe2yhtolEJTpxQ" name="BlackClient">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlSoMKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-TKAGEe2yhtolEJTpxQ" name="mainGui">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnV2pKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLr-TaAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-TqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-T6AGEe2yhtolEJTpxQ" name="Gui">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlXgsKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-UKAGEe2yhtolEJTpxQ" name="playerActionPanel">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnV2pqAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLr-UaAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VndLYKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLr-UqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-U6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-VKAGEe2yhtolEJTpxQ" name="JPanel">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm9cIKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-VaAGEe2yhtolEJTpxQ" name="playerHandPanel">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VndLYaAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLr-VqAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VndLYqAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLr-V6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-WKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-WaAGEe2yhtolEJTpxQ" name="JPanel">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm9cIKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-WqAGEe2yhtolEJTpxQ" name="topLabel">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VndycKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLr-W6AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VndycaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLr-XKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-XaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-XqAGEe2yhtolEJTpxQ" name="JLabel">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm81E6AGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-X6AGEe2yhtolEJTpxQ" name="playerHand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VndycqAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLr-YKAGEe2yhtolEJTpxQ" name="Generics">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VneZgKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XLr-YaAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VneZgaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLr-YqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-Y6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-ZKAGEe2yhtolEJTpxQ" name="ArrayList">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm7m9KAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-ZaAGEe2yhtolEJTpxQ" name="playerCardHand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnfAkKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLr-ZqAGEe2yhtolEJTpxQ" name="Generics">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnfAkaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XLr-Z6AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnfAkqAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLr-aKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-aaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-aqAGEe2yhtolEJTpxQ" name="ArrayList">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm7m9KAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-a6AGEe2yhtolEJTpxQ" name="playerHandValueLabel">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnfAk6AGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLr-bKAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnfAlKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLr-baAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-bqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-b6AGEe2yhtolEJTpxQ" name="JLabel">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm81E6AGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-cKAGEe2yhtolEJTpxQ" name="lblGameStatus">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnfnoKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLr-caAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnfnoaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLr-cqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-c6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-dKAGEe2yhtolEJTpxQ" name="JLabel">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm81E6AGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-daAGEe2yhtolEJTpxQ" defaultValue="0" name="cardCnt">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnfnoqAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLr-dqAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnfnpKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLr-d6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-eKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-eaAGEe2yhtolEJTpxQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-eqAGEe2yhtolEJTpxQ" defaultValue="0" name="handValue">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnfnpaAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLr-e6AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VngOsKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLr-fKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-faAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-fqAGEe2yhtolEJTpxQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-f6AGEe2yhtolEJTpxQ" defaultValue="0" name="playerBet">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VngOsaAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLr-gKAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VngOs6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLr-gaAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-gqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-g6AGEe2yhtolEJTpxQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-hKAGEe2yhtolEJTpxQ" defaultValue="new Color(136, 138, 145)" name="foregroundColor">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VngOtKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLr-haAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VngOtqAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLr-hqAGEe2yhtolEJTpxQ" label="~"/>
+      <cardinality xmi:id="_XLr-h6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-iKAGEe2yhtolEJTpxQ" name="Color">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm38kKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-iaAGEe2yhtolEJTpxQ" defaultValue="new Color(48, 49, 54)" name="backgroundColor">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VngOt6AGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLr-iqAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vng1waAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLr-i6AGEe2yhtolEJTpxQ" label="~"/>
+      <cardinality xmi:id="_XLr-jKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-jaAGEe2yhtolEJTpxQ" name="Color">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm38kKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XLr-jqAGEe2yhtolEJTpxQ" defaultValue="new Color(55, 57, 63)" name="specialColor">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vng1wqAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XLr-j6AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vng1xKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XLr-kKAGEe2yhtolEJTpxQ" label="~"/>
+      <cardinality xmi:id="_XLr-kaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XLr-kqAGEe2yhtolEJTpxQ" name="Color">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm38kKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XLr-k6AGEe2yhtolEJTpxQ" name="main" staticOperation="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vle1cKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLr-lKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLr-laAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XLr-lqAGEe2yhtolEJTpxQ" name="args">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vle1caAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLr-l6AGEe2yhtolEJTpxQ" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_XLr-mKAGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLr-maAGEe2yhtolEJTpxQ" name="initialize">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vle1c6AGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLr-mqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-m6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLr-nKAGEe2yhtolEJTpxQ" name="OnClose">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlfcgKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLr-naAGEe2yhtolEJTpxQ" label="#"/>
+      <cardinality xmi:id="_XLr-nqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLr-n6AGEe2yhtolEJTpxQ" name="OnResize">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlfcgaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLr-oKAGEe2yhtolEJTpxQ" label="#"/>
+      <cardinality xmi:id="_XLr-oaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLr-oqAGEe2yhtolEJTpxQ" name="doubleDown">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlfcgqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLr-o6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-pKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLr-paAGEe2yhtolEJTpxQ" name="drawCard">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlfcg6AGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLr-pqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-p6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLr-qKAGEe2yhtolEJTpxQ" name="stand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlfchKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLr-qaAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-qqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLr-q6AGEe2yhtolEJTpxQ" name="updateHandValue">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlfchaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLr-rKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XLr-raAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XLr-rqAGEe2yhtolEJTpxQ" name="updateCard">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlfchqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLr-r6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLr-sKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XLr-saAGEe2yhtolEJTpxQ" name="pos">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlfch6AGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLr-sqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLr-s6AGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLr-tKAGEe2yhtolEJTpxQ" name="type">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlfciKAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLr-taAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLr-tqAGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLr-t6AGEe2yhtolEJTpxQ" name="endRound">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlgDkKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLr-uKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLr-uaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XLr-uqAGEe2yhtolEJTpxQ" name="gameStatus">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlgDkaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLr-u6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLr-vKAGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLr-vaAGEe2yhtolEJTpxQ" name="dealerHandValue">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlgDkqAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLr-vqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLr-v6AGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLr-wKAGEe2yhtolEJTpxQ" name="GuiForSplit">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnAfcKAGEe2yhtolEJTpxQ"/>
+      <keywords xmi:id="_XLr-waAGEe2yhtolEJTpxQ" keyword="create"/>
+      <visibility xmi:id="_XLr-wqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLr-w6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLr-xKAGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnAfdqAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XLr-xaAGEe2yhtolEJTpxQ" name="GuiForSplit">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VleOYKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLr-xqAGEe2yhtolEJTpxQ" name="mainGui">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnAfcaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLr-x6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLr-yKAGEe2yhtolEJTpxQ" name="Gui">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlXgsKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLr-yaAGEe2yhtolEJTpxQ" name="client">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnAfcqAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLr-yqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLr-y6AGEe2yhtolEJTpxQ" name="BlackClient">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlSoMKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLr-zKAGEe2yhtolEJTpxQ" name="card">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnAfc6AGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLr-zaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLr-zqAGEe2yhtolEJTpxQ" name="Card">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlkVAKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLr-z6AGEe2yhtolEJTpxQ" name="setCard">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnBGgKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XLr-0KAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XLr-0aAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XLr-0qAGEe2yhtolEJTpxQ" name="card">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnBGgaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XLr-06AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XLr-1KAGEe2yhtolEJTpxQ" name="Card">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlkVAKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XL1IOaAGEe2yhtolEJTpxQ" name="JUT_CardDeck" associationsOut="_XL1IMKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlif0aAGEe2yhtolEJTpxQ"/>
+    <visualProperties xmi:id="_XL1IOqAGEe2yhtolEJTpxQ" position="-310.0,-586.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XL1IO6AGEe2yhtolEJTpxQ" label="+"/>
+    <attributes xmi:id="_XL1IPKAGEe2yhtolEJTpxQ" name="cardDeck">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vnhc0KAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XL1IPaAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VniD4KAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XL1IPqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XL1IP6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XL1IQKAGEe2yhtolEJTpxQ" name="CardDeck">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlk8FaAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XL1IQaAGEe2yhtolEJTpxQ" name="setUp">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VljG4KAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL1IQqAGEe2yhtolEJTpxQ" label="#"/>
+      <cardinality xmi:id="_XL1IQ6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XL1IRKAGEe2yhtolEJTpxQ" name="testCase_1">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VljG4aAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL1IRaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL1IRqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XL1IR6AGEe2yhtolEJTpxQ" name="testCase_2">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VljG4qAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL1ISKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL1ISaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XL29YKAGEe2yhtolEJTpxQ" name="JUT_Card">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlh4wKAGEe2yhtolEJTpxQ"/>
+    <visualProperties xmi:id="_XL29YaAGEe2yhtolEJTpxQ" position="-310.0,-422.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XL29YqAGEe2yhtolEJTpxQ" label="+"/>
+    <operations xmi:id="_XL29Y6AGEe2yhtolEJTpxQ" name="testCase_1">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlif0KAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL29ZKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL29ZaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XL5Zo6AGEe2yhtolEJTpxQ" name="JUT_CardHand" associationsOut="_XL4LgKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VljG46AGEe2yhtolEJTpxQ"/>
+    <visualProperties xmi:id="_XL5ZpKAGEe2yhtolEJTpxQ" position="-516.0,-641.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XL5ZpaAGEe2yhtolEJTpxQ" label="+"/>
+    <attributes xmi:id="_XL5ZpqAGEe2yhtolEJTpxQ" name="cardHand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VniD4aAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XL5Zp6AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VniD4qAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XL5ZqKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XL5ZqaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XL5ZqqAGEe2yhtolEJTpxQ" name="CardHand">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmKMKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XL5Zq6AGEe2yhtolEJTpxQ" name="setUp">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vljt8KAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL5ZrKAGEe2yhtolEJTpxQ" label="#"/>
+      <cardinality xmi:id="_XL5ZraAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XL5ZrqAGEe2yhtolEJTpxQ" comments="_XL4LgaAGEe2yhtolEJTpxQ" targetConnectionVisual="_XL4LgqAGEe2yhtolEJTpxQ" name="testCase_1">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vljt8aAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL5Zr6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL5ZsKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XL5ZsaAGEe2yhtolEJTpxQ" comments="_XL4Lg6AGEe2yhtolEJTpxQ" targetConnectionVisual="_XL4LhKAGEe2yhtolEJTpxQ" name="testCase_2">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vljt8qAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL5ZsqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL5Zs6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XL5ZtKAGEe2yhtolEJTpxQ" comments="_XL4LhaAGEe2yhtolEJTpxQ" targetConnectionVisual="_XL4ykKAGEe2yhtolEJTpxQ" name="testCase_3">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vljt86AGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL5ZtaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL5ZtqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XL5Zt6AGEe2yhtolEJTpxQ" comments="_XL4ykaAGEe2yhtolEJTpxQ" targetConnectionVisual="_XL4ykqAGEe2yhtolEJTpxQ" name="testCase_4">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vljt9KAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL5ZuKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL5ZuaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XL5ZuqAGEe2yhtolEJTpxQ" comments="_XL4yk6AGEe2yhtolEJTpxQ" targetConnectionVisual="_XL4ylKAGEe2yhtolEJTpxQ" name="testCase_5">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vljt9aAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL5Zu6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL5ZvKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XL9EBqAGEe2yhtolEJTpxQ" name="CardDeck" associationsIn="_XL1IMKAGEe2yhtolEJTpxQ _XMJ4UKAGEe2yhtolEJTpxQ" associationsOut="_XL714KAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlk8FaAGEe2yhtolEJTpxQ"/>
+    <visualProperties xmi:id="_XL9EB6AGEe2yhtolEJTpxQ" position="-1363.0,-816.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XL9ECKAGEe2yhtolEJTpxQ" label="+"/>
+    <attributes xmi:id="_XL9ECaAGEe2yhtolEJTpxQ" defaultValue="new ArrayList&lt;Card>()" name="CardDeck">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vniq8qAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XL9ECqAGEe2yhtolEJTpxQ" name="Generics">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnjSAKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XL9EC6AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnjSAqAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XL9EDKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL9EDaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XL9EDqAGEe2yhtolEJTpxQ" name="ArrayList">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm7m9KAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XL9ED6AGEe2yhtolEJTpxQ" defaultValue="{&quot;Ace&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;, &quot;Jack&quot;, &quot;Queen&quot;, &quot;King&quot;}" name="cardNames">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vnj5EKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XL9EEKAGEe2yhtolEJTpxQ" name="Array">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vnj5EqAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XL9EEaAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vnj5FKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XL9EEqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XL9EE6AGEe2yhtolEJTpxQ" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_XL9EFKAGEe2yhtolEJTpxQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XL9EFaAGEe2yhtolEJTpxQ" defaultValue="{ 11&#x9;,  2 ,  3 ,  4 ,  5 ,  6 ,  7 ,  8 ,  9 ,  10 ,   10  ,   10   ,   10  }" name="cardValues">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vnj5FaAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XL9EFqAGEe2yhtolEJTpxQ" name="Array">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vnj5F6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XL9EF6AGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnkgIaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XL9EGKAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XL9EGaAGEe2yhtolEJTpxQ" label="1..*" max="-1" min="1"/>
+      <type xmi:id="_XL9EGqAGEe2yhtolEJTpxQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XL9EG6AGEe2yhtolEJTpxQ" name="CardDeck">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlk8FqAGEe2yhtolEJTpxQ"/>
+      <keywords xmi:id="_XL9EHKAGEe2yhtolEJTpxQ" keyword="create"/>
+      <visibility xmi:id="_XL9EHaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL9EHqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XL9EH6AGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlljIaAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XL9EIKAGEe2yhtolEJTpxQ" name="CardDeck">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlk8FaAGEe2yhtolEJTpxQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XL9EIaAGEe2yhtolEJTpxQ" name="drawCard">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlljIqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL9EIqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL9EI6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XL9EJKAGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnDiwaAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XL9EJaAGEe2yhtolEJTpxQ" name="Card">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlkVAKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XL9EJqAGEe2yhtolEJTpxQ" name="getCardDeckSize">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlljI6AGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL9EJ6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL9EKKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XL9EKaAGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlljJKAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XL9EKqAGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XL9EK6AGEe2yhtolEJTpxQ" name="shuffle">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlljJaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XL9ELKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XL9ELaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XMCjkaAGEe2yhtolEJTpxQ" name="CardHand" associationsIn="_XLJywKAGEe2yhtolEJTpxQ _XLJyyaAGEe2yhtolEJTpxQ _XL4LgKAGEe2yhtolEJTpxQ _XMKfYKAGEe2yhtolEJTpxQ" associationsOut="_XMAuYKAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmKMKAGEe2yhtolEJTpxQ"/>
+    <visualProperties xmi:id="_XMCjkqAGEe2yhtolEJTpxQ" position="-510.0,-1292.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XMCjk6AGEe2yhtolEJTpxQ" label="+"/>
+    <attributes xmi:id="_XMCjlKAGEe2yhtolEJTpxQ" name="cardHand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnkgIqAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XMCjlaAGEe2yhtolEJTpxQ" name="Generics">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnlHMKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XMCjlqAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnlHMaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XMCjl6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMCjmKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XMCjmaAGEe2yhtolEJTpxQ" name="ArrayList">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm7m9KAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XMCjmqAGEe2yhtolEJTpxQ" name="CardHand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmKMaAGEe2yhtolEJTpxQ"/>
+      <keywords xmi:id="_XMCjm6AGEe2yhtolEJTpxQ" keyword="create"/>
+      <visibility xmi:id="_XMCjnKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMCjnaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XMCjnqAGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmKNKAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XMCjn6AGEe2yhtolEJTpxQ" name="CardHand">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmKMKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XMCjoKAGEe2yhtolEJTpxQ" name="getCardHand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmKNaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMCjoaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMCjoqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XMCjo6AGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmKNqAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XMCjpKAGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XMCjpaAGEe2yhtolEJTpxQ" name="getCardAt">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmxQKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMCjpqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMCjp6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XMCjqKAGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnEJ0KAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XMCjqaAGEe2yhtolEJTpxQ" name="Card">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlkVAKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XMCjqqAGEe2yhtolEJTpxQ" name="pos">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmxQaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMCjq6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMCjrKAGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XMCjraAGEe2yhtolEJTpxQ" name="getCardHandSize">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmxQqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMCjrqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMCjr6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XMCjsKAGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmxQ6AGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XMCjsaAGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XMCjsqAGEe2yhtolEJTpxQ" name="clearHand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmxRKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMCjs6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMCjtKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XMCjtaAGEe2yhtolEJTpxQ" name="getValue">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmxRaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMCjtqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMCjt6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XMCjuKAGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmxRqAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XMCjuaAGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XMCjuqAGEe2yhtolEJTpxQ" name="addCard">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnDiwqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMCju6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMCjvKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XMCjvaAGEe2yhtolEJTpxQ" name="card">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnDiw6AGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMCjvqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMCjv6AGEe2yhtolEJTpxQ" name="Card">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlkVAKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XMG1AKAGEe2yhtolEJTpxQ" name="Card">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlkVAKAGEe2yhtolEJTpxQ"/>
+    <visualProperties xmi:id="_XMG1AaAGEe2yhtolEJTpxQ" position="-102.0,-611.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XMG1AqAGEe2yhtolEJTpxQ" label="+"/>
+    <attributes xmi:id="_XMG1A6AGEe2yhtolEJTpxQ" name="name">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vniq8KAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMG1BKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMG1BaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XMG1BqAGEe2yhtolEJTpxQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XMG1B6AGEe2yhtolEJTpxQ" name="value">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vniq8aAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMG1CKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMG1CaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XMG1CqAGEe2yhtolEJTpxQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XMG1C6AGEe2yhtolEJTpxQ" name="Card">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlkVAaAGEe2yhtolEJTpxQ"/>
+      <keywords xmi:id="_XMG1DKAGEe2yhtolEJTpxQ" keyword="create"/>
+      <visibility xmi:id="_XMG1DaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMG1DqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XMG1D6AGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlk8FKAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XMG1EKAGEe2yhtolEJTpxQ" name="Card">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlkVAKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XMG1EaAGEe2yhtolEJTpxQ" name="name">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlk8EKAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMG1EqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMG1E6AGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XMG1FKAGEe2yhtolEJTpxQ" name="value">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlk8EaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMG1FaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMG1FqAGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XMIqMKAGEe2yhtolEJTpxQ" name="JsonObj">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlnYUKAGEe2yhtolEJTpxQ"/>
+    <visualProperties xmi:id="_XMIqMaAGEe2yhtolEJTpxQ" position="-415.0,-289.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XMIqMqAGEe2yhtolEJTpxQ" label="+"/>
+    <attributes xmi:id="_XMIqM6AGEe2yhtolEJTpxQ" name="type">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnluQKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMIqNKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMIqNaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XMIqNqAGEe2yhtolEJTpxQ" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XMIqN6AGEe2yhtolEJTpxQ" name="value">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnluQaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMIqOKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMIqOaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XMIqOqAGEe2yhtolEJTpxQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XMIqO6AGEe2yhtolEJTpxQ" name="JsonObj">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vln_YKAGEe2yhtolEJTpxQ"/>
+      <keywords xmi:id="_XMIqPKAGEe2yhtolEJTpxQ" keyword="create"/>
+      <visibility xmi:id="_XMIqPaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMIqPqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XMIqP6AGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vln_ZaAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XMIqQKAGEe2yhtolEJTpxQ" name="JsonObj">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlnYUKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XMIqQaAGEe2yhtolEJTpxQ" name="type">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vln_YaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMIqQqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMIqQ6AGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XMIqRKAGEe2yhtolEJTpxQ" name="value">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vln_YqAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMIqRaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMIqRqAGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XMMUkKAGEe2yhtolEJTpxQ" name="clientThread" associationsOut="_XMJ4UKAGEe2yhtolEJTpxQ _XMKfYKAGEe2yhtolEJTpxQ _XMKfYaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlpNgKAGEe2yhtolEJTpxQ"/>
+    <visualProperties xmi:id="_XMMUkaAGEe2yhtolEJTpxQ" position="-901.0,-417.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XMMUkqAGEe2yhtolEJTpxQ" label="+"/>
+    <attributes xmi:id="_XMMUk6AGEe2yhtolEJTpxQ" name="socket">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vnm8YKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XMMUlKAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vnm8YaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XMMUlaAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XMMUlqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XMMUl6AGEe2yhtolEJTpxQ" name="Socket">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm2HY6AGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XMMUmKAGEe2yhtolEJTpxQ" name="deck">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vnm8YqAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XMMUmaAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vnm8Y6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XMMUmqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XMMUm6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XMMUnKAGEe2yhtolEJTpxQ" name="CardDeck">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlk8FaAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XMMUnaAGEe2yhtolEJTpxQ" name="dealerHand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnnjcKAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XMMUnqAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnnjcaAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XMMUn6AGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XMMUoKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XMMUoaAGEe2yhtolEJTpxQ" name="CardHand">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlmKMKAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XMMUoqAGEe2yhtolEJTpxQ" name="run">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlp0kKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMMUo6AGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMMUpKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XMMUpaAGEe2yhtolEJTpxQ" name="getGameState">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlp0kaAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMMUpqAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XMMUp6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XMMUqKAGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlqboaAGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XMMUqaAGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XMMUqqAGEe2yhtolEJTpxQ" name="playerHandValue">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlp0kqAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMMUq6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMMUrKAGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XMMUraAGEe2yhtolEJTpxQ" name="dealerHandValue">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlqboKAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMMUrqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMMUr6AGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XMMUsKAGEe2yhtolEJTpxQ" name="createDealerHand">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlqboqAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMMUsaAGEe2yhtolEJTpxQ" label="-"/>
+      <cardinality xmi:id="_XMMUsqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XMMUs6AGEe2yhtolEJTpxQ" name="playerHandValue">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlqbo6AGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMMUtKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMMUtaAGEe2yhtolEJTpxQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XMMUtqAGEe2yhtolEJTpxQ" name="clientThread">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnNTw6AGEe2yhtolEJTpxQ"/>
+      <keywords xmi:id="_XMMUt6AGEe2yhtolEJTpxQ" keyword="create"/>
+      <visibility xmi:id="_XMMUuKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMMUuaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XMMUuqAGEe2yhtolEJTpxQ">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnN606AGEe2yhtolEJTpxQ"/>
+        <type xmi:id="_XMMUu6AGEe2yhtolEJTpxQ" name="clientThread">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlpNgKAGEe2yhtolEJTpxQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XMMUvKAGEe2yhtolEJTpxQ" name="givenSocket">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnNTxKAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMMUvaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMMUvqAGEe2yhtolEJTpxQ" name="Socket">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm2HY6AGEe2yhtolEJTpxQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XMMUv6AGEe2yhtolEJTpxQ" name="deck">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnN60KAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMMUwKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMMUwaAGEe2yhtolEJTpxQ" name="CardDeck">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlk8FaAGEe2yhtolEJTpxQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XMSbMKAGEe2yhtolEJTpxQ" comments="_XMP-8KAGEe2yhtolEJTpxQ" targetConnectionVisual="_XMP-8aAGEe2yhtolEJTpxQ" name="BlackServer" associationsOut="_XMQmAKAGEe2yhtolEJTpxQ _XMQmAaAGEe2yhtolEJTpxQ">
+    <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vln_ZqAGEe2yhtolEJTpxQ"/>
+    <visualProperties xmi:id="_XMSbMaAGEe2yhtolEJTpxQ" position="-925.0,-640.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XMSbMqAGEe2yhtolEJTpxQ" label="+"/>
+    <attributes xmi:id="_XMSbM6AGEe2yhtolEJTpxQ" defaultValue="new ArrayList&lt;Socket>()" name="allSockets" staticAttribute="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnluQqAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XMSbNKAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnluQ6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XMSbNaAGEe2yhtolEJTpxQ" name="Generics">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnluRKAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XMSbNqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMSbN6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XMSbOKAGEe2yhtolEJTpxQ" name="ArrayList">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm7m9KAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XMSbOaAGEe2yhtolEJTpxQ" defaultValue="new ArrayList&lt;Thread>()" name="allThreads" staticAttribute="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnmVUaAGEe2yhtolEJTpxQ"/>
+      <stereotypes xmi:id="_XMSbOqAGEe2yhtolEJTpxQ" name="LegacyStyledElement">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnmVUqAGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XMSbO6AGEe2yhtolEJTpxQ" name="Generics">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnmVU6AGEe2yhtolEJTpxQ"/>
+      </stereotypes>
+      <visibility xmi:id="_XMSbPKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMSbPaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <type xmi:id="_XMSbPqAGEe2yhtolEJTpxQ" name="ArrayList">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm7m9KAGEe2yhtolEJTpxQ"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XMSbP6AGEe2yhtolEJTpxQ" name="main" staticOperation="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlomcKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMSbQKAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMSbQaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XMSbQqAGEe2yhtolEJTpxQ" name="args">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VlomcaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMSbQ6AGEe2yhtolEJTpxQ" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_XMSbRKAGEe2yhtolEJTpxQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XMSbRaAGEe2yhtolEJTpxQ" name="checkStoppedThread" staticOperation="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vlomc6AGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMSbRqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMSbR6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_XMSbSKAGEe2yhtolEJTpxQ" name="saveConnection" staticOperation="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnMssKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMSbSaAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMSbSqAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XMSbS6AGEe2yhtolEJTpxQ" name="socket">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnMssaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMSbTKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMSbTaAGEe2yhtolEJTpxQ" name="Socket">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm2HY6AGEe2yhtolEJTpxQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XMSbTqAGEe2yhtolEJTpxQ" name="thread">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnMssqAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMSbT6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMSbUKAGEe2yhtolEJTpxQ" name="Thread">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnHNIaAGEe2yhtolEJTpxQ"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XMSbUaAGEe2yhtolEJTpxQ" name="delConnection" staticOperation="true">
+      <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnNTwKAGEe2yhtolEJTpxQ"/>
+      <visibility xmi:id="_XMSbUqAGEe2yhtolEJTpxQ" label="+"/>
+      <cardinality xmi:id="_XMSbU6AGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XMSbVKAGEe2yhtolEJTpxQ" name="socket">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnNTwaAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMSbVaAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMSbVqAGEe2yhtolEJTpxQ" name="Socket">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_Vm2HY6AGEe2yhtolEJTpxQ"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XMSbV6AGEe2yhtolEJTpxQ" name="thread">
+        <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnNTwqAGEe2yhtolEJTpxQ"/>
+        <cardinality xmi:id="_XMSbWKAGEe2yhtolEJTpxQ" label="1" max="1" min="1"/>
+        <type xmi:id="_XMSbWaAGEe2yhtolEJTpxQ" name="Thread">
+          <modelElement href="5BHIT_Wagner_Weissengruber_Blackjack.uml#_VnHNIaAGEe2yhtolEJTpxQ"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

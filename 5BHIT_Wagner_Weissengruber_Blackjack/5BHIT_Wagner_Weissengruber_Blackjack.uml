@@ -1,0 +1,2557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_Vbz8EKAGEe2yhtolEJTpxQ" name="_5BHIT_Wagner_Weissengruber_Blackjack">
+    <eAnnotations xmi:id="_VfzEMKAGEe2yhtolEJTpxQ" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_VfzEMaAGEe2yhtolEJTpxQ" source="codegen">
+        <details xmi:id="_VfzEMqAGEe2yhtolEJTpxQ" key="codegenDirectory" value="/5BHIT_Wagner_Weissengruber_Blackjack/src"/>
+        <details xmi:id="_XLAo0KAGEe2yhtolEJTpxQ" key="AssociatedSourceCode" value="/5BHIT_Wagner_Weissengruber_Blackjack/src/client/BlackClient.java;2544948645/1;/5BHIT_Wagner_Weissengruber_Blackjack/src/client/Gui.java;2208367308/1;/5BHIT_Wagner_Weissengruber_Blackjack/src/client/GuiForSplit.java;158132770/1;/5BHIT_Wagner_Weissengruber_Blackjack/src/jUnit/JUT_Card.java;1906588778/1;/5BHIT_Wagner_Weissengruber_Blackjack/src/jUnit/JUT_CardDeck.java;1540402390/1;/5BHIT_Wagner_Weissengruber_Blackjack/src/jUnit/JUT_CardHand.java;190905167/1;/5BHIT_Wagner_Weissengruber_Blackjack/src/misc/Card.java;3652951322/1;/5BHIT_Wagner_Weissengruber_Blackjack/src/misc/CardDeck.java;2985281741/1;/5BHIT_Wagner_Weissengruber_Blackjack/src/misc/CardHand.java;2265948111/1;/5BHIT_Wagner_Weissengruber_Blackjack/src/misc/JsonObj.java;3657592218/1;/5BHIT_Wagner_Weissengruber_Blackjack/src/server/BlackServer.java;3146156349/1;/5BHIT_Wagner_Weissengruber_Blackjack/src/server/clientThread.java;1418598782/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_Vk8p8KAGEe2yhtolEJTpxQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_Vk8p8aAGEe2yhtolEJTpxQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_Vk8p8qAGEe2yhtolEJTpxQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_Vk8p86AGEe2yhtolEJTpxQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_Vk8p9KAGEe2yhtolEJTpxQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_Vk8p9aAGEe2yhtolEJTpxQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_Vk8p9qAGEe2yhtolEJTpxQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_Vk8p96AGEe2yhtolEJTpxQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_Vk8p-KAGEe2yhtolEJTpxQ">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Vk94EKAGEe2yhtolEJTpxQ" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_Vk94EaAGEe2yhtolEJTpxQ" name="io">
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm0SMKAGEe2yhtolEJTpxQ" name="BufferedReader"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm05QaAGEe2yhtolEJTpxQ" name="IOException"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm05Q6AGEe2yhtolEJTpxQ" name="InputStream"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm1gUaAGEe2yhtolEJTpxQ" name="InputStreamReader"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm1gU6AGEe2yhtolEJTpxQ" name="OutputStream"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm2HYaAGEe2yhtolEJTpxQ" name="PrintWriter"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Vk94EqAGEe2yhtolEJTpxQ" name="net">
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm2HY6AGEe2yhtolEJTpxQ" name="Socket"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm2HZaAGEe2yhtolEJTpxQ" name="UnknownHostException"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_VlA7YKAGEe2yhtolEJTpxQ" name="awt">
+        <packagedElement xmi:type="uml:Package" xmi:id="_VlA7YaAGEe2yhtolEJTpxQ" name="event">
+          <packagedElement xmi:type="uml:Class" xmi:id="_Vm6Y0aAGEe2yhtolEJTpxQ" name="ActionEvent"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_Vm6Y06AGEe2yhtolEJTpxQ" name="ActionListener"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Vm6_4aAGEe2yhtolEJTpxQ" name="ComponentAdapter"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Vm6_46AGEe2yhtolEJTpxQ" name="ComponentEvent"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Vm7m8KAGEe2yhtolEJTpxQ" name="WindowAdapter"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Vm7m8qAGEe2yhtolEJTpxQ" name="WindowEvent"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm38kKAGEe2yhtolEJTpxQ" name="Color"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm4joaAGEe2yhtolEJTpxQ" name="Component"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm5KsaAGEe2yhtolEJTpxQ" name="EventQueue"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm5xwKAGEe2yhtolEJTpxQ" name="Font"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm5xwqAGEe2yhtolEJTpxQ" name="Toolkit"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_VlBicKAGEe2yhtolEJTpxQ" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm7m9KAGEe2yhtolEJTpxQ" name="ArrayList"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_VnC7sKAGEe2yhtolEJTpxQ" name="Random"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_VnHNIKAGEe2yhtolEJTpxQ" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_VnHNIaAGEe2yhtolEJTpxQ" name="Thread"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Vk94E6AGEe2yhtolEJTpxQ" name="com">
+      <packagedElement xmi:type="uml:Package" xmi:id="_Vk94FKAGEe2yhtolEJTpxQ" name="google">
+        <packagedElement xmi:type="uml:Package" xmi:id="_Vk-fIKAGEe2yhtolEJTpxQ" name="gson">
+          <packagedElement xmi:type="uml:Class" xmi:id="_Vm2ucaAGEe2yhtolEJTpxQ" name="Gson"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Vk-fIaAGEe2yhtolEJTpxQ" name="misc">
+      <packagedElement xmi:type="uml:Class" xmi:id="_VlkVAKAGEe2yhtolEJTpxQ" name="Card">
+        <ownedAttribute xmi:id="_Vniq8KAGEe2yhtolEJTpxQ" name="name" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Vniq8aAGEe2yhtolEJTpxQ" name="value" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntqEaAGEe2yhtolEJTpxQ" name="Card" specification="_VlkVAaAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VntqEqAGEe2yhtolEJTpxQ" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VntqE6AGEe2yhtolEJTpxQ" name="value">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VntqFKAGEe2yhtolEJTpxQ" type="_VlkVAKAGEe2yhtolEJTpxQ" direction="return"/>
+          <language>java</language>
+          <body>super();&#xD;
+		this.name = name;&#xD;
+		this.value = value;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_VlkVAaAGEe2yhtolEJTpxQ" name="Card" method="_VntqEaAGEe2yhtolEJTpxQ">
+          <eAnnotations xmi:id="_Vlk8EqAGEe2yhtolEJTpxQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_Vlk8E6AGEe2yhtolEJTpxQ" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_Vlk8EKAGEe2yhtolEJTpxQ" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_Vlk8EaAGEe2yhtolEJTpxQ" name="value">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_Vlk8FKAGEe2yhtolEJTpxQ" type="_VlkVAKAGEe2yhtolEJTpxQ" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Vlk8FaAGEe2yhtolEJTpxQ" name="CardDeck">
+        <ownedAttribute xmi:id="_Vniq8qAGEe2yhtolEJTpxQ" name="CardDeck" type="_Vm7m9KAGEe2yhtolEJTpxQ" association="_Vn-v1KAGEe2yhtolEJTpxQ">
+          <eAnnotations xmi:id="_Vniq86AGEe2yhtolEJTpxQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_Vniq9KAGEe2yhtolEJTpxQ" key="volatile"/>
+          </eAnnotations>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnjSAaAGEe2yhtolEJTpxQ" value="new ArrayList&lt;Card>()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Vnj5EKAGEe2yhtolEJTpxQ" name="cardNames" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vnj5EaAGEe2yhtolEJTpxQ" value="*"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Vnj5E6AGEe2yhtolEJTpxQ" value="{&quot;Ace&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;, &quot;Jack&quot;, &quot;Queen&quot;, &quot;King&quot;}"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Vnj5FaAGEe2yhtolEJTpxQ" name="cardValues" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vnj5FqAGEe2yhtolEJTpxQ" value="*"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnkgIKAGEe2yhtolEJTpxQ" value="{ 11&#x9;,  2 ,  3 ,  4 ,  5 ,  6 ,  7 ,  8 ,  9 ,  10 ,   10  ,   10   ,   10  }"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntqFaAGEe2yhtolEJTpxQ" name="CardDeck" specification="_Vlk8FqAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VntqFqAGEe2yhtolEJTpxQ" type="_Vlk8FaAGEe2yhtolEJTpxQ" direction="return"/>
+          <language>java</language>
+          <body>shuffle();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntqF6AGEe2yhtolEJTpxQ" name="drawCard" specification="_VlljIqAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VntqGKAGEe2yhtolEJTpxQ" type="_VlkVAKAGEe2yhtolEJTpxQ" direction="return"/>
+          <language>java</language>
+          <body>if (CardDeck.isEmpty()) &#xD;
+		{&#xD;
+			shuffle();&#xD;
+		}&#xD;
+		&#xD;
+		Random rand = new Random();&#xD;
+		int randomNum = rand.nextInt(CardDeck.size());&#xD;
+		&#xD;
+		//Retrieve Card according to random Int &amp; remove it from the deck&#xD;
+		Card card = CardDeck.get(randomNum);&#xD;
+		CardDeck.remove(randomNum);&#xD;
+		return card;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntqGaAGEe2yhtolEJTpxQ" name="getCardDeckSize" specification="_VlljI6AGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VntqGqAGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return CardDeck.size();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntqG6AGEe2yhtolEJTpxQ" name="shuffle" specification="_VlljJaAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>CardDeck.clear();&#xD;
+		for (int i = 0; i &lt; cardNames.length; i++) &#xD;
+		{&#xD;
+			CardDeck.add(new Card(cardNames[i] + &quot; of Hearts&quot;, cardValues[i]));&#xD;
+			CardDeck.add(new Card(cardNames[i] + &quot; of Spades&quot;, cardValues[i]));&#xD;
+			CardDeck.add(new Card(cardNames[i] + &quot; of Diamonds&quot;, cardValues[i]));&#xD;
+			CardDeck.add(new Card(cardNames[i] + &quot; of Clover&quot;, cardValues[i]));&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_Vlk8FqAGEe2yhtolEJTpxQ" name="CardDeck" method="_VntqFaAGEe2yhtolEJTpxQ">
+          <eAnnotations xmi:id="_Vlk8F6AGEe2yhtolEJTpxQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_VlljIKAGEe2yhtolEJTpxQ" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_VlljIaAGEe2yhtolEJTpxQ" type="_Vlk8FaAGEe2yhtolEJTpxQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlljIqAGEe2yhtolEJTpxQ" name="drawCard" method="_VntqF6AGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnDiwaAGEe2yhtolEJTpxQ" type="_VlkVAKAGEe2yhtolEJTpxQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlljI6AGEe2yhtolEJTpxQ" name="getCardDeckSize" method="_VntqGaAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlljJKAGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlljJaAGEe2yhtolEJTpxQ" name="shuffle" method="_VntqG6AGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_VlmKMKAGEe2yhtolEJTpxQ" name="CardHand">
+        <ownedAttribute xmi:id="_VnkgIqAGEe2yhtolEJTpxQ" name="cardHand" type="_Vm7m9KAGEe2yhtolEJTpxQ" association="_Vn_W4aAGEe2yhtolEJTpxQ"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntqHKAGEe2yhtolEJTpxQ" name="CardHand" specification="_VlmKMaAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VntqHaAGEe2yhtolEJTpxQ" type="_VlmKMKAGEe2yhtolEJTpxQ" direction="return"/>
+          <language>java</language>
+          <body>cardHand = new ArrayList&lt;Card>();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnuRIKAGEe2yhtolEJTpxQ" name="getCardHand" specification="_VlmKNaAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnuRIaAGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>Gson gson = new Gson();&#xD;
+		String jsondata = gson.toJson(cardHand);&#xD;
+		return jsondata;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnuRIqAGEe2yhtolEJTpxQ" name="addCard" specification="_VnDiwqAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnuRI6AGEe2yhtolEJTpxQ" name="card" type="_VlkVAKAGEe2yhtolEJTpxQ"/>
+          <language>java</language>
+          <body>cardHand.add(card);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnuRJKAGEe2yhtolEJTpxQ" name="getCardAt" specification="_VlmxQKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnuRJaAGEe2yhtolEJTpxQ" name="pos">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VnuRJqAGEe2yhtolEJTpxQ" type="_VlkVAKAGEe2yhtolEJTpxQ" direction="return"/>
+          <language>java</language>
+          <body>return cardHand.get(pos);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnuRJ6AGEe2yhtolEJTpxQ" name="getCardHandSize" specification="_VlmxQqAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnuRKKAGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return cardHand.size();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnuRKaAGEe2yhtolEJTpxQ" name="clearHand" specification="_VlmxRKAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>cardHand.clear();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnuRKqAGEe2yhtolEJTpxQ" name="getValue" specification="_VlmxRaAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnuRK6AGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>int value = 0;&#xD;
+		&#xD;
+		for (int i = 0; i &lt; cardHand.size(); i++) &#xD;
+		{&#xD;
+			Card card = cardHand.get(i);&#xD;
+			&#xD;
+			//Normal dazu rechnen&#xD;
+			if (value + card.getValue() &lt;= 21) &#xD;
+			{&#xD;
+				value += card.getValue();&#xD;
+			}&#xD;
+			else&#xD;
+			{&#xD;
+				//Hinzurechnen bei einem Ass&#xD;
+				if (card.getValue() == 11) &#xD;
+				{&#xD;
+					value += 1;&#xD;
+				}&#xD;
+				else&#xD;
+				{&#xD;
+					value += card.getValue();&#xD;
+				}&#xD;
+			}&#xD;
+		}&#xD;
+		&#xD;
+		return value;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_VlmKMaAGEe2yhtolEJTpxQ" name="CardHand" method="_VntqHKAGEe2yhtolEJTpxQ">
+          <eAnnotations xmi:id="_VlmKMqAGEe2yhtolEJTpxQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_VlmKM6AGEe2yhtolEJTpxQ" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_VlmKNKAGEe2yhtolEJTpxQ" type="_VlmKMKAGEe2yhtolEJTpxQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlmKNaAGEe2yhtolEJTpxQ" name="getCardHand" method="_VnuRIKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlmKNqAGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlmxQKAGEe2yhtolEJTpxQ" name="getCardAt" method="_VnuRJKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlmxQaAGEe2yhtolEJTpxQ" name="pos">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VnEJ0KAGEe2yhtolEJTpxQ" type="_VlkVAKAGEe2yhtolEJTpxQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlmxQqAGEe2yhtolEJTpxQ" name="getCardHandSize" method="_VnuRJ6AGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlmxQ6AGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlmxRKAGEe2yhtolEJTpxQ" name="clearHand" method="_VnuRKaAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlmxRaAGEe2yhtolEJTpxQ" name="getValue" method="_VnuRKqAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlmxRqAGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VnDiwqAGEe2yhtolEJTpxQ" name="addCard" method="_VnuRIqAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnDiw6AGEe2yhtolEJTpxQ" name="card" type="_VlkVAKAGEe2yhtolEJTpxQ"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_VlnYUKAGEe2yhtolEJTpxQ" name="JsonObj">
+        <ownedAttribute xmi:id="_VnluQKAGEe2yhtolEJTpxQ" name="type" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VnluQaAGEe2yhtolEJTpxQ" name="value" isReadOnly="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnuRLKAGEe2yhtolEJTpxQ" name="JsonObj" specification="_Vln_YKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnuRLaAGEe2yhtolEJTpxQ" name="type">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VnuRLqAGEe2yhtolEJTpxQ" name="value">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VnuRL6AGEe2yhtolEJTpxQ" type="_VlnYUKAGEe2yhtolEJTpxQ" direction="return"/>
+          <language>java</language>
+          <body>this.type = type;&#xD;
+		this.value = value;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_Vln_YKAGEe2yhtolEJTpxQ" name="JsonObj" method="_VnuRLKAGEe2yhtolEJTpxQ">
+          <eAnnotations xmi:id="_Vln_Y6AGEe2yhtolEJTpxQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_Vln_ZKAGEe2yhtolEJTpxQ" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_Vln_YaAGEe2yhtolEJTpxQ" name="type">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_Vln_YqAGEe2yhtolEJTpxQ" name="value">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_Vln_ZaAGEe2yhtolEJTpxQ" type="_VlnYUKAGEe2yhtolEJTpxQ" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn-v1KAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn-v1aAGEe2yhtolEJTpxQ _Vniq8qAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn-v1aAGEe2yhtolEJTpxQ" name="" type="_Vlk8FaAGEe2yhtolEJTpxQ" association="_Vn-v1KAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn_W4aAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn_W4qAGEe2yhtolEJTpxQ _VnkgIqAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn_W4qAGEe2yhtolEJTpxQ" name="" type="_VlmKMKAGEe2yhtolEJTpxQ" association="_Vn_W4aAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Vk_tQKAGEe2yhtolEJTpxQ" name="client">
+      <packagedElement xmi:type="uml:Class" xmi:id="_VlSoMKAGEe2yhtolEJTpxQ" name="BlackClient">
+        <generalization xmi:id="_VnH0MKAGEe2yhtolEJTpxQ" general="_VnHNIaAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnPwAKAGEe2yhtolEJTpxQ" name="output" visibility="private" type="_Vm1gU6AGEe2yhtolEJTpxQ" association="_Vn0XwKAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnQXEKAGEe2yhtolEJTpxQ" name="writer" visibility="private" type="_Vm2HYaAGEe2yhtolEJTpxQ" association="_Vn0-0aAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnQXEqAGEe2yhtolEJTpxQ" name="window" visibility="private" isStatic="true" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn0-1KAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnQXFKAGEe2yhtolEJTpxQ" name="window2" isStatic="true" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn1l4aAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnQ-IaAGEe2yhtolEJTpxQ" name="socket" visibility="private" type="_Vm2HY6AGEe2yhtolEJTpxQ" association="_Vn1l5KAGEe2yhtolEJTpxQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnQ-IqAGEe2yhtolEJTpxQ" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VnQ-JKAGEe2yhtolEJTpxQ" name="hand" visibility="private" type="_VlmKMKAGEe2yhtolEJTpxQ" association="_Vn2M8aAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnQ-JqAGEe2yhtolEJTpxQ" name="handSplitted" visibility="private" type="_VlmKMKAGEe2yhtolEJTpxQ" association="_Vn2M9KAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnRlMaAGEe2yhtolEJTpxQ" name="doForSplitted" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnRlMqAGEe2yhtolEJTpxQ" value="false"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VnRlNKAGEe2yhtolEJTpxQ" name="inputString" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnRlNaAGEe2yhtolEJTpxQ" value="&quot;&quot;"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnoxkKAGEe2yhtolEJTpxQ" name="main" specification="_VlUdYKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnoxkaAGEe2yhtolEJTpxQ" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VnoxkqAGEe2yhtolEJTpxQ" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>BlackClient client = new BlackClient();&#xD;
+		window = new Gui(client);&#xD;
+		client.start();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnpYoKAGEe2yhtolEJTpxQ" name="run" specification="_VlVEcaAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>System.out.println(&quot;#Client# Client Started!&quot;);&#xD;
+ 	//Connection Data&#xD;
+ 	String hostname = &quot;localhost&quot;;&#xD;
+ 	int port = 6868;&#xD;
+ &#xD;
+ 	try {&#xD;
+ 		//Intialize socket, output and writer&#xD;
+ 		while(socket == null)&#xD;
+ 		{&#xD;
+ 			try {&#xD;
+ 				socket = new Socket(hostname, port);&#xD;
+ 			}&#xD;
+ 			catch(IOException ex)&#xD;
+ 			{&#xD;
+ 				System.out.println(&quot;#Client# No server found!&quot;);&#xD;
+ 				try {&#xD;
+						Thread.sleep(5000);&#xD;
+					} catch (InterruptedException e) {&#xD;
+						e.printStackTrace();&#xD;
+					}&#xD;
+ 			}&#xD;
+ 		}&#xD;
+ 		System.out.println(&quot;#Client# Connected succesfully&quot;);&#xD;
+ 		   		&#xD;
+         output = socket.getOutputStream();&#xD;
+         writer = new PrintWriter(output, true);&#xD;
+         hand = new CardHand();&#xD;
+         handSplitted = new CardHand();&#xD;
+         &#xD;
+         InputStream input = socket.getInputStream();&#xD;
+         BufferedReader reader = new BufferedReader(new InputStreamReader(input));&#xD;
+         &#xD;
+         while (true) {&#xD;
+         	System.out.print(&quot;&quot;);	//Ohne dem gehts nimma xD&#xD;
+         	if (inputString.equals(&quot;draw&quot;)) &#xD;
+         	{&#xD;
+         		if (!doForSplitted) &#xD;
+         		{//Do for standard GUI&#xD;
+         			inputString = getMsgDraw();&#xD;
+                     writer.println(inputString);	//Send message to server&#xD;
+                     inputString = &quot;&quot;;&#xD;
+      &#xD;
+                     String answer = reader.readLine();	//Server answer&#xD;
+                     Card card = translateCardFromJson(answer);&#xD;
+                     hand.addCard(card);&#xD;
+                     window.setCard(card);&#xD;
+                     &#xD;
+                     synchronized(window) {&#xD;
+                         window.notify();&#xD;
+                     }&#xD;
+&#xD;
+                     System.out.println(&quot;#Client# Antwort vom Server: &quot; + answer);&#xD;
+					}&#xD;
+         		else&#xD;
+         		{//Do for splitted GUI&#xD;
+         			inputString = getMsgDraw();&#xD;
+                     writer.println(inputString);	//Send message to server&#xD;
+                     inputString = &quot;&quot;;&#xD;
+      &#xD;
+                     String answer = reader.readLine();	//Server answer&#xD;
+                     Card card = translateCardFromJson(answer);&#xD;
+                     handSplitted.addCard(card);&#xD;
+                     window2.setCard(card);&#xD;
+                     &#xD;
+                     synchronized(window2) {&#xD;
+                         window2.notify();&#xD;
+                     }&#xD;
+                     &#xD;
+                     System.out.println(&quot;#Client# Antwort vom Server: &quot; + answer);&#xD;
+         		}&#xD;
+				}&#xD;
+         	else if (inputString.equals(&quot;stand&quot;))&#xD;
+         	{&#xD;
+         		if (!doForSplitted) &#xD;
+         		{//Do for standard GUI&#xD;
+						writer.println(getMsgStand(hand.getValue()));&#xD;
+						hand = new CardHand();&#xD;
+	            		inputString = &quot;&quot;;&#xD;
+	            		&#xD;
+	            		String answer = reader.readLine();	//Server answer&#xD;
+	            		JsonObj msgObj = translateFromJson(answer);&#xD;
+	            		String gameStatus = msgObj.getType();&#xD;
+	            		int dealerHandValue = msgObj.getValue();&#xD;
+	            		window.endRound(gameStatus, dealerHandValue);&#xD;
+					}&#xD;
+         		else&#xD;
+         		{//Do for splitted GUI&#xD;
+         			writer.println(getMsgStand(handSplitted.getValue()));&#xD;
+         			handSplitted = new CardHand();&#xD;
+             		inputString = &quot;&quot;;&#xD;
+             		&#xD;
+             		String answer = reader.readLine();	//Server answer&#xD;
+             		JsonObj msgObj = translateFromJson(answer);&#xD;
+             		String gameStatus = msgObj.getType();&#xD;
+             		int dealerHandValue = msgObj.getValue();&#xD;
+             		window2.endRound(gameStatus, dealerHandValue);&#xD;
+         		}&#xD;
+         		&#xD;
+         	}&#xD;
+         	else if (inputString.equals(&quot;quit&quot;))&#xD;
+         	{&#xD;
+         		break;&#xD;
+         	}&#xD;
+         }&#xD;
+         shutdown();&#xD;
+     } catch (UnknownHostException ex) {&#xD;
+ &#xD;
+         System.out.println(&quot;#Client# Server not found: &quot; + ex.getMessage());&#xD;
+ &#xD;
+     } catch (IOException ex) {&#xD;
+ &#xD;
+         System.out.println(&quot;#Client# I/O error: &quot; + ex.getMessage());&#xD;
+     }&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnpYoaAGEe2yhtolEJTpxQ" name="translateCardFromJson" specification="_VlVEcqAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnpYoqAGEe2yhtolEJTpxQ" name="msg">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VnpYo6AGEe2yhtolEJTpxQ" type="_VlkVAKAGEe2yhtolEJTpxQ" direction="return"/>
+          <language>java</language>
+          <body>Gson gson = new Gson();&#xD;
+		if (msg.contains(&quot;name&quot;) &amp;&amp; msg.contains(&quot;value&quot;)) &#xD;
+		{&#xD;
+			Card card = gson.fromJson(msg, Card.class);&#xD;
+			return card;&#xD;
+		}&#xD;
+		return null;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnpYpKAGEe2yhtolEJTpxQ" name="translateFromJson" specification="_VlVEdKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnpYpaAGEe2yhtolEJTpxQ" name="msg">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VnpYpqAGEe2yhtolEJTpxQ" type="_VlnYUKAGEe2yhtolEJTpxQ" direction="return"/>
+          <language>java</language>
+          <body>Gson gson = new Gson();&#xD;
+		if (msg.contains(&quot;type&quot;) &amp;&amp; msg.contains(&quot;value&quot;)) &#xD;
+		{&#xD;
+			JsonObj obj = gson.fromJson(msg, JsonObj.class);&#xD;
+			return obj;&#xD;
+		}&#xD;
+		return null;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnpYp6AGEe2yhtolEJTpxQ" name="shutdown" specification="_VlVEdqAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>//Bei einem geplanten Verbindungsabbruch wird eine letzte Nachricht geschickt, der Server stoppt somit den Thread&#xD;
+ 	try {&#xD;
+ 		System.out.println(&quot;#Client# Requested shutdown!&quot;);&#xD;
+ 		writer.println(&quot;closeSession&quot;);&#xD;
+ 		&#xD;
+ 		//Langer Abstand ist notwendig, da der Thread sonst nicht mehr den Abbruch lesen kann&#xD;
+         Thread.sleep(5000);				&#xD;
+         &#xD;
+			socket.close();&#xD;
+		} catch (IOException | InterruptedException e) {&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnpYqKAGEe2yhtolEJTpxQ" name="sendMessage" specification="_VlVEd6AGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnpYqaAGEe2yhtolEJTpxQ" name="msg">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VnpYqqAGEe2yhtolEJTpxQ" name="doForSplitted">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.inputString = msg;&#xD;
+		this.doForSplitted = doForSplitted;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnpYq6AGEe2yhtolEJTpxQ" name="getMsgDraw" specification="_VlVEeqAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnpYrKAGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>JsonObj obj = new JsonObj(&quot;draw&quot;, 0);&#xD;
+		Gson gson = new Gson();&#xD;
+		String jsondata = gson.toJson(obj);&#xD;
+		return jsondata;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnpYraAGEe2yhtolEJTpxQ" name="getMsgStand" specification="_VlVrgaAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnpYrqAGEe2yhtolEJTpxQ" name="handValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VnpYr6AGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>JsonObj obj = new JsonObj(&quot;stand&quot;, handValue);&#xD;
+		Gson gson = new Gson();&#xD;
+		String jsondata = gson.toJson(obj);&#xD;
+		return jsondata;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnpYsKAGEe2yhtolEJTpxQ" name="doSplit" specification="_Vm3VgqAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnpYsaAGEe2yhtolEJTpxQ" name="gui" type="_VleOYKAGEe2yhtolEJTpxQ"/>
+          <language>java</language>
+          <body>//Set GUI&#xD;
+		window2 = gui;&#xD;
+		&#xD;
+		//Save Cards&#xD;
+		Card card1 = hand.getCardAt(0);&#xD;
+		Card card2 = hand.getCardAt(1);&#xD;
+		&#xD;
+		//Clear hands&#xD;
+		hand.clearHand();&#xD;
+		handSplitted.clearHand();&#xD;
+		&#xD;
+		//Set both hands&#xD;
+		hand.addCard(card1);&#xD;
+		handSplitted.addCard(card2);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnp_sKAGEe2yhtolEJTpxQ" name="getHandValue" specification="_VlVrhKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vnp_saAGEe2yhtolEJTpxQ" name="doForSplitted">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_Vnp_sqAGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>if (doForSplitted) &#xD;
+		{&#xD;
+			return handSplitted.getValue();&#xD;
+		}&#xD;
+		return hand.getValue();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_VlUdYKAGEe2yhtolEJTpxQ" name="main" isStatic="true" method="_VnoxkKAGEe2yhtolEJTpxQ">
+          <ownedComment xmi:id="_VnwGUKAGEe2yhtolEJTpxQ">
+            <body>Rudi Wagner&#xD;
+	 * Paul Weissengruber&#xD;
+	 * 5 BHIT&#xD;
+	 * Blackjack&#xD;
+	 * Client</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_VlUdYaAGEe2yhtolEJTpxQ" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VlUdYqAGEe2yhtolEJTpxQ" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlVEcaAGEe2yhtolEJTpxQ" name="run" method="_VnpYoKAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlVEcqAGEe2yhtolEJTpxQ" name="translateCardFromJson" visibility="private" method="_VnpYoaAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlVEc6AGEe2yhtolEJTpxQ" name="msg">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_Vm3VgKAGEe2yhtolEJTpxQ" type="_VlkVAKAGEe2yhtolEJTpxQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlVEdKAGEe2yhtolEJTpxQ" name="translateFromJson" visibility="private" method="_VnpYpKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlVEdaAGEe2yhtolEJTpxQ" name="msg">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_Vm3VgaAGEe2yhtolEJTpxQ" type="_VlnYUKAGEe2yhtolEJTpxQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlVEdqAGEe2yhtolEJTpxQ" name="shutdown" method="_VnpYp6AGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlVEd6AGEe2yhtolEJTpxQ" name="sendMessage" method="_VnpYqKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlVEeKAGEe2yhtolEJTpxQ" name="msg">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VlVEeaAGEe2yhtolEJTpxQ" name="doForSplitted">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlVEeqAGEe2yhtolEJTpxQ" name="getMsgDraw" visibility="private" method="_VnpYq6AGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlVrgKAGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlVrgaAGEe2yhtolEJTpxQ" name="getMsgStand" visibility="private" method="_VnpYraAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlVrgqAGEe2yhtolEJTpxQ" name="handValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VlVrg6AGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlVrhKAGEe2yhtolEJTpxQ" name="getHandValue" method="_Vnp_sKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlVrhaAGEe2yhtolEJTpxQ" name="doForSplitted">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VlVrhqAGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Vm3VgqAGEe2yhtolEJTpxQ" name="doSplit" method="_VnpYsKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vm3Vg6AGEe2yhtolEJTpxQ" name="gui" type="_VleOYKAGEe2yhtolEJTpxQ"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_VlXgsKAGEe2yhtolEJTpxQ" name="Gui">
+        <ownedAttribute xmi:id="_VnSMQKAGEe2yhtolEJTpxQ" name="frmBlackjackJavaClient" visibility="private" type="_Vm81EaAGEe2yhtolEJTpxQ" association="_Vn20AaAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnSMQqAGEe2yhtolEJTpxQ" name="client" visibility="private" type="_VlSoMKAGEe2yhtolEJTpxQ" association="_Vn20BKAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnSMRKAGEe2yhtolEJTpxQ" name="playerActionPanel" visibility="private" type="_Vm9cIKAGEe2yhtolEJTpxQ" association="_Vn20B6AGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnSMRqAGEe2yhtolEJTpxQ" name="playerHandPanel" visibility="private" type="_Vm9cIKAGEe2yhtolEJTpxQ" association="_Vn3bEqAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnSzUKAGEe2yhtolEJTpxQ" name="playerMoneyPanel" visibility="private" type="_Vm9cIKAGEe2yhtolEJTpxQ" association="_Vn4CIaAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnSzUqAGEe2yhtolEJTpxQ" name="topLabel" visibility="private" type="_Vm81E6AGEe2yhtolEJTpxQ" association="_Vn4CJKAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnSzVKAGEe2yhtolEJTpxQ" name="playerHand" visibility="private" type="_Vm7m9KAGEe2yhtolEJTpxQ" association="_Vn4pMaAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnTaYaAGEe2yhtolEJTpxQ" name="playerCardHand" type="_Vm7m9KAGEe2yhtolEJTpxQ" association="_Vn5QQKAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnTaZKAGEe2yhtolEJTpxQ" name="playerHandValueLabel" visibility="private" type="_Vm81E6AGEe2yhtolEJTpxQ" association="_Vn5QQ6AGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnUBcKAGEe2yhtolEJTpxQ" name="lblGameStatus" visibility="private" type="_Vm81E6AGEe2yhtolEJTpxQ" association="_Vn5QRqAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnUBcqAGEe2yhtolEJTpxQ" name="cardCnt" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnUBc6AGEe2yhtolEJTpxQ" value="0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VnUBdaAGEe2yhtolEJTpxQ" name="handValue" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnUBdqAGEe2yhtolEJTpxQ" value="0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VnUBeKAGEe2yhtolEJTpxQ" name="money" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnUBeaAGEe2yhtolEJTpxQ" value="5000"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VnUogKAGEe2yhtolEJTpxQ" name="playerBet" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnUogaAGEe2yhtolEJTpxQ" value="0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VnUog6AGEe2yhtolEJTpxQ" name="gui2" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn53UaAGEe2yhtolEJTpxQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnUohKAGEe2yhtolEJTpxQ" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VnUohqAGEe2yhtolEJTpxQ" name="foregroundColor" visibility="package" type="_Vm38kKAGEe2yhtolEJTpxQ" association="_Vn53VKAGEe2yhtolEJTpxQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnUoh6AGEe2yhtolEJTpxQ" value="new Color(136, 138, 145)"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VnUoiaAGEe2yhtolEJTpxQ" name="backgroundColor" visibility="package" type="_Vm38kKAGEe2yhtolEJTpxQ" association="_Vn6eYaAGEe2yhtolEJTpxQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnUoiqAGEe2yhtolEJTpxQ" value="new Color(48, 49, 54)"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VnVPkaAGEe2yhtolEJTpxQ" name="specialColor" visibility="package" type="_Vm38kKAGEe2yhtolEJTpxQ" association="_Vn6eZKAGEe2yhtolEJTpxQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnVPkqAGEe2yhtolEJTpxQ" value="new Color(55, 57, 63)"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnp_s6AGEe2yhtolEJTpxQ" name="main" specification="_VlYu0KAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vnp_tKAGEe2yhtolEJTpxQ" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vnp_taAGEe2yhtolEJTpxQ" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>EventQueue.invokeLater(new Runnable() {&#xD;
+			public void run() {&#xD;
+				try {&#xD;
+					Gui window = new Gui(null);&#xD;
+					window.frmBlackjackJavaClient.setVisible(true);&#xD;
+				} catch (Exception e) {&#xD;
+					e.printStackTrace();&#xD;
+				}&#xD;
+			}&#xD;
+		});&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnp_tqAGEe2yhtolEJTpxQ" name="Gui" specification="_Vm-qQKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vnp_t6AGEe2yhtolEJTpxQ" name="client" type="_VlSoMKAGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_Vnp_uKAGEe2yhtolEJTpxQ" type="_VlXgsKAGEe2yhtolEJTpxQ" direction="return"/>
+          <language>java</language>
+          <body>playerHand = new ArrayList&lt;JLabel>();&#xD;
+		playerCardHand = new ArrayList&lt;Card>();&#xD;
+		this.client = client;&#xD;
+		initialize();&#xD;
+		frmBlackjackJavaClient.setVisible(true);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnp_uaAGEe2yhtolEJTpxQ" name="initialize" specification="_VlZ88qAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>frmBlackjackJavaClient = new JFrame();&#xD;
+		frmBlackjackJavaClient.setIconImage(Toolkit.getDefaultToolkit().getImage(Gui.class.getResource(&quot;/resources/card_joker_black.png&quot;)));&#xD;
+		frmBlackjackJavaClient.setTitle(&quot;Blackjack Java Client&quot;);&#xD;
+		frmBlackjackJavaClient.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);&#xD;
+		frmBlackjackJavaClient.addWindowListener(new WindowAdapter() {&#xD;
+		    @Override&#xD;
+		    public void windowClosing(WindowEvent event) {&#xD;
+		        OnClose();&#xD;
+		    }&#xD;
+		});&#xD;
+		frmBlackjackJavaClient.getContentPane().setLayout(null);&#xD;
+		frmBlackjackJavaClient.setSize(1000, 700);&#xD;
+		frmBlackjackJavaClient.getContentPane().setBackground(backgroundColor);&#xD;
+		frmBlackjackJavaClient.getContentPane().setForeground(foregroundColor);&#xD;
+		frmBlackjackJavaClient.addComponentListener(new ComponentAdapter() {&#xD;
+		    public void componentResized(ComponentEvent componentEvent) &#xD;
+		    {&#xD;
+		        OnResize();&#xD;
+		    }&#xD;
+		});&#xD;
+		&#xD;
+		//Player Action Panel (Middle Panel with Buttons)&#xD;
+		playerActionPanel = new JPanel();&#xD;
+		playerActionPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));&#xD;
+		playerActionPanel.setBounds(10, 283, 964, 266);&#xD;
+		frmBlackjackJavaClient.getContentPane().add(playerActionPanel);&#xD;
+		playerActionPanel.setLayout(null);&#xD;
+		playerActionPanel.setForeground(foregroundColor);&#xD;
+		playerActionPanel.setBackground(backgroundColor);&#xD;
+		&#xD;
+			//Hit Button&#xD;
+			JButton drawButton = new JButton(&quot;Hit&quot;);&#xD;
+			drawButton.setEnabled(false);&#xD;
+			drawButton.setFont(new Font(&quot;Sitka Small&quot;, Font.PLAIN, 30));&#xD;
+			drawButton.setBounds(33, 50, 200, 170);&#xD;
+			drawButton.addActionListener(e -> drawCard());&#xD;
+			drawButton.setName(&quot;drawButton&quot;);&#xD;
+			drawButton.setForeground(foregroundColor);&#xD;
+			drawButton.setBackground(specialColor);&#xD;
+			playerActionPanel.add(drawButton);&#xD;
+			&#xD;
+			//Stand Button&#xD;
+			JButton standButton = new JButton(&quot;Stand&quot;);&#xD;
+			standButton.setEnabled(false);&#xD;
+			standButton.setFont(new Font(&quot;Sitka Small&quot;, Font.PLAIN, 30));&#xD;
+			standButton.setBounds(731, 50, 200, 170);&#xD;
+			standButton.addActionListener(e -> stand());&#xD;
+			standButton.setName(&quot;standButton&quot;);&#xD;
+			standButton.setForeground(foregroundColor);&#xD;
+			standButton.setBackground(specialColor);&#xD;
+			playerActionPanel.add(standButton);&#xD;
+			&#xD;
+			//New Round Button&#xD;
+			JButton reloadButton = new JButton(&quot;New Round!&quot;);&#xD;
+			reloadButton.addActionListener(new ActionListener() {&#xD;
+				public void actionPerformed(ActionEvent e) {&#xD;
+				}&#xD;
+			});&#xD;
+			reloadButton.setBounds(382, 231, 200, 21);&#xD;
+			reloadButton.addActionListener(e -> newRound());&#xD;
+			reloadButton.setName(&quot;reloadButton&quot;);&#xD;
+			reloadButton.setForeground(foregroundColor);&#xD;
+			reloadButton.setBackground(specialColor);&#xD;
+			playerActionPanel.add(reloadButton);&#xD;
+			&#xD;
+			//Double Down Button&#xD;
+			JButton doubleDownButton = new JButton(&quot;Double&quot;);&#xD;
+			doubleDownButton.setEnabled(false);&#xD;
+			doubleDownButton.setFont(new Font(&quot;Sitka Small&quot;, Font.PLAIN, 30));&#xD;
+			doubleDownButton.setBounds(265, 50, 200, 170);&#xD;
+			doubleDownButton.addActionListener(e -> doubleDown());&#xD;
+			doubleDownButton.setName(&quot;doubleDownButton&quot;);&#xD;
+			doubleDownButton.setForeground(foregroundColor);&#xD;
+			doubleDownButton.setBackground(specialColor);&#xD;
+			playerActionPanel.add(doubleDownButton);&#xD;
+			&#xD;
+			//Split Button&#xD;
+			JButton splitButton = new JButton(&quot;Split&quot;);&#xD;
+			splitButton.addActionListener(e -> split());&#xD;
+			splitButton.setName(&quot;splitButton&quot;);&#xD;
+			splitButton.setFont(new Font(&quot;Sitka Small&quot;, Font.PLAIN, 30));&#xD;
+			splitButton.setBounds(498, 50, 200, 170);&#xD;
+			splitButton.setEnabled(false);&#xD;
+			splitButton.setForeground(foregroundColor);&#xD;
+			splitButton.setBackground(specialColor);&#xD;
+			&#xD;
+			playerActionPanel.add(splitButton);&#xD;
+		&#xD;
+		//Player Hand Panel&#xD;
+		playerHandPanel = new JPanel();&#xD;
+		playerHandPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));&#xD;
+		playerHandPanel.setLayout(null);&#xD;
+		playerHandPanel.setBounds(10, 176, 964, 96);&#xD;
+		playerHandPanel.setForeground(foregroundColor);&#xD;
+		playerHandPanel.setBackground(backgroundColor);&#xD;
+		frmBlackjackJavaClient.getContentPane().add(playerHandPanel);&#xD;
+			&#xD;
+		playerHandValueLabel = new JLabel(&quot;Current player-hand value: &quot;);&#xD;
+		playerHandValueLabel.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));&#xD;
+		playerHandValueLabel.setBounds(10, 0, 357, 20);&#xD;
+		playerHandValueLabel.setName(&quot;playerHandValueLabel&quot;);&#xD;
+		playerHandValueLabel.setForeground(foregroundColor);&#xD;
+		playerHandValueLabel.setBackground(backgroundColor);&#xD;
+		playerHandPanel.add(playerHandValueLabel);&#xD;
+			&#xD;
+			//Set Player Hand Images&#xD;
+			int cards = 11;&#xD;
+			for(int i = 0; i &lt; cards; i++)&#xD;
+			{&#xD;
+				JLabel card = new JLabel(&quot;&quot;);&#xD;
+				card.setIcon(new ImageIcon(Gui.class.getResource(&quot;/resources/card_back.png&quot;)));&#xD;
+				card.setBounds(i * 74, 25, 64, 64);&#xD;
+				card.setName(&quot;card&quot; + i);&#xD;
+				playerHand.add(card);&#xD;
+				playerHandPanel.add(card);&#xD;
+			}&#xD;
+		&#xD;
+		//Title&#xD;
+		topLabel = new JLabel(&quot;BLACKJACK&quot;);&#xD;
+		topLabel.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 30));&#xD;
+		topLabel.setHorizontalAlignment(SwingConstants.CENTER);&#xD;
+		topLabel.setBounds(10, 10, 964, 80);&#xD;
+		topLabel.setForeground(foregroundColor);&#xD;
+		frmBlackjackJavaClient.getContentPane().add(topLabel);&#xD;
+		&#xD;
+		//Player Money Panel&#xD;
+		playerMoneyPanel = new JPanel();&#xD;
+		playerMoneyPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));&#xD;
+		playerMoneyPanel.setLayout(null);&#xD;
+		playerMoneyPanel.setBounds(10, 101, 964, 64);&#xD;
+		playerMoneyPanel.setForeground(foregroundColor);&#xD;
+		playerMoneyPanel.setBackground(backgroundColor);&#xD;
+		frmBlackjackJavaClient.getContentPane().add(playerMoneyPanel);&#xD;
+		&#xD;
+			JLabel lblMoney = new JLabel(&quot;Money:&quot;);&#xD;
+			lblMoney.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 24));&#xD;
+			lblMoney.setBounds(10, 11, 78, 42);&#xD;
+			lblMoney.setName(&quot;moneyLabel&quot;);&#xD;
+			lblMoney.setForeground(foregroundColor);&#xD;
+			playerMoneyPanel.add(lblMoney);&#xD;
+			&#xD;
+			JLabel moneyLabel = new JLabel(&quot;5000€&quot;);&#xD;
+			moneyLabel.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 24));&#xD;
+			moneyLabel.setBounds(98, 11, 131, 42);&#xD;
+			moneyLabel.setName(&quot;money&quot;);&#xD;
+			moneyLabel.setForeground(foregroundColor);&#xD;
+			playerMoneyPanel.add(moneyLabel);&#xD;
+			&#xD;
+			//Spinner for Player Bet&#xD;
+			JSpinner spinner = new JSpinner();&#xD;
+			spinner.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 24));&#xD;
+			spinner.setBounds(718, 11, 236, 42);&#xD;
+			spinner.setName(&quot;betAmount&quot;);&#xD;
+			spinner.addChangeListener(e -> updateBet());&#xD;
+			//Colour&#xD;
+			spinner.getEditor().getComponent(0).setForeground(foregroundColor);&#xD;
+			spinner.getEditor().getComponent(0).setBackground(backgroundColor);&#xD;
+			spinner.setBorder(new LineBorder(foregroundColor, 1));&#xD;
+			int n = spinner.getComponentCount();&#xD;
+		    for (int i=0; i&lt;n; i++)&#xD;
+		    {&#xD;
+		        Component c = spinner.getComponent(i);&#xD;
+		        if (c instanceof JButton)&#xD;
+		        {&#xD;
+		            c.setBackground(specialColor);&#xD;
+		        }&#xD;
+		    }&#xD;
+			playerMoneyPanel.add(spinner);&#xD;
+			&#xD;
+			JLabel spinnerLabel = new JLabel(&quot;Bet amount:&quot;);&#xD;
+			spinnerLabel.setHorizontalAlignment(SwingConstants.TRAILING);&#xD;
+			spinnerLabel.setBounds(565, 11, 143, 42);&#xD;
+			spinnerLabel.setName(&quot;betAmountLabel&quot;);&#xD;
+			spinnerLabel.setForeground(foregroundColor);&#xD;
+			spinnerLabel.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 24));&#xD;
+			playerMoneyPanel.add(spinnerLabel);&#xD;
+			&#xD;
+			lblGameStatus = new JLabel(&quot;&quot;);&#xD;
+			lblGameStatus.setBounds(10, 68, 966, 33);&#xD;
+			lblGameStatus.setHorizontalAlignment(SwingConstants.CENTER);&#xD;
+			lblGameStatus.setVerticalAlignment(SwingConstants.TOP);&#xD;
+			lblGameStatus.setName(&quot;gameStatusLabel&quot;);&#xD;
+			lblGameStatus.setForeground(new Color(136, 138, 145));&#xD;
+			lblGameStatus.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 24));&#xD;
+			frmBlackjackJavaClient.getContentPane().add(lblGameStatus);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnp_uqAGEe2yhtolEJTpxQ" name="OnClose" specification="_VlZ886AGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>client.sendMessage(&quot;quit&quot;, false);&#xD;
+		if(this.gui2 != null)&#xD;
+		{&#xD;
+			this.gui2.OnClose();&#xD;
+		}&#xD;
+		frmBlackjackJavaClient.setVisible(false);&#xD;
+		frmBlackjackJavaClient.dispose();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnqmwKAGEe2yhtolEJTpxQ" name="OnResize" specification="_VlakAKAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>if (frmBlackjackJavaClient.getWidth() &lt; 870) &#xD;
+		{&#xD;
+			frmBlackjackJavaClient.setBounds(frmBlackjackJavaClient.getX(), frmBlackjackJavaClient.getY(), 870, frmBlackjackJavaClient.getHeight());&#xD;
+		}&#xD;
+		&#xD;
+		System.out.println(&quot;#GUI# Resizing to fit frame size: width: &quot; + frmBlackjackJavaClient.getWidth() + &quot;, height: &quot; + frmBlackjackJavaClient.getHeight());&#xD;
+		//Resize TopLabel&#xD;
+		topLabel.setBounds(topLabel.getX(), topLabel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, topLabel.getHeight());&#xD;
+		lblGameStatus.setBounds(lblGameStatus.getX(), lblGameStatus.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, lblGameStatus.getHeight());&#xD;
+		&#xD;
+		//Resize PlayerHandPanel&#xD;
+			Component[] handComponents = playerHandPanel.getComponents();&#xD;
+			//Panel Size/Pos&#xD;
+			playerHandPanel.setBounds(playerHandPanel.getX(), playerHandPanel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, playerHandPanel.getHeight());&#xD;
+			&#xD;
+			//			  (Panel Width - Extra Spacing Left&amp;Right - Button Widths) / spacingAmount&#xD;
+			int handSpacing = (playerHandPanel.getWidth() - 20 - (11 * 64)) / 12;&#xD;
+			int handNextX = 10;&#xD;
+			for (Component component : handComponents) &#xD;
+			{&#xD;
+				if (!component.getName().equals(&quot;playerHandValueLabel&quot;)) &#xD;
+				{&#xD;
+					int x = handNextX + handSpacing;&#xD;
+					int y = component.getY();&#xD;
+					component.setLocation(x, y);&#xD;
+					handNextX = component.getX() + component.getWidth();&#xD;
+				}&#xD;
+			}&#xD;
+		&#xD;
+		//Resize PlayerActionPanel&#xD;
+			Component[] actionComponents = playerActionPanel.getComponents();&#xD;
+			//Panel Size/Pos&#xD;
+			playerActionPanel.setBounds(playerActionPanel.getX(), playerActionPanel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, playerActionPanel.getHeight());&#xD;
+			&#xD;
+			//			  (Panel Width - Extra Spacing Left&amp;Right - Button Widths) / spacingAmount&#xD;
+			int actionSpacing = (playerActionPanel.getWidth() - 20 - (4 * 200)) / 5;&#xD;
+			int actionNextX = 10;&#xD;
+			for (Component component : actionComponents) &#xD;
+			{&#xD;
+				if (!component.getName().equals(&quot;reloadButton&quot;)) &#xD;
+				{&#xD;
+					int x = actionNextX + actionSpacing;&#xD;
+					int y = component.getY();&#xD;
+					component.setLocation(x, y);&#xD;
+					actionNextX = component.getX() + component.getWidth();&#xD;
+				}&#xD;
+				if (component.getName().equals(&quot;reloadButton&quot;)) &#xD;
+				{&#xD;
+					int x = (playerActionPanel.getWidth() - component.getWidth())/2;&#xD;
+					int y = component.getY();&#xD;
+					component.setLocation(x, y);&#xD;
+				}&#xD;
+			}&#xD;
+		&#xD;
+		//Resize PlayerMoneyPanel&#xD;
+			Component[] moneyComponents = playerMoneyPanel.getComponents();&#xD;
+			//Panel Size/Pos&#xD;
+			playerMoneyPanel.setBounds(playerMoneyPanel.getX(), playerMoneyPanel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, playerMoneyPanel.getHeight());&#xD;
+			&#xD;
+			int savePos = 0;&#xD;
+			for (Component component : moneyComponents) &#xD;
+			{&#xD;
+				if(component.getName().equals(&quot;betAmount&quot;))&#xD;
+				{&#xD;
+					int x = playerMoneyPanel.getWidth() - component.getWidth() - 10;&#xD;
+					int y = component.getY();&#xD;
+					component.setLocation(x, y);&#xD;
+					savePos = component.getX();&#xD;
+				}&#xD;
+				if(component.getName().equals(&quot;betAmountLabel&quot;))&#xD;
+				{&#xD;
+					int x = savePos - component.getWidth() - 10;&#xD;
+					int y = component.getY();&#xD;
+					component.setLocation(x, y);&#xD;
+				}&#xD;
+			}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnqmwaAGEe2yhtolEJTpxQ" name="split" specification="_VlakAaAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>System.out.println(&quot;#ClientGUI# Request to split Hand.&quot;);&#xD;
+		gui2 = new GuiForSplit(this, client, playerCardHand.get(1));&#xD;
+		client.doSplit(gui2);&#xD;
+		playerCardHand.remove(1);&#xD;
+		cardCnt--;&#xD;
+		updateCard(1, &quot;card_back&quot;);&#xD;
+		&#xD;
+		//Disable Button&#xD;
+		Component[] actionComponents = playerActionPanel.getComponents();&#xD;
+		for (Component component : actionComponents) &#xD;
+		{&#xD;
+			if(component.getName().equals(&quot;splitButton&quot;))&#xD;
+			{&#xD;
+				component.setEnabled(false);&#xD;
+			}&#xD;
+		}&#xD;
+		&#xD;
+		//Draw Automaticly &amp; reset Value&#xD;
+		drawCard();&#xD;
+		handValue = this.client.getHandValue(false);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnqmwqAGEe2yhtolEJTpxQ" name="addSplitMoney" specification="_VlakAqAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vnqmw6AGEe2yhtolEJTpxQ" name="splitMoney">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>money += splitMoney;&#xD;
+		&#xD;
+		Component[] components = playerMoneyPanel.getComponents();&#xD;
+		for (Component component : components) &#xD;
+		{&#xD;
+			if (component.getName().equals(&quot;money&quot;)) &#xD;
+			{&#xD;
+				JLabel label = (JLabel) component;&#xD;
+				label.setText(Integer.toString(money) + &quot;€&quot;);&#xD;
+			}&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnqmxKAGEe2yhtolEJTpxQ" name="doubleDown" specification="_VlakBKAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>System.out.println(&quot;#ClientGUI# Request to double down.&quot;);&#xD;
+		//Draw last Card&#xD;
+		drawCard();&#xD;
+		&#xD;
+		//double MoneyBet&#xD;
+		playerBet = playerBet * 2;&#xD;
+		&#xD;
+		//Update playerBet from spinner&#xD;
+		Component[] components = playerMoneyPanel.getComponents();&#xD;
+		for (Component component : components) &#xD;
+		{&#xD;
+			if (component.getName().equals(&quot;betAmount&quot;)) &#xD;
+			{&#xD;
+				JSpinner spinner = ((JSpinner) component);&#xD;
+				spinner.setValue(playerBet);&#xD;
+			}&#xD;
+		}&#xD;
+		frmBlackjackJavaClient.repaint();&#xD;
+		&#xD;
+		//Automaticly Stand &amp; end Round&#xD;
+		try {&#xD;
+			Thread.sleep(50);&#xD;
+		} catch (InterruptedException e) {&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+		stand();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnqmxaAGEe2yhtolEJTpxQ" name="drawCard" specification="_VlakBaAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>System.out.println(&quot;#ClientGUI# Request new Card.&quot;);&#xD;
+		client.sendMessage(&quot;draw&quot;, false);&#xD;
+		&#xD;
+		if(cardCnt == 2)&#xD;
+		{&#xD;
+			//Disable DoubleDown and Split Button&#xD;
+			Component[] components = playerActionPanel.getComponents();&#xD;
+			for (Component component : components) &#xD;
+			{&#xD;
+				if(component.getName().equals(&quot;doubleDownButton&quot;) || component.getName().equals(&quot;splitButton&quot;))&#xD;
+				{&#xD;
+					//Set reload Button false&#xD;
+					component.setEnabled(false);&#xD;
+				}&#xD;
+			}&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnqmxqAGEe2yhtolEJTpxQ" name="stand" specification="_VlakBqAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>System.out.println(&quot;#ClientGUI# Request to stand.&quot;);&#xD;
+		client.sendMessage(&quot;stand&quot;, false);&#xD;
+		&#xD;
+		Component[] actionComponents = playerActionPanel.getComponents();&#xD;
+		for (Component component : actionComponents) &#xD;
+		{&#xD;
+			if(component.getClass() == JButton.class &amp;&amp; !component.getName().equals(&quot;reloadButton&quot;))&#xD;
+			{&#xD;
+				//Set all Buttons to false&#xD;
+				component.setEnabled(false);&#xD;
+			}&#xD;
+			&#xD;
+			if(component.getName().equals(&quot;reloadButton&quot;))&#xD;
+			{&#xD;
+				//Set reload Button true&#xD;
+				component.setEnabled(true);&#xD;
+			}&#xD;
+		}&#xD;
+		&#xD;
+		//Enable betSpinner&#xD;
+		Component[] moneyComponents = playerMoneyPanel.getComponents();&#xD;
+		for (Component component : moneyComponents) &#xD;
+		{&#xD;
+			if (component.getName().equals(&quot;betAmount&quot;)) &#xD;
+			{&#xD;
+				component.setEnabled(true);&#xD;
+			}&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnrN0KAGEe2yhtolEJTpxQ" name="newRound" specification="_VlakB6AGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>if (!(playerBet > 0 &amp;&amp; playerBet &lt;= money)) &#xD;
+		{&#xD;
+			return;&#xD;
+		}&#xD;
+		&#xD;
+		System.out.println(&quot;#ClientGUI# Reset on Client.&quot;);&#xD;
+		//Reset variables&#xD;
+		cardCnt = 0;&#xD;
+		handValue = 0;&#xD;
+		updateHandValue();&#xD;
+		&#xD;
+		//Reset cards&#xD;
+		playerCardHand = new ArrayList&lt;Card>();&#xD;
+		for (int i = 0; i &lt; playerHand.size(); i++) &#xD;
+		{&#xD;
+			updateCard(i, &quot;card_back&quot;);&#xD;
+		}&#xD;
+		&#xD;
+		//Lock betSpinner &amp; Reset GameStatus&#xD;
+		Component[] moneyComponents = playerMoneyPanel.getComponents();&#xD;
+		for (Component component : moneyComponents) &#xD;
+		{&#xD;
+			if (component.getName().equals(&quot;betAmount&quot;)) &#xD;
+			{&#xD;
+				component.setEnabled(false);&#xD;
+			}&#xD;
+		}&#xD;
+		lblGameStatus.setText(&quot;&quot;);&#xD;
+				&#xD;
+		//Draw first two cards&#xD;
+		drawCard();&#xD;
+		&#xD;
+		synchronized(this) {&#xD;
+			while(playerCardHand.size() &lt; 1 ) &#xD;
+			{&#xD;
+				System.out.print(&quot;&quot;);&#xD;
+			}&#xD;
+		}&#xD;
+		&#xD;
+		drawCard();&#xD;
+		&#xD;
+		//Reset Buttons&#xD;
+		Component[] actionComponents = playerActionPanel.getComponents();&#xD;
+		for (Component component : actionComponents) &#xD;
+		{&#xD;
+			if(component.getClass() == JButton.class &amp;&amp; !component.getName().equals(&quot;reloadButton&quot;) &amp;&amp; !component.getName().equals(&quot;splitButton&quot;))&#xD;
+			{&#xD;
+				//Set all Buttons to true&#xD;
+				component.setEnabled(true);&#xD;
+			}&#xD;
+			&#xD;
+			if(component.getName().equals(&quot;reloadButton&quot;))&#xD;
+			{&#xD;
+				//Set reload Button false&#xD;
+				component.setEnabled(false);&#xD;
+			}&#xD;
+		}&#xD;
+		&#xD;
+		//Repaint&#xD;
+		frmBlackjackJavaClient.repaint();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnrN0aAGEe2yhtolEJTpxQ" name="updateBet" specification="_VlakCKAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>//Update playerBet from spinner&#xD;
+		Component[] components = playerMoneyPanel.getComponents();&#xD;
+		for (Component component : components) &#xD;
+		{&#xD;
+			if (component.getName().equals(&quot;betAmount&quot;)) &#xD;
+			{&#xD;
+				JSpinner spinner = ((JSpinner) component);&#xD;
+				playerBet = (int) spinner.getValue();&#xD;
+			}&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnrN0qAGEe2yhtolEJTpxQ" name="setCard" specification="_Vm_RUKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnrN06AGEe2yhtolEJTpxQ" name="card" type="_VlkVAKAGEe2yhtolEJTpxQ"/>
+          <language>java</language>
+          <body>updateCard(cardCnt, card.getName());&#xD;
+		playerCardHand.add(card);&#xD;
+		handValue = this.client.getHandValue(false);&#xD;
+		cardCnt++;&#xD;
+		&#xD;
+		//Check for duplicate Cards to enable Split&#xD;
+		if (cardCnt == 2 &amp;&amp; gui2 == null) &#xD;
+		{&#xD;
+			Component[] actionComponents = playerActionPanel.getComponents();&#xD;
+			for (Component component : actionComponents) &#xD;
+			{&#xD;
+				if(component.getName().equals(&quot;splitButton&quot;))&#xD;
+				{&#xD;
+					component.setEnabled(false);&#xD;
+					&#xD;
+					Card card1 = playerCardHand.get(0);&#xD;
+					Card card2 = playerCardHand.get(1);&#xD;
+					if (card1.getValue() == card2.getValue()) &#xD;
+					{&#xD;
+						component.setEnabled(true);&#xD;
+					}&#xD;
+				}&#xD;
+			}&#xD;
+		}&#xD;
+		&#xD;
+		updateHandValue();&#xD;
+		&#xD;
+		if (handValue >= 21 || cardCnt >= 11) &#xD;
+		{&#xD;
+			//Automaticly stand and stop the user from hitting again&#xD;
+			stand();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnrN1KAGEe2yhtolEJTpxQ" name="updateHandValue" specification="_VlbLEKAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>playerHandValueLabel.setText(&quot;Current player-hand value: &quot; + handValue + &quot;&quot;);&#xD;
+		frmBlackjackJavaClient.repaint();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnrN1aAGEe2yhtolEJTpxQ" name="updateCard" specification="_VlbLEaAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnrN1qAGEe2yhtolEJTpxQ" name="pos">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VnrN16AGEe2yhtolEJTpxQ" name="type">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>JLabel card = playerHand.get(pos);&#xD;
+		//Gui	https://www.kenney.nl/assets/playing-cards-pack&#xD;
+		card.setIcon(new ImageIcon(Gui.class.getResource(&quot;/resources/&quot; + type + &quot;.png&quot;)));&#xD;
+		frmBlackjackJavaClient.repaint();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnrN2KAGEe2yhtolEJTpxQ" name="endRound" specification="_VlbLFKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnrN2aAGEe2yhtolEJTpxQ" name="gameStatus">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VnrN2qAGEe2yhtolEJTpxQ" name="dealerHandValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>System.out.println(&quot;#Client# Round state: &quot; + gameStatus);&#xD;
+		String gameStatusMSG = &quot;&quot;;&#xD;
+		switch (gameStatus) &#xD;
+		{&#xD;
+			case &quot;win&quot;:&#xD;
+				money += playerBet * 1.5;&#xD;
+				gameStatusMSG = &quot; You WON &quot; + (int)(playerBet * 1.5) + &quot;€ Dealer has:&quot; + dealerHandValue;&#xD;
+				break;&#xD;
+				&#xD;
+			case &quot;loose&quot;:&#xD;
+				money -= playerBet;&#xD;
+				gameStatusMSG = &quot; You LOST &quot; + playerBet + &quot;€ Dealer has:&quot; + dealerHandValue;&#xD;
+				break;&#xD;
+				&#xD;
+			case &quot;draw&quot;:&#xD;
+				//Stays the same&#xD;
+				gameStatusMSG = &quot; DRAW  Dealer has:&quot; + dealerHandValue;&#xD;
+				break;&#xD;
+		}&#xD;
+		&#xD;
+		//Update GUI&#xD;
+		Component[] components = playerMoneyPanel.getComponents();&#xD;
+		for (Component component : components) &#xD;
+		{&#xD;
+			if (component.getName().equals(&quot;money&quot;)) &#xD;
+			{&#xD;
+				JLabel label = (JLabel) component;&#xD;
+				label.setText(Integer.toString(money) + &quot;€&quot;);&#xD;
+			}&#xD;
+		}&#xD;
+		lblGameStatus.setText(gameStatusMSG);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_VlYu0KAGEe2yhtolEJTpxQ" name="main" isStatic="true" method="_Vnp_s6AGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlZ88KAGEe2yhtolEJTpxQ" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VlZ88aAGEe2yhtolEJTpxQ" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlZ88qAGEe2yhtolEJTpxQ" name="initialize" visibility="private" method="_Vnp_uaAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlZ886AGEe2yhtolEJTpxQ" name="OnClose" visibility="protected" method="_Vnp_uqAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlakAKAGEe2yhtolEJTpxQ" name="OnResize" visibility="protected" method="_VnqmwKAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlakAaAGEe2yhtolEJTpxQ" name="split" visibility="private" method="_VnqmwaAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlakAqAGEe2yhtolEJTpxQ" name="addSplitMoney" method="_VnqmwqAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlakA6AGEe2yhtolEJTpxQ" name="splitMoney">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlakBKAGEe2yhtolEJTpxQ" name="doubleDown" visibility="private" method="_VnqmxKAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlakBaAGEe2yhtolEJTpxQ" name="drawCard" visibility="private" method="_VnqmxaAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlakBqAGEe2yhtolEJTpxQ" name="stand" visibility="private" method="_VnqmxqAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlakB6AGEe2yhtolEJTpxQ" name="newRound" visibility="private" method="_VnrN0KAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlakCKAGEe2yhtolEJTpxQ" name="updateBet" visibility="private" method="_VnrN0aAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlbLEKAGEe2yhtolEJTpxQ" name="updateHandValue" visibility="private" method="_VnrN1KAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlbLEaAGEe2yhtolEJTpxQ" name="updateCard" method="_VnrN1aAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlbLEqAGEe2yhtolEJTpxQ" name="pos">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VlbLE6AGEe2yhtolEJTpxQ" name="type">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlbLFKAGEe2yhtolEJTpxQ" name="endRound" method="_VnrN2KAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlbLFaAGEe2yhtolEJTpxQ" name="gameStatus">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VlbLFqAGEe2yhtolEJTpxQ" name="dealerHandValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Vm-qQKAGEe2yhtolEJTpxQ" name="Gui" method="_Vnp_tqAGEe2yhtolEJTpxQ">
+          <eAnnotations xmi:id="_Vm-qQqAGEe2yhtolEJTpxQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_Vm-qQ6AGEe2yhtolEJTpxQ" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_Vm-qQaAGEe2yhtolEJTpxQ" name="client" type="_VlSoMKAGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_Vm-qRKAGEe2yhtolEJTpxQ" type="_VlXgsKAGEe2yhtolEJTpxQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Vm_RUKAGEe2yhtolEJTpxQ" name="setCard" method="_VnrN0qAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vm_RUaAGEe2yhtolEJTpxQ" name="card" type="_VlkVAKAGEe2yhtolEJTpxQ"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_VleOYKAGEe2yhtolEJTpxQ" name="GuiForSplit">
+        <ownedAttribute xmi:id="_VnV2oKAGEe2yhtolEJTpxQ" name="frmBlackjackJavaClient" visibility="private" type="_Vm81EaAGEe2yhtolEJTpxQ" association="_Vn6eZ6AGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnV2oqAGEe2yhtolEJTpxQ" name="client" visibility="private" type="_VlSoMKAGEe2yhtolEJTpxQ" association="_Vn7FcaAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnV2pKAGEe2yhtolEJTpxQ" name="mainGui" visibility="private" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn7FdKAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnV2pqAGEe2yhtolEJTpxQ" name="playerActionPanel" visibility="private" type="_Vm9cIKAGEe2yhtolEJTpxQ" association="_Vn7sgaAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VndLYaAGEe2yhtolEJTpxQ" name="playerHandPanel" visibility="private" type="_Vm9cIKAGEe2yhtolEJTpxQ" association="_Vn7shKAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VndycKAGEe2yhtolEJTpxQ" name="topLabel" visibility="private" type="_Vm81E6AGEe2yhtolEJTpxQ" association="_Vn8TkaAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VndycqAGEe2yhtolEJTpxQ" name="playerHand" visibility="private" type="_Vm7m9KAGEe2yhtolEJTpxQ" association="_Vn8TlKAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnfAkKAGEe2yhtolEJTpxQ" name="playerCardHand" visibility="private" type="_Vm7m9KAGEe2yhtolEJTpxQ" association="_Vn86oaAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnfAk6AGEe2yhtolEJTpxQ" name="playerHandValueLabel" visibility="private" type="_Vm81E6AGEe2yhtolEJTpxQ" association="_Vn86pKAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnfnoKAGEe2yhtolEJTpxQ" name="lblGameStatus" visibility="private" type="_Vm81E6AGEe2yhtolEJTpxQ" association="_Vn9hsaAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnfnoqAGEe2yhtolEJTpxQ" name="cardCnt" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Vnfno6AGEe2yhtolEJTpxQ" value="0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VnfnpaAGEe2yhtolEJTpxQ" name="handValue" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnfnpqAGEe2yhtolEJTpxQ" value="0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VngOsaAGEe2yhtolEJTpxQ" name="playerBet" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VngOsqAGEe2yhtolEJTpxQ" value="0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VngOtKAGEe2yhtolEJTpxQ" name="foregroundColor" visibility="package" type="_Vm38kKAGEe2yhtolEJTpxQ" association="_Vn9htKAGEe2yhtolEJTpxQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VngOtaAGEe2yhtolEJTpxQ" value="new Color(136, 138, 145)"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VngOt6AGEe2yhtolEJTpxQ" name="backgroundColor" visibility="package" type="_Vm38kKAGEe2yhtolEJTpxQ" association="_Vn-IwaAGEe2yhtolEJTpxQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Vng1wKAGEe2yhtolEJTpxQ" value="new Color(48, 49, 54)"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Vng1wqAGEe2yhtolEJTpxQ" name="specialColor" visibility="package" type="_Vm38kKAGEe2yhtolEJTpxQ" association="_Vn-IxKAGEe2yhtolEJTpxQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Vng1w6AGEe2yhtolEJTpxQ" value="new Color(55, 57, 63)"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnr04KAGEe2yhtolEJTpxQ" name="main" specification="_Vle1cKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vnr04aAGEe2yhtolEJTpxQ" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vnr04qAGEe2yhtolEJTpxQ" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>EventQueue.invokeLater(new Runnable() {&#xD;
+			public void run() {&#xD;
+				try {&#xD;
+					GuiForSplit window = new GuiForSplit(null, null, null);&#xD;
+					window.frmBlackjackJavaClient.setVisible(true);&#xD;
+				} catch (Exception e) {&#xD;
+					e.printStackTrace();&#xD;
+				}&#xD;
+			}&#xD;
+		});&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnr046AGEe2yhtolEJTpxQ" name="GuiForSplit" specification="_VnAfcKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vnr05KAGEe2yhtolEJTpxQ" name="mainGui" type="_VlXgsKAGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_Vnr05aAGEe2yhtolEJTpxQ" name="client" type="_VlSoMKAGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_Vnr05qAGEe2yhtolEJTpxQ" name="card" type="_VlkVAKAGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_Vnr056AGEe2yhtolEJTpxQ" type="_VleOYKAGEe2yhtolEJTpxQ" direction="return"/>
+          <language>java</language>
+          <body>this.mainGui = mainGui;&#xD;
+		playerHand = new ArrayList&lt;JLabel>();&#xD;
+		playerCardHand = new ArrayList&lt;Card>();&#xD;
+		this.client = client;&#xD;
+		initialize();&#xD;
+		frmBlackjackJavaClient.setVisible(true);&#xD;
+		&#xD;
+		setCard(card);&#xD;
+		&#xD;
+		synchronized(this) {&#xD;
+			while(playerCardHand.size() &lt; 1 ) &#xD;
+			{&#xD;
+				System.out.print(&quot;&quot;);&#xD;
+			}&#xD;
+		}&#xD;
+		&#xD;
+		drawCard();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnr06KAGEe2yhtolEJTpxQ" name="initialize" specification="_Vle1c6AGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>frmBlackjackJavaClient = new JFrame();&#xD;
+		frmBlackjackJavaClient.setIconImage(Toolkit.getDefaultToolkit().getImage(GuiForSplit.class.getResource(&quot;/resources/card_joker_black.png&quot;)));&#xD;
+		frmBlackjackJavaClient.setTitle(&quot;Blackjack Java Client&quot;);&#xD;
+		frmBlackjackJavaClient.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);&#xD;
+		frmBlackjackJavaClient.addWindowListener(new WindowAdapter() {&#xD;
+		    @Override&#xD;
+		    public void windowClosing(WindowEvent event) {&#xD;
+		        OnClose();&#xD;
+		    }&#xD;
+		});&#xD;
+		frmBlackjackJavaClient.getContentPane().setLayout(null);&#xD;
+		frmBlackjackJavaClient.setSize(1000, 700);&#xD;
+		frmBlackjackJavaClient.getContentPane().setBackground(backgroundColor);&#xD;
+		frmBlackjackJavaClient.getContentPane().setForeground(foregroundColor);&#xD;
+		frmBlackjackJavaClient.addComponentListener(new ComponentAdapter() {&#xD;
+		    public void componentResized(ComponentEvent componentEvent) &#xD;
+		    {&#xD;
+		        OnResize();&#xD;
+		    }&#xD;
+		});&#xD;
+		&#xD;
+		//Player Action Panel (Middle Panel with Buttons)&#xD;
+		playerActionPanel = new JPanel();&#xD;
+		playerActionPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));&#xD;
+		playerActionPanel.setBounds(10, 221, 964, 266);&#xD;
+		frmBlackjackJavaClient.getContentPane().add(playerActionPanel);&#xD;
+		playerActionPanel.setLayout(null);&#xD;
+		playerActionPanel.setForeground(foregroundColor);&#xD;
+		playerActionPanel.setBackground(backgroundColor);&#xD;
+		&#xD;
+			//Hit Button&#xD;
+			JButton drawButton = new JButton(&quot;Hit&quot;);&#xD;
+			drawButton.setFont(new Font(&quot;Sitka Small&quot;, Font.PLAIN, 30));&#xD;
+			drawButton.setBounds(33, 50, 200, 170);&#xD;
+			drawButton.addActionListener(e -> drawCard());&#xD;
+			drawButton.setName(&quot;drawButton&quot;);&#xD;
+			drawButton.setForeground(foregroundColor);&#xD;
+			drawButton.setBackground(specialColor);&#xD;
+			playerActionPanel.add(drawButton);&#xD;
+			&#xD;
+			//Stand Button&#xD;
+			JButton standButton = new JButton(&quot;Stand&quot;);&#xD;
+			standButton.setFont(new Font(&quot;Sitka Small&quot;, Font.PLAIN, 30));&#xD;
+			standButton.setBounds(731, 50, 200, 170);&#xD;
+			standButton.addActionListener(e -> stand());&#xD;
+			standButton.setName(&quot;standButton&quot;);&#xD;
+			standButton.setForeground(foregroundColor);&#xD;
+			standButton.setBackground(specialColor);&#xD;
+			playerActionPanel.add(standButton);&#xD;
+			&#xD;
+			//Double Down Button&#xD;
+			JButton doubleDownButton = new JButton(&quot;Double&quot;);&#xD;
+			doubleDownButton.setFont(new Font(&quot;Sitka Small&quot;, Font.PLAIN, 30));&#xD;
+			doubleDownButton.setBounds(265, 50, 200, 170);&#xD;
+			doubleDownButton.addActionListener(e -> doubleDown());&#xD;
+			doubleDownButton.setName(&quot;doubleDownButton&quot;);&#xD;
+			doubleDownButton.setForeground(foregroundColor);&#xD;
+			doubleDownButton.setBackground(specialColor);&#xD;
+			playerActionPanel.add(doubleDownButton);&#xD;
+		&#xD;
+		//Player Hand Panel&#xD;
+		playerHandPanel = new JPanel();&#xD;
+		playerHandPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));&#xD;
+		playerHandPanel.setLayout(null);&#xD;
+		playerHandPanel.setBounds(10, 115, 964, 96);&#xD;
+		playerHandPanel.setForeground(foregroundColor);&#xD;
+		playerHandPanel.setBackground(backgroundColor);&#xD;
+		frmBlackjackJavaClient.getContentPane().add(playerHandPanel);&#xD;
+			&#xD;
+		playerHandValueLabel = new JLabel(&quot;Current player-hand value: &quot;);&#xD;
+		playerHandValueLabel.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));&#xD;
+		playerHandValueLabel.setBounds(10, 0, 357, 20);&#xD;
+		playerHandValueLabel.setName(&quot;playerHandValueLabel&quot;);&#xD;
+		playerHandValueLabel.setForeground(foregroundColor);&#xD;
+		playerHandValueLabel.setBackground(backgroundColor);&#xD;
+		playerHandPanel.add(playerHandValueLabel);&#xD;
+			&#xD;
+			//Set Player Hand Images&#xD;
+			int cards = 11;&#xD;
+			for(int i = 0; i &lt; cards; i++)&#xD;
+			{&#xD;
+				JLabel card = new JLabel(&quot;&quot;);&#xD;
+				card.setIcon(new ImageIcon(GuiForSplit.class.getResource(&quot;/resources/card_back.png&quot;)));&#xD;
+				card.setBounds(i * 74, 25, 64, 64);&#xD;
+				card.setName(&quot;card&quot; + i);&#xD;
+				playerHand.add(card);&#xD;
+				playerHandPanel.add(card);&#xD;
+			}&#xD;
+		&#xD;
+		//Title&#xD;
+		topLabel = new JLabel(&quot;BLACKJACK&quot;);&#xD;
+		topLabel.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 30));&#xD;
+		topLabel.setHorizontalAlignment(SwingConstants.CENTER);&#xD;
+		topLabel.setBounds(10, 10, 964, 80);&#xD;
+		topLabel.setForeground(foregroundColor);&#xD;
+		frmBlackjackJavaClient.getContentPane().add(topLabel);&#xD;
+		&#xD;
+		lblGameStatus = new JLabel(&quot;&quot;);&#xD;
+		lblGameStatus.setHorizontalAlignment(SwingConstants.CENTER);&#xD;
+		lblGameStatus.setName(&quot;gameStatusLabel&quot;);&#xD;
+		lblGameStatus.setForeground(new Color(136, 138, 145));&#xD;
+		lblGameStatus.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));&#xD;
+		lblGameStatus.setBackground(new Color(48, 49, 54));&#xD;
+		lblGameStatus.setBounds(339, 85, 357, 20);&#xD;
+		frmBlackjackJavaClient.getContentPane().add(lblGameStatus);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnr06aAGEe2yhtolEJTpxQ" name="OnClose" specification="_VlfcgKAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>this.mainGui.gui2 = null;&#xD;
+		frmBlackjackJavaClient.setVisible(false);&#xD;
+		frmBlackjackJavaClient.dispose();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnr06qAGEe2yhtolEJTpxQ" name="OnResize" specification="_VlfcgaAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>if (frmBlackjackJavaClient.getWidth() &lt; 870) &#xD;
+		{&#xD;
+			frmBlackjackJavaClient.setBounds(frmBlackjackJavaClient.getX(), frmBlackjackJavaClient.getY(), 870, frmBlackjackJavaClient.getHeight());&#xD;
+		}&#xD;
+		&#xD;
+		System.out.println(&quot;#GUI# Resizing to fit frame size: width: &quot; + frmBlackjackJavaClient.getWidth() + &quot;, height: &quot; + frmBlackjackJavaClient.getHeight());&#xD;
+		//Resize TopLabel&#xD;
+		topLabel.setBounds(topLabel.getX(), topLabel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, topLabel.getHeight());&#xD;
+		&#xD;
+		//Resize PlayerHandPanel&#xD;
+			Component[] handComponents = playerHandPanel.getComponents();&#xD;
+			//Panel Size/Pos&#xD;
+			playerHandPanel.setBounds(playerHandPanel.getX(), playerHandPanel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, playerHandPanel.getHeight());&#xD;
+			&#xD;
+			//			  (Panel Width - Extra Spacing Left&amp;Right - Button Widths) / spacingAmount&#xD;
+			int handSpacing = (playerHandPanel.getWidth() - 20 - (11 * 64)) / 12;&#xD;
+			int handNextX = 10;&#xD;
+			for (Component component : handComponents) &#xD;
+			{&#xD;
+				if (!component.getName().equals(&quot;playerHandValueLabel&quot;)) &#xD;
+				{&#xD;
+					int x = handNextX + handSpacing;&#xD;
+					int y = component.getY();&#xD;
+					component.setLocation(x, y);&#xD;
+					handNextX = component.getX() + component.getWidth();&#xD;
+				}&#xD;
+			}&#xD;
+		&#xD;
+		//Resize PlayerActionPanel&#xD;
+			Component[] actionComponents = playerActionPanel.getComponents();&#xD;
+			//Panel Size/Pos&#xD;
+			playerActionPanel.setBounds(playerActionPanel.getX(), playerActionPanel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, playerActionPanel.getHeight());&#xD;
+			&#xD;
+			//			  (Panel Width - Extra Spacing Left&amp;Right - Button Widths) / spacingAmount&#xD;
+			int actionSpacing = (playerActionPanel.getWidth() - 20 - (3 * 200)) / 4;&#xD;
+			int actionNextX = 10;&#xD;
+			for (Component component : actionComponents) &#xD;
+			{&#xD;
+				if (!component.getName().equals(&quot;reloadButton&quot;)) &#xD;
+				{&#xD;
+					int x = actionNextX + actionSpacing;&#xD;
+					int y = component.getY();&#xD;
+					component.setLocation(x, y);&#xD;
+					actionNextX = component.getX() + component.getWidth();&#xD;
+				}&#xD;
+				if (component.getName().equals(&quot;reloadButton&quot;)) &#xD;
+				{&#xD;
+					int x = (playerActionPanel.getWidth() - component.getWidth())/2;&#xD;
+					int y = component.getY();&#xD;
+					component.setLocation(x, y);&#xD;
+				}&#xD;
+			}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnr066AGEe2yhtolEJTpxQ" name="doubleDown" specification="_VlfcgqAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>System.out.println(&quot;#ClientGUI# Request to double down.&quot;);&#xD;
+		//Draw last Card&#xD;
+		drawCard();&#xD;
+		&#xD;
+		//double MoneyBet&#xD;
+		playerBet = playerBet * 2;&#xD;
+		&#xD;
+		//Update playerBet from spinner&#xD;
+		frmBlackjackJavaClient.repaint();&#xD;
+		&#xD;
+		//Automaticly Stand &amp; end Round&#xD;
+		try {&#xD;
+			Thread.sleep(50);&#xD;
+		} catch (InterruptedException e) {&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+		stand();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnsb8KAGEe2yhtolEJTpxQ" name="drawCard" specification="_Vlfcg6AGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>System.out.println(&quot;#Client2GUI# Request new Card.&quot;);&#xD;
+		client.sendMessage(&quot;draw&quot;, true);&#xD;
+		&#xD;
+		if(cardCnt == 2)&#xD;
+		{&#xD;
+			//Disable DoubleDown and Split Button&#xD;
+			Component[] components = playerActionPanel.getComponents();&#xD;
+			for (Component component : components) &#xD;
+			{&#xD;
+				if(component.getName().equals(&quot;doubleDownButton&quot;) || component.getName().equals(&quot;splitButton&quot;))&#xD;
+				{&#xD;
+					//Set reload Button false&#xD;
+					component.setEnabled(false);&#xD;
+				}&#xD;
+			}&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnsb8aAGEe2yhtolEJTpxQ" name="stand" specification="_VlfchKAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>System.out.println(&quot;#ClientGUI# Request to stand.&quot;);&#xD;
+		client.sendMessage(&quot;stand&quot;, true);&#xD;
+		&#xD;
+		Component[] actionComponents = playerActionPanel.getComponents();&#xD;
+		for (Component component : actionComponents) &#xD;
+		{&#xD;
+			if(component.getClass() == JButton.class &amp;&amp; !component.getName().equals(&quot;reloadButton&quot;))&#xD;
+			{&#xD;
+				//Set all Buttons to false&#xD;
+				component.setEnabled(false);&#xD;
+			}&#xD;
+			&#xD;
+			if(component.getName().equals(&quot;reloadButton&quot;))&#xD;
+			{&#xD;
+				//Set reload Button true&#xD;
+				component.setEnabled(true);&#xD;
+			}&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnsb8qAGEe2yhtolEJTpxQ" name="setCard" specification="_VnBGgKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vnsb86AGEe2yhtolEJTpxQ" name="card" type="_VlkVAKAGEe2yhtolEJTpxQ"/>
+          <language>java</language>
+          <body>updateCard(cardCnt, card.getName());&#xD;
+		playerCardHand.add(card);&#xD;
+		handValue = this.client.getHandValue(true);&#xD;
+		cardCnt++;&#xD;
+		&#xD;
+		//Check for duplicate Cards to enable Split&#xD;
+		if (cardCnt == 2 ) &#xD;
+		{&#xD;
+			Component[] actionComponents = playerActionPanel.getComponents();&#xD;
+			for (Component component : actionComponents) &#xD;
+			{&#xD;
+				if(component.getName().equals(&quot;splitButton&quot;))&#xD;
+				{&#xD;
+					component.setEnabled(false);&#xD;
+					&#xD;
+					Card card1 = playerCardHand.get(0);&#xD;
+					Card card2 = playerCardHand.get(1);&#xD;
+					if (card1.getValue() == card2.getValue()) &#xD;
+					{&#xD;
+						component.setEnabled(true);&#xD;
+					}&#xD;
+				}&#xD;
+			}&#xD;
+		}&#xD;
+		&#xD;
+		updateHandValue();&#xD;
+		&#xD;
+		if (handValue >= 21 || cardCnt >= 11) &#xD;
+		{&#xD;
+			//Automaticly stand and stop the user from hitting again&#xD;
+			stand();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnsb9KAGEe2yhtolEJTpxQ" name="updateHandValue" specification="_VlfchaAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>playerHandValueLabel.setText(&quot;Current player-hand value: &quot; + handValue + &quot;&quot;);&#xD;
+		frmBlackjackJavaClient.repaint();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnsb9aAGEe2yhtolEJTpxQ" name="updateCard" specification="_VlfchqAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vnsb9qAGEe2yhtolEJTpxQ" name="pos">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_Vnsb96AGEe2yhtolEJTpxQ" name="type">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>JLabel card = playerHand.get(pos);&#xD;
+		//Gui	https://www.kenney.nl/assets/playing-cards-pack&#xD;
+		card.setIcon(new ImageIcon(GuiForSplit.class.getResource(&quot;/resources/&quot; + type + &quot;.png&quot;)));&#xD;
+		frmBlackjackJavaClient.repaint();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnsb-KAGEe2yhtolEJTpxQ" name="endRound" specification="_VlgDkKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vnsb-aAGEe2yhtolEJTpxQ" name="gameStatus">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_Vnsb-qAGEe2yhtolEJTpxQ" name="dealerHandValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>System.out.println(&quot;#Client# Round state: &quot; + gameStatus);&#xD;
+		String gameStatusMSG = &quot;&quot;;&#xD;
+		int money = 0;&#xD;
+		switch (gameStatus) &#xD;
+		{&#xD;
+			case &quot;win&quot;:&#xD;
+				money += playerBet * 1.5;&#xD;
+				gameStatusMSG = &quot; You WON &quot; + (int)(playerBet * 1.5) + &quot;€ Dealer has:&quot; + dealerHandValue;&#xD;
+				break;&#xD;
+				&#xD;
+			case &quot;loose&quot;:&#xD;
+				money -= playerBet;&#xD;
+				gameStatusMSG = &quot; You LOST &quot; + playerBet + &quot;€ Dealer has:&quot; + dealerHandValue;&#xD;
+				break;&#xD;
+				&#xD;
+			case &quot;draw&quot;:&#xD;
+				//Stays the same&#xD;
+				gameStatusMSG = &quot; DRAW  Dealer has:&quot; + dealerHandValue;&#xD;
+				break;&#xD;
+		}&#xD;
+		&#xD;
+		//Update GUI&#xD;
+		lblGameStatus.setText(gameStatusMSG);;&#xD;
+		&#xD;
+		mainGui.addSplitMoney(money);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_Vle1cKAGEe2yhtolEJTpxQ" name="main" isStatic="true" method="_Vnr04KAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vle1caAGEe2yhtolEJTpxQ" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vle1cqAGEe2yhtolEJTpxQ" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Vle1c6AGEe2yhtolEJTpxQ" name="initialize" visibility="private" method="_Vnr06KAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlfcgKAGEe2yhtolEJTpxQ" name="OnClose" visibility="protected" method="_Vnr06aAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlfcgaAGEe2yhtolEJTpxQ" name="OnResize" visibility="protected" method="_Vnr06qAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlfcgqAGEe2yhtolEJTpxQ" name="doubleDown" visibility="private" method="_Vnr066AGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_Vlfcg6AGEe2yhtolEJTpxQ" name="drawCard" visibility="private" method="_Vnsb8KAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlfchKAGEe2yhtolEJTpxQ" name="stand" visibility="private" method="_Vnsb8aAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlfchaAGEe2yhtolEJTpxQ" name="updateHandValue" visibility="private" method="_Vnsb9KAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VlfchqAGEe2yhtolEJTpxQ" name="updateCard" method="_Vnsb9aAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vlfch6AGEe2yhtolEJTpxQ" name="pos">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VlfciKAGEe2yhtolEJTpxQ" name="type">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlgDkKAGEe2yhtolEJTpxQ" name="endRound" method="_Vnsb-KAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlgDkaAGEe2yhtolEJTpxQ" name="gameStatus">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VlgDkqAGEe2yhtolEJTpxQ" name="dealerHandValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VnAfcKAGEe2yhtolEJTpxQ" name="GuiForSplit" method="_Vnr046AGEe2yhtolEJTpxQ">
+          <eAnnotations xmi:id="_VnAfdKAGEe2yhtolEJTpxQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_VnAfdaAGEe2yhtolEJTpxQ" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_VnAfcaAGEe2yhtolEJTpxQ" name="mainGui" type="_VlXgsKAGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_VnAfcqAGEe2yhtolEJTpxQ" name="client" type="_VlSoMKAGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_VnAfc6AGEe2yhtolEJTpxQ" name="card" type="_VlkVAKAGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_VnAfdqAGEe2yhtolEJTpxQ" type="_VleOYKAGEe2yhtolEJTpxQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VnBGgKAGEe2yhtolEJTpxQ" name="setCard" method="_Vnsb8qAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnBGgaAGEe2yhtolEJTpxQ" name="card" type="_VlkVAKAGEe2yhtolEJTpxQ"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn0XwKAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn0XwaAGEe2yhtolEJTpxQ _VnPwAKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn0XwaAGEe2yhtolEJTpxQ" name="" type="_VlSoMKAGEe2yhtolEJTpxQ" association="_Vn0XwKAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn0-0aAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn0-0qAGEe2yhtolEJTpxQ _VnQXEKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn0-0qAGEe2yhtolEJTpxQ" name="" type="_VlSoMKAGEe2yhtolEJTpxQ" association="_Vn0-0aAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn0-1KAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn0-1aAGEe2yhtolEJTpxQ _VnQXEqAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn0-1aAGEe2yhtolEJTpxQ" name="" type="_VlSoMKAGEe2yhtolEJTpxQ" association="_Vn0-1KAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn1l4aAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn1l4qAGEe2yhtolEJTpxQ _VnQXFKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn1l4qAGEe2yhtolEJTpxQ" name="" type="_VlSoMKAGEe2yhtolEJTpxQ" association="_Vn1l4aAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn1l5KAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn1l5aAGEe2yhtolEJTpxQ _VnQ-IaAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn1l5aAGEe2yhtolEJTpxQ" name="" type="_VlSoMKAGEe2yhtolEJTpxQ" association="_Vn1l5KAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn2M8aAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn2M8qAGEe2yhtolEJTpxQ _VnQ-JKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn2M8qAGEe2yhtolEJTpxQ" name="" type="_VlSoMKAGEe2yhtolEJTpxQ" association="_Vn2M8aAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn2M9KAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn2M9aAGEe2yhtolEJTpxQ _VnQ-JqAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn2M9aAGEe2yhtolEJTpxQ" name="" type="_VlSoMKAGEe2yhtolEJTpxQ" association="_Vn2M9KAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn20AaAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn20AqAGEe2yhtolEJTpxQ _VnSMQKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn20AqAGEe2yhtolEJTpxQ" name="" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn20AaAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn20BKAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn20BaAGEe2yhtolEJTpxQ _VnSMQqAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn20BaAGEe2yhtolEJTpxQ" name="" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn20BKAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn20B6AGEe2yhtolEJTpxQ" name="" memberEnd="_Vn3bEKAGEe2yhtolEJTpxQ _VnSMRKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn3bEKAGEe2yhtolEJTpxQ" name="" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn20B6AGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn3bEqAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn3bE6AGEe2yhtolEJTpxQ _VnSMRqAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn3bE6AGEe2yhtolEJTpxQ" name="" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn3bEqAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn4CIaAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn4CIqAGEe2yhtolEJTpxQ _VnSzUKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn4CIqAGEe2yhtolEJTpxQ" name="" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn4CIaAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn4CJKAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn4CJaAGEe2yhtolEJTpxQ _VnSzUqAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn4CJaAGEe2yhtolEJTpxQ" name="" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn4CJKAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn4pMaAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn4pMqAGEe2yhtolEJTpxQ _VnSzVKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn4pMqAGEe2yhtolEJTpxQ" name="" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn4pMaAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn5QQKAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn5QQaAGEe2yhtolEJTpxQ _VnTaYaAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn5QQaAGEe2yhtolEJTpxQ" name="" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn5QQKAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn5QQ6AGEe2yhtolEJTpxQ" name="" memberEnd="_Vn5QRKAGEe2yhtolEJTpxQ _VnTaZKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn5QRKAGEe2yhtolEJTpxQ" name="" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn5QQ6AGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn5QRqAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn5QR6AGEe2yhtolEJTpxQ _VnUBcKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn5QR6AGEe2yhtolEJTpxQ" name="" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn5QRqAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn53UaAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn53UqAGEe2yhtolEJTpxQ _VnUog6AGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn53UqAGEe2yhtolEJTpxQ" name="" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn53UaAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn53VKAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn53VaAGEe2yhtolEJTpxQ _VnUohqAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn53VaAGEe2yhtolEJTpxQ" name="" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn53VKAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn6eYaAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn6eYqAGEe2yhtolEJTpxQ _VnUoiaAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn6eYqAGEe2yhtolEJTpxQ" name="" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn6eYaAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn6eZKAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn6eZaAGEe2yhtolEJTpxQ _VnVPkaAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn6eZaAGEe2yhtolEJTpxQ" name="" type="_VlXgsKAGEe2yhtolEJTpxQ" association="_Vn6eZKAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn6eZ6AGEe2yhtolEJTpxQ" name="" memberEnd="_Vn6eaKAGEe2yhtolEJTpxQ _VnV2oKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn6eaKAGEe2yhtolEJTpxQ" name="" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn6eZ6AGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn7FcaAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn7FcqAGEe2yhtolEJTpxQ _VnV2oqAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn7FcqAGEe2yhtolEJTpxQ" name="" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn7FcaAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn7FdKAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn7FdaAGEe2yhtolEJTpxQ _VnV2pKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn7FdaAGEe2yhtolEJTpxQ" name="" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn7FdKAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn7sgaAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn7sgqAGEe2yhtolEJTpxQ _VnV2pqAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn7sgqAGEe2yhtolEJTpxQ" name="" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn7sgaAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn7shKAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn7shaAGEe2yhtolEJTpxQ _VndLYaAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn7shaAGEe2yhtolEJTpxQ" name="" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn7shKAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn8TkaAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn8TkqAGEe2yhtolEJTpxQ _VndycKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn8TkqAGEe2yhtolEJTpxQ" name="" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn8TkaAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn8TlKAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn8TlaAGEe2yhtolEJTpxQ _VndycqAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn8TlaAGEe2yhtolEJTpxQ" name="" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn8TlKAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn86oaAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn86oqAGEe2yhtolEJTpxQ _VnfAkKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn86oqAGEe2yhtolEJTpxQ" name="" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn86oaAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn86pKAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn86paAGEe2yhtolEJTpxQ _VnfAk6AGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn86paAGEe2yhtolEJTpxQ" name="" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn86pKAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn9hsaAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn9hsqAGEe2yhtolEJTpxQ _VnfnoKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn9hsqAGEe2yhtolEJTpxQ" name="" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn9hsaAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn9htKAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn9htaAGEe2yhtolEJTpxQ _VngOtKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn9htaAGEe2yhtolEJTpxQ" name="" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn9htKAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn-IwaAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn-IwqAGEe2yhtolEJTpxQ _VngOt6AGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn-IwqAGEe2yhtolEJTpxQ" name="" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn-IwaAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn-IxKAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn-IxaAGEe2yhtolEJTpxQ _Vng1wqAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn-IxaAGEe2yhtolEJTpxQ" name="" type="_VleOYKAGEe2yhtolEJTpxQ" association="_Vn-IxKAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VlBicaAGEe2yhtolEJTpxQ" name="javax">
+      <packagedElement xmi:type="uml:Package" xmi:id="_VlBicqAGEe2yhtolEJTpxQ" name="swing">
+        <packagedElement xmi:type="uml:Package" xmi:id="_VlBic6AGEe2yhtolEJTpxQ" name="border">
+          <packagedElement xmi:type="uml:Class" xmi:id="_Vm-DMaAGEe2yhtolEJTpxQ" name="BevelBorder"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Vm-DM6AGEe2yhtolEJTpxQ" name="LineBorder"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm8OAaAGEe2yhtolEJTpxQ" name="ImageIcon"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm8OA6AGEe2yhtolEJTpxQ" name="JButton"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm81EaAGEe2yhtolEJTpxQ" name="JFrame"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm81E6AGEe2yhtolEJTpxQ" name="JLabel"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm9cIKAGEe2yhtolEJTpxQ" name="JPanel"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Vm9cIqAGEe2yhtolEJTpxQ" name="JSpinner"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_Vm9cJKAGEe2yhtolEJTpxQ" name="SwingConstants"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VlGa8KAGEe2yhtolEJTpxQ" name="junit">
+      <packagedElement xmi:type="uml:Package" xmi:id="_VlGa8aAGEe2yhtolEJTpxQ" name="framework">
+        <packagedElement xmi:type="uml:Class" xmi:id="_VnCUoKAGEe2yhtolEJTpxQ" name="TestCase"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VlGa8qAGEe2yhtolEJTpxQ" name="jUnit">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Vlh4wKAGEe2yhtolEJTpxQ" name="JUT_Card">
+        <generalization xmi:id="_VnLekKAGEe2yhtolEJTpxQ" general="_VnCUoKAGEe2yhtolEJTpxQ"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntDAKAGEe2yhtolEJTpxQ" name="testCase_1" specification="_Vlif0KAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>String name = &quot;Test123&quot;;&#xD;
+		int value = 5;&#xD;
+		&#xD;
+		Card card = new Card(name, value);&#xD;
+		&#xD;
+		assertNotNull(card);&#xD;
+		assertEquals(name, card.getName());&#xD;
+		assertEquals(value, card.getValue());&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_Vlif0KAGEe2yhtolEJTpxQ" name="testCase_1" method="_VntDAKAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Vlif0aAGEe2yhtolEJTpxQ" name="JUT_CardDeck">
+        <generalization xmi:id="_VnLekaAGEe2yhtolEJTpxQ" general="_VnCUoKAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_Vnhc0KAGEe2yhtolEJTpxQ" name="cardDeck" visibility="private" type="_Vlk8FaAGEe2yhtolEJTpxQ" association="_Vn-Ix6AGEe2yhtolEJTpxQ"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntDAaAGEe2yhtolEJTpxQ" name="setUp" specification="_VljG4KAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>cardDeck = new CardDeck();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntDAqAGEe2yhtolEJTpxQ" name="testCase_1" specification="_VljG4aAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>//Test if CardDeck is created and correctly filled&#xD;
+		int expected = 52;&#xD;
+		int actual = cardDeck.getCardDeckSize();&#xD;
+		&#xD;
+		assertNotNull(actual);&#xD;
+		assertEquals(actual, 52);&#xD;
+		&#xD;
+		//Test if drawCard() works Correctly&#xD;
+		cardDeck.drawCard();&#xD;
+		actual = cardDeck.getCardDeckSize();&#xD;
+		expected = 51;&#xD;
+		assertEquals(actual, expected);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntDA6AGEe2yhtolEJTpxQ" name="testCase_2" specification="_VljG4qAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>//Clear deck and test if empty&#xD;
+		for (int i = 0; i &lt; 52; i++) &#xD;
+		{&#xD;
+			cardDeck.drawCard();&#xD;
+		}&#xD;
+		int actual = cardDeck.getCardDeckSize();&#xD;
+		int expected = 0;&#xD;
+		assertEquals(actual, expected);&#xD;
+		&#xD;
+		//Shuffle and test if full (52)&#xD;
+		cardDeck.shuffle();&#xD;
+		expected = 52; //Full CardDeck has 52 Cards&#xD;
+		actual = cardDeck.getCardDeckSize();&#xD;
+		assertEquals(actual, expected);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_VljG4KAGEe2yhtolEJTpxQ" name="setUp" visibility="protected" method="_VntDAaAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VljG4aAGEe2yhtolEJTpxQ" name="testCase_1" method="_VntDAqAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VljG4qAGEe2yhtolEJTpxQ" name="testCase_2" method="_VntDA6AGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_VljG46AGEe2yhtolEJTpxQ" name="JUT_CardHand">
+        <generalization xmi:id="_VnLekqAGEe2yhtolEJTpxQ" general="_VnCUoKAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VniD4aAGEe2yhtolEJTpxQ" name="cardHand" visibility="private" type="_VlmKMKAGEe2yhtolEJTpxQ" association="_Vn-v0aAGEe2yhtolEJTpxQ"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntDBKAGEe2yhtolEJTpxQ" name="setUp" specification="_Vljt8KAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>cardHand = new CardHand();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntDBaAGEe2yhtolEJTpxQ" name="testCase_1" specification="_Vljt8aAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>//Test if Object is created&#xD;
+		assertNotNull(cardHand);&#xD;
+		&#xD;
+		//Test if Card get added correctly&#xD;
+		cardHand.addCard(new Card(&quot;Test Card1&quot;, 2));&#xD;
+		cardHand.addCard(new Card(&quot;Test Card2&quot;, 2));&#xD;
+		cardHand.addCard(new Card(&quot;Test Card3&quot;, 2));&#xD;
+		cardHand.addCard(new Card(&quot;Test Card4&quot;, 2));&#xD;
+		assertEquals(4, cardHand.getCardHandSize());&#xD;
+		&#xD;
+		//Clear and test if cleared&#xD;
+		cardHand.clearHand();&#xD;
+		assertEquals(0, cardHand.getCardHandSize());&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntDBqAGEe2yhtolEJTpxQ" name="testCase_2" specification="_Vljt8qAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>cardHand.clearHand();&#xD;
+		cardHand.addCard(new Card(&quot;Test Card1&quot;, 5));&#xD;
+		cardHand.addCard(new Card(&quot;Test Card2&quot;, 5));&#xD;
+		cardHand.addCard(new Card(&quot;Test Card3&quot;, 5));&#xD;
+		assertEquals(15, cardHand.getValue());&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntDB6AGEe2yhtolEJTpxQ" name="testCase_3" specification="_Vljt86AGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>cardHand.clearHand();&#xD;
+		cardHand.addCard(new Card(&quot;Test Card Ace&quot;, 11));&#xD;
+		cardHand.addCard(new Card(&quot;Test Card2&quot;, 5));&#xD;
+		cardHand.addCard(new Card(&quot;Test Card3&quot;, 5));&#xD;
+		assertEquals(21, cardHand.getValue());&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntDCKAGEe2yhtolEJTpxQ" name="testCase_4" specification="_Vljt9KAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>System.out.println(&quot;Case 4&quot;);&#xD;
+		cardHand.clearHand();&#xD;
+		cardHand.addCard(new Card(&quot;Test Card1&quot;, 10));&#xD;
+		cardHand.addCard(new Card(&quot;Test Card2&quot;, 5));&#xD;
+		cardHand.addCard(new Card(&quot;Ace of Spades&quot;, 11));&#xD;
+		assertEquals(16, cardHand.getValue());&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VntqEKAGEe2yhtolEJTpxQ" name="testCase_5" specification="_Vljt9aAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>System.out.println(&quot;Case 5&quot;);&#xD;
+		cardHand.clearHand();&#xD;
+		cardHand.addCard(new Card(&quot;Test Card1&quot;, 5));&#xD;
+		cardHand.addCard(new Card(&quot;Test Card Ace&quot;, 11));&#xD;
+		cardHand.addCard(new Card(&quot;Test Card3&quot;, 5));&#xD;
+		assertEquals(21, cardHand.getValue());&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_Vljt8KAGEe2yhtolEJTpxQ" name="setUp" visibility="protected" method="_VntDBKAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_Vljt8aAGEe2yhtolEJTpxQ" name="testCase_1" method="_VntDBaAGEe2yhtolEJTpxQ">
+          <ownedComment xmi:id="_VnwGUaAGEe2yhtolEJTpxQ">
+            <body>Basic tests on standard Methods</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Vljt8qAGEe2yhtolEJTpxQ" name="testCase_2" method="_VntDBqAGEe2yhtolEJTpxQ">
+          <ownedComment xmi:id="_VnwGUqAGEe2yhtolEJTpxQ">
+            <body>Test getValue() Method&#xD;
+	 * Normal Value without Aces&#xD;
+	 * 5 + 5 + 5 = 15</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Vljt86AGEe2yhtolEJTpxQ" name="testCase_3" method="_VntDB6AGEe2yhtolEJTpxQ">
+          <ownedComment xmi:id="_VnwtYKAGEe2yhtolEJTpxQ">
+            <body>Test getValue() Method&#xD;
+	 * Normal Value with Ace at first place&#xD;
+	 * 11 + 5 + 5 = 21</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Vljt9KAGEe2yhtolEJTpxQ" name="testCase_4" method="_VntDCKAGEe2yhtolEJTpxQ">
+          <ownedComment xmi:id="_VnwtYaAGEe2yhtolEJTpxQ">
+            <body>Test getValue() Method&#xD;
+	 * Normal Value with Ace at last place&#xD;
+	 * 10 + 5 + 11 > 21 --> deswegen soll das Ass als 1 gewertet werden&#xD;
+	 * also 10 + 5 + 1 = 16</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Vljt9aAGEe2yhtolEJTpxQ" name="testCase_5" method="_VntqEKAGEe2yhtolEJTpxQ">
+          <ownedComment xmi:id="_VnwtYqAGEe2yhtolEJTpxQ">
+            <body>Test getValue() Method&#xD;
+	 * Normal Value with Ace in the middle&#xD;
+	 * 5 + 11 + 5 = 21</body>
+          </ownedComment>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn-Ix6AGEe2yhtolEJTpxQ" name="" memberEnd="_Vn-IyKAGEe2yhtolEJTpxQ _Vnhc0KAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn-IyKAGEe2yhtolEJTpxQ" name="" type="_Vlif0aAGEe2yhtolEJTpxQ" association="_Vn-Ix6AGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn-v0aAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn-v0qAGEe2yhtolEJTpxQ _VniD4aAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn-v0qAGEe2yhtolEJTpxQ" name="" type="_VljG46AGEe2yhtolEJTpxQ" association="_Vn-v0aAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VlKsYKAGEe2yhtolEJTpxQ" name="server">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Vln_ZqAGEe2yhtolEJTpxQ" name="BlackServer">
+        <ownedComment xmi:id="_VnwtY6AGEe2yhtolEJTpxQ">
+          <body>Rudi Wagner&#xD;
+Paul Weissengruber&#xD;
+5 BHIT&#xD;
+Blackjack&#xD;
+Server</body>
+        </ownedComment>
+        <ownedAttribute xmi:id="_VnluQqAGEe2yhtolEJTpxQ" name="allSockets" isStatic="true" type="_Vm7m9KAGEe2yhtolEJTpxQ" association="_Vn_W5KAGEe2yhtolEJTpxQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnmVUKAGEe2yhtolEJTpxQ" value="new ArrayList&lt;Socket>()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_VnmVUaAGEe2yhtolEJTpxQ" name="allThreads" isStatic="true" type="_Vm7m9KAGEe2yhtolEJTpxQ" association="_Vn_98aAGEe2yhtolEJTpxQ">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_VnmVVKAGEe2yhtolEJTpxQ" value="new ArrayList&lt;Thread>()"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnuRMKAGEe2yhtolEJTpxQ" name="main" specification="_VlomcKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnuRMaAGEe2yhtolEJTpxQ" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VnuRMqAGEe2yhtolEJTpxQ" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>System.out.println(&quot;#Server# Server started!&quot;);&#xD;
+ 	int port = 6868;		//Port festlegen&#xD;
+ 	CardDeck deck = new CardDeck();&#xD;
+ &#xD;
+ 	//Oeffnen und warten auf Clients&#xD;
+ 	try (ServerSocket serverSocket = new ServerSocket(port)) {&#xD;
+ 		 &#xD;
+         System.out.println(&quot;#Server# Server is listening on port &quot; + port);&#xD;
+         Socket socket= null;&#xD;
+         serverSocket.setSoTimeout(3000);&#xD;
+ &#xD;
+         //Endlos Schleife um &quot;unendlich&quot; Clients aufzunehmen&#xD;
+         while (true) {&#xD;
+         	//Check fuer gestoppte Threads --> gestoppte Threads werden gel�scht&#xD;
+         	checkStoppedThread();&#xD;
+         	try {&#xD;
+         		socket = serverSocket.accept();&#xD;
+         	}catch(SocketTimeoutException ste)&#xD;
+         	{&#xD;
+//            		System.out.println(&quot;#Warning# No Client found!&quot;);	//Nach 3s wird neu gesucht&#xD;
+         	}&#xD;
+     &#xD;
+             if(socket != null)&#xD;
+             { //Wenn ein Client gefunden wurde, wird ein Thread gestartet der die Verbindung uebernimmt&quot;&#xD;
+             	System.out.println(&quot;#Server# New client connected&quot;);&#xD;
+             	Thread clientRunnabel = new clientThread(socket, deck);&#xD;
+             	saveConnection(socket, clientRunnabel);&#xD;
+             	clientRunnabel.setName(socket.getInetAddress().toString());&#xD;
+             	clientRunnabel.start();&#xD;
+             	socket = null;&#xD;
+             	System.out.println(&quot;#Server# Waiting for next client on port &quot; + port);&#xD;
+             }&#xD;
+         }&#xD;
+ 	} catch (IOException ex) {&#xD;
+         System.out.println(&quot;#Server# Server exception: &quot; + ex.getMessage());&#xD;
+         ex.printStackTrace();&#xD;
+ 	}&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnu4MKAGEe2yhtolEJTpxQ" name="checkStoppedThread" specification="_Vlomc6AGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>//Wenn ein gestoppter Thread gefunden wird, wird er aus der ArrayList entfernt&#xD;
+ 	for (int i = 0; i &lt; allThreads.size(); i++) &#xD;
+ 	{&#xD;
+			Thread thread = allThreads.get(i);&#xD;
+			Socket socket = allSockets.get(i);&#xD;
+			if(!thread.isAlive())&#xD;
+			{&#xD;
+				delConnection(socket, thread);&#xD;
+			}&#xD;
+		}&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnu4MaAGEe2yhtolEJTpxQ" name="saveConnection" specification="_VnMssKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vnu4MqAGEe2yhtolEJTpxQ" name="socket" type="_Vm2HY6AGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_Vnu4M6AGEe2yhtolEJTpxQ" name="thread" type="_VnHNIaAGEe2yhtolEJTpxQ"/>
+          <language>java</language>
+          <body>allSockets.add(socket);&#xD;
+ 	allThreads.add(thread);&#xD;
+ 	System.out.println(&quot;#ServerLog# Socket and Thread saved, Sockets size: &quot; + allSockets.size() &#xD;
+ 							+ &quot; , Threads size: &quot; + allThreads.size());&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnu4NKAGEe2yhtolEJTpxQ" name="delConnection" specification="_VnNTwKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vnu4NaAGEe2yhtolEJTpxQ" name="socket" type="_Vm2HY6AGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_Vnu4NqAGEe2yhtolEJTpxQ" name="thread" type="_VnHNIaAGEe2yhtolEJTpxQ"/>
+          <language>java</language>
+          <body>allSockets.remove(socket);&#xD;
+ 	allThreads.remove(thread);&#xD;
+ 	System.out.println(&quot;#ServerLog# Socket and Thread deleted, Sockets size: &quot; + allSockets.size() &#xD;
+		+ &quot; , Treads size: &quot; + allThreads.size());&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_VlomcKAGEe2yhtolEJTpxQ" name="main" isStatic="true" method="_VnuRMKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VlomcaAGEe2yhtolEJTpxQ" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VlomcqAGEe2yhtolEJTpxQ" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_Vlomc6AGEe2yhtolEJTpxQ" name="checkStoppedThread" isStatic="true" method="_Vnu4MKAGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_VnMssKAGEe2yhtolEJTpxQ" name="saveConnection" isStatic="true" method="_Vnu4MaAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnMssaAGEe2yhtolEJTpxQ" name="socket" type="_Vm2HY6AGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_VnMssqAGEe2yhtolEJTpxQ" name="thread" type="_VnHNIaAGEe2yhtolEJTpxQ"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VnNTwKAGEe2yhtolEJTpxQ" name="delConnection" isStatic="true" method="_Vnu4NKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnNTwaAGEe2yhtolEJTpxQ" name="socket" type="_Vm2HY6AGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_VnNTwqAGEe2yhtolEJTpxQ" name="thread" type="_VnHNIaAGEe2yhtolEJTpxQ"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_VlpNgKAGEe2yhtolEJTpxQ" name="clientThread">
+        <generalization xmi:id="_VnN61KAGEe2yhtolEJTpxQ" general="_VnHNIaAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_Vnm8YKAGEe2yhtolEJTpxQ" name="socket" visibility="private" type="_Vm2HY6AGEe2yhtolEJTpxQ" association="_Vn_99KAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_Vnm8YqAGEe2yhtolEJTpxQ" name="deck" visibility="private" type="_Vlk8FaAGEe2yhtolEJTpxQ" association="_VoAlAaAGEe2yhtolEJTpxQ"/>
+        <ownedAttribute xmi:id="_VnnjcKAGEe2yhtolEJTpxQ" name="dealerHand" visibility="private" type="_VlmKMKAGEe2yhtolEJTpxQ" association="_VoAlBKAGEe2yhtolEJTpxQ"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnu4N6AGEe2yhtolEJTpxQ" name="clientThread" specification="_VnNTw6AGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vnu4OKAGEe2yhtolEJTpxQ" name="givenSocket" type="_Vm2HY6AGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_Vnu4OaAGEe2yhtolEJTpxQ" name="deck" type="_Vlk8FaAGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_Vnu4OqAGEe2yhtolEJTpxQ" type="_VlpNgKAGEe2yhtolEJTpxQ" direction="return"/>
+          <language>java</language>
+          <body>this.socket = givenSocket;&#xD;
+		this.deck = deck;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnu4O6AGEe2yhtolEJTpxQ" name="run" specification="_Vlp0kKAGEe2yhtolEJTpxQ">
+          <language>java</language>
+          <body>boolean run = true;&#xD;
+ 	System.out.println(&quot;#ThreadLog# Thread &quot; + this.getName() + &quot; is now running!&quot;);&#xD;
+ 	while(run)&#xD;
+		{&#xD;
+ 		try {&#xD;
+ 			//Liest gesendete strings&#xD;
+ 			InputStream input = socket.getInputStream();&#xD;
+	            BufferedReader reader = new BufferedReader(new InputStreamReader(input));&#xD;
+	&#xD;
+	            OutputStream output = socket.getOutputStream();&#xD;
+	            PrintWriter writer = new PrintWriter(output, true);&#xD;
+	&#xD;
+	&#xD;
+	            String recievedMSG;&#xD;
+	            &#xD;
+	            do {&#xD;
+	                recievedMSG = reader.readLine();&#xD;
+	                if(recievedMSG.isBlank()) //Finished loop early if blank&#xD;
+	                {&#xD;
+	                	continue;&#xD;
+	                }&#xD;
+	                &#xD;
+	                if(recievedMSG.equals(&quot;startSession&quot;))&#xD;
+	                { //Verbindungs start&#xD;
+	                	System.out.println(&quot;#Thread# &quot; + this.getName() + &quot; Thread erhaelt nun Daten!&quot;);&#xD;
+	                }&#xD;
+	                else if(recievedMSG.equals(&quot;closeSession&quot;))&#xD;
+	                { //Abbruch der Verbindung falls der Client das fordert&#xD;
+	                	run = false;&#xD;
+	                	System.out.println(&quot;#Thread# &quot; + this.getName() + &quot; Client requested shutdown!&quot;);&#xD;
+	                	break;&#xD;
+	                }&#xD;
+	                else&#xD;
+	                { //Client Communication&#xD;
+	                	Gson gson = new Gson();&#xD;
+	            		JsonObj jsondata = gson.fromJson(recievedMSG, JsonObj.class);&#xD;
+	                	String msg = &quot;&quot;;&#xD;
+	                	switch (jsondata.getType()) &#xD;
+	                	{&#xD;
+							case &quot;draw&quot;:&#xD;
+								Card card = deck.drawCard();&#xD;
+								msg = gson.toJson(card);&#xD;
+								break;&#xD;
+							&#xD;
+							case &quot;stand&quot;:&#xD;
+								int playerHandValue = jsondata.getValue();&#xD;
+								&#xD;
+								createDealerHand(playerHandValue);&#xD;
+								int dealerHandValue = dealerHand.getValue();&#xD;
+								&#xD;
+								//Vergleichen mit Server hand&#xD;
+								System.out.println(&quot;#ThreadLog# Player's Hand is &quot; + playerHandValue + &quot; worth!&quot;);&#xD;
+								&#xD;
+								String state = getGameState(playerHandValue, dealerHandValue);&#xD;
+								msg = gson.toJson(new JsonObj(state, dealerHandValue));&#xD;
+								&#xD;
+								break;&#xD;
+								&#xD;
+							default:&#xD;
+								throw new IllegalArgumentException(&quot;Unexpected value: &quot; + jsondata.getType());&#xD;
+						}&#xD;
+	                	writer.println(msg);&#xD;
+	                }&#xD;
+	                &#xD;
+	            } while (true);&#xD;
+	            break;&#xD;
+ 		} catch (IOException ex) {&#xD;
+             System.out.println(&quot;Server exception: &quot; + ex.getMessage());&#xD;
+             ex.printStackTrace();&#xD;
+ 		}&#xD;
+		}&#xD;
+		System.out.println(&quot;#ThreadLog# Thread &quot; + this.getName() + &quot; is now stopping!&quot;);&#xD;
+		try {&#xD;
+			socket.close();&#xD;
+		} catch (IOException e) {&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+		&#xD;
+		System.out.println(&quot;#Log# Socket ~&quot; + socket.getRemoteSocketAddress() + &quot;~ in Thread &quot; + this.getName() + &quot; has been closed!&quot;);&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Vnu4PKAGEe2yhtolEJTpxQ" name="getGameState" specification="_Vlp0kaAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vnu4PaAGEe2yhtolEJTpxQ" name="playerHandValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_Vnu4PqAGEe2yhtolEJTpxQ" name="dealerHandValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_Vnu4P6AGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>System.out.println(&quot;D: &quot; + dealerHandValue + &quot;, P: &quot; + playerHandValue);&#xD;
+		//If both have more than 21 or their Value is equal&#xD;
+		if (dealerHandValue == playerHandValue)&#xD;
+		{&#xD;
+			return &quot;draw&quot;;&#xD;
+		}&#xD;
+		else&#xD;
+		//Player Win&#xD;
+		//Less than 22 and more than the dealer&#xD;
+		if (playerHandValue == 21 || playerHandValue > dealerHandValue &amp;&amp; playerHandValue &lt;= 21 || dealerHandValue > 21) &#xD;
+		{&#xD;
+			return &quot;win&quot;;&#xD;
+		}&#xD;
+		else&#xD;
+		//Player Loose&#xD;
+		//More than 21 or less than the dealer&#xD;
+		if (21 &lt; playerHandValue || playerHandValue &lt; dealerHandValue &amp;&amp; dealerHandValue &lt;= 21)&#xD;
+		{&#xD;
+			return &quot;loose&quot;;&#xD;
+		}&#xD;
+		&#xD;
+		//Couldn't calculate&#xD;
+		return &quot;draw&quot;;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_VnvfQKAGEe2yhtolEJTpxQ" name="createDealerHand" specification="_VlqboqAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_VnvfQaAGEe2yhtolEJTpxQ" name="playerHandValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>dealerHand = new CardHand();&#xD;
+		//Draw first two&#xD;
+		dealerHand.addCard(deck.drawCard());&#xD;
+		dealerHand.addCard(deck.drawCard());&#xD;
+		&#xD;
+		if(playerHandValue > 21)&#xD;
+		{&#xD;
+			return;&#xD;
+		}&#xD;
+		&#xD;
+		while (dealerHand.getValue() &lt;= 16) &#xD;
+		{&#xD;
+			Card card = deck.drawCard();&#xD;
+			dealerHand.addCard(card);&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_Vlp0kKAGEe2yhtolEJTpxQ" name="run" method="_Vnu4O6AGEe2yhtolEJTpxQ"/>
+        <ownedOperation xmi:id="_Vlp0kaAGEe2yhtolEJTpxQ" name="getGameState" visibility="private" method="_Vnu4PKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vlp0kqAGEe2yhtolEJTpxQ" name="playerHandValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VlqboKAGEe2yhtolEJTpxQ" name="dealerHandValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_VlqboaAGEe2yhtolEJTpxQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VlqboqAGEe2yhtolEJTpxQ" name="createDealerHand" visibility="private" method="_VnvfQKAGEe2yhtolEJTpxQ">
+          <ownedParameter xmi:id="_Vlqbo6AGEe2yhtolEJTpxQ" name="playerHandValue">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_VnNTw6AGEe2yhtolEJTpxQ" name="clientThread" method="_Vnu4N6AGEe2yhtolEJTpxQ">
+          <eAnnotations xmi:id="_VnN60aAGEe2yhtolEJTpxQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_VnN60qAGEe2yhtolEJTpxQ" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_VnNTxKAGEe2yhtolEJTpxQ" name="givenSocket" type="_Vm2HY6AGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_VnN60KAGEe2yhtolEJTpxQ" name="deck" type="_Vlk8FaAGEe2yhtolEJTpxQ"/>
+          <ownedParameter xmi:id="_VnN606AGEe2yhtolEJTpxQ" type="_VlpNgKAGEe2yhtolEJTpxQ" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn_W5KAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn_W5aAGEe2yhtolEJTpxQ _VnluQqAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn_W5aAGEe2yhtolEJTpxQ" name="" type="_Vln_ZqAGEe2yhtolEJTpxQ" association="_Vn_W5KAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn_98aAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn_98qAGEe2yhtolEJTpxQ _VnmVUaAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn_98qAGEe2yhtolEJTpxQ" name="" type="_Vln_ZqAGEe2yhtolEJTpxQ" association="_Vn_98aAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Vn_99KAGEe2yhtolEJTpxQ" name="" memberEnd="_Vn_99aAGEe2yhtolEJTpxQ _Vnm8YKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_Vn_99aAGEe2yhtolEJTpxQ" name="" type="_VlpNgKAGEe2yhtolEJTpxQ" association="_Vn_99KAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_VoAlAaAGEe2yhtolEJTpxQ" name="" memberEnd="_VoAlAqAGEe2yhtolEJTpxQ _Vnm8YqAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_VoAlAqAGEe2yhtolEJTpxQ" name="" type="_VlpNgKAGEe2yhtolEJTpxQ" association="_VoAlAaAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_VoAlBKAGEe2yhtolEJTpxQ" name="" memberEnd="_VoAlBaAGEe2yhtolEJTpxQ _VnnjcKAGEe2yhtolEJTpxQ">
+        <ownedEnd xmi:id="_VoAlBaAGEe2yhtolEJTpxQ" name="" type="_VlpNgKAGEe2yhtolEJTpxQ" association="_VoAlBKAGEe2yhtolEJTpxQ"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_VfzrQKAGEe2yhtolEJTpxQ">
+      <eAnnotations xmi:id="_VfzrQaAGEe2yhtolEJTpxQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_VfzrQqAGEe2yhtolEJTpxQ" base_Package="_Vbz8EKAGEe2yhtolEJTpxQ">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:Array xmi:id="_VlVEcKAGEe2yhtolEJTpxQ" base_Element="_VlUdYaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm05QKAGEe2yhtolEJTpxQ" base_Element="_Vm0SMKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm05QqAGEe2yhtolEJTpxQ" base_Element="_Vm05QaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm1gUKAGEe2yhtolEJTpxQ" base_Element="_Vm05Q6AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm1gUqAGEe2yhtolEJTpxQ" base_Element="_Vm1gUaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm2HYKAGEe2yhtolEJTpxQ" base_Element="_Vm1gU6AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm2HYqAGEe2yhtolEJTpxQ" base_Element="_Vm2HYaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm2HZKAGEe2yhtolEJTpxQ" base_Element="_Vm2HY6AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm2ucKAGEe2yhtolEJTpxQ" base_Element="_Vm2HZaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm2ucqAGEe2yhtolEJTpxQ" base_Element="_Vm2ucaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm4joKAGEe2yhtolEJTpxQ" base_Element="_Vm38kKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm5KsKAGEe2yhtolEJTpxQ" base_Element="_Vm4joaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm5KsqAGEe2yhtolEJTpxQ" base_Element="_Vm5KsaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm5xwaAGEe2yhtolEJTpxQ" base_Element="_Vm5xwKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm6Y0KAGEe2yhtolEJTpxQ" base_Element="_Vm5xwqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm6Y0qAGEe2yhtolEJTpxQ" base_Element="_Vm6Y0aAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm6_4KAGEe2yhtolEJTpxQ" base_Element="_Vm6Y06AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm6_4qAGEe2yhtolEJTpxQ" base_Element="_Vm6_4aAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm6_5KAGEe2yhtolEJTpxQ" base_Element="_Vm6_46AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm7m8aAGEe2yhtolEJTpxQ" base_Element="_Vm7m8KAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm7m86AGEe2yhtolEJTpxQ" base_Element="_Vm7m8qAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm8OAKAGEe2yhtolEJTpxQ" base_Element="_Vm7m9KAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm8OAqAGEe2yhtolEJTpxQ" base_Element="_Vm8OAaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm81EKAGEe2yhtolEJTpxQ" base_Element="_Vm8OA6AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm81EqAGEe2yhtolEJTpxQ" base_Element="_Vm81EaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm81FKAGEe2yhtolEJTpxQ" base_Element="_Vm81E6AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm9cIaAGEe2yhtolEJTpxQ" base_Element="_Vm9cIKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm9cI6AGEe2yhtolEJTpxQ" base_Element="_Vm9cIqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm-DMKAGEe2yhtolEJTpxQ" base_Element="_Vm9cJKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm-DMqAGEe2yhtolEJTpxQ" base_Element="_Vm-DMaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vm-DNKAGEe2yhtolEJTpxQ" base_Element="_Vm-DM6AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_VnCUoaAGEe2yhtolEJTpxQ" base_Element="_VnCUoKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_VnDiwKAGEe2yhtolEJTpxQ" base_Element="_VnC7sKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_VnHNIqAGEe2yhtolEJTpxQ" base_Element="_VnHNIaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnPwAaAGEe2yhtolEJTpxQ" base_Element="_VnPwAKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnQXEaAGEe2yhtolEJTpxQ" base_Element="_VnQXEKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnQXE6AGEe2yhtolEJTpxQ" base_Element="_VnQXEqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnQ-IKAGEe2yhtolEJTpxQ" base_Element="_VnQXFKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnQ-I6AGEe2yhtolEJTpxQ" base_Element="_VnQ-IaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnQ-JaAGEe2yhtolEJTpxQ" base_Element="_VnQ-JKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnRlMKAGEe2yhtolEJTpxQ" base_Element="_VnQ-JqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnRlM6AGEe2yhtolEJTpxQ" base_Element="_VnRlMaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnRlNqAGEe2yhtolEJTpxQ" base_Element="_VnRlNKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnSMQaAGEe2yhtolEJTpxQ" base_Element="_VnSMQKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnSMQ6AGEe2yhtolEJTpxQ" base_Element="_VnSMQqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnSMRaAGEe2yhtolEJTpxQ" base_Element="_VnSMRKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnSMR6AGEe2yhtolEJTpxQ" base_Element="_VnSMRqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnSzUaAGEe2yhtolEJTpxQ" base_Element="_VnSzUKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnSzU6AGEe2yhtolEJTpxQ" base_Element="_VnSzUqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Generics xmi:id="_VnSzVaAGEe2yhtolEJTpxQ" genericsValue="JLabel" base_Element="_VnSzVKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnTaYKAGEe2yhtolEJTpxQ" base_Element="_VnSzVKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Generics xmi:id="_VnTaYqAGEe2yhtolEJTpxQ" genericsValue="Card" base_Element="_VnTaYaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnTaY6AGEe2yhtolEJTpxQ" base_Element="_VnTaYaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnTaZaAGEe2yhtolEJTpxQ" base_Element="_VnTaZKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnUBcaAGEe2yhtolEJTpxQ" base_Element="_VnUBcKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnUBdKAGEe2yhtolEJTpxQ" base_Element="_VnUBcqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnUBd6AGEe2yhtolEJTpxQ" base_Element="_VnUBdaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnUBeqAGEe2yhtolEJTpxQ" base_Element="_VnUBeKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnUogqAGEe2yhtolEJTpxQ" base_Element="_VnUogKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnUohaAGEe2yhtolEJTpxQ" base_Element="_VnUog6AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnUoiKAGEe2yhtolEJTpxQ" base_Element="_VnUohqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnVPkKAGEe2yhtolEJTpxQ" base_Element="_VnUoiaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnVPk6AGEe2yhtolEJTpxQ" base_Element="_VnVPkaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnV2oaAGEe2yhtolEJTpxQ" base_Element="_VnV2oKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnV2o6AGEe2yhtolEJTpxQ" base_Element="_VnV2oqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnV2paAGEe2yhtolEJTpxQ" base_Element="_VnV2pKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VndLYKAGEe2yhtolEJTpxQ" base_Element="_VnV2pqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VndLYqAGEe2yhtolEJTpxQ" base_Element="_VndLYaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VndycaAGEe2yhtolEJTpxQ" base_Element="_VndycKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Generics xmi:id="_VneZgKAGEe2yhtolEJTpxQ" genericsValue="JLabel" base_Element="_VndycqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VneZgaAGEe2yhtolEJTpxQ" base_Element="_VndycqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Generics xmi:id="_VnfAkaAGEe2yhtolEJTpxQ" genericsValue="Card" base_Element="_VnfAkKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnfAkqAGEe2yhtolEJTpxQ" base_Element="_VnfAkKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnfAlKAGEe2yhtolEJTpxQ" base_Element="_VnfAk6AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnfnoaAGEe2yhtolEJTpxQ" base_Element="_VnfnoKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnfnpKAGEe2yhtolEJTpxQ" base_Element="_VnfnoqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VngOsKAGEe2yhtolEJTpxQ" base_Element="_VnfnpaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VngOs6AGEe2yhtolEJTpxQ" base_Element="_VngOsaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VngOtqAGEe2yhtolEJTpxQ" base_Element="_VngOtKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Vng1waAGEe2yhtolEJTpxQ" base_Element="_VngOt6AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Vng1xKAGEe2yhtolEJTpxQ" base_Element="_Vng1wqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VniD4KAGEe2yhtolEJTpxQ" base_Element="_Vnhc0KAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VniD4qAGEe2yhtolEJTpxQ" base_Element="_VniD4aAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Generics xmi:id="_VnjSAKAGEe2yhtolEJTpxQ" genericsValue="Card" base_Element="_Vniq8qAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnjSAqAGEe2yhtolEJTpxQ" base_Element="_Vniq8qAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Array xmi:id="_Vnj5EqAGEe2yhtolEJTpxQ" base_Element="_Vnj5EKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Vnj5FKAGEe2yhtolEJTpxQ" base_Element="_Vnj5EKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Array xmi:id="_Vnj5F6AGEe2yhtolEJTpxQ" dimensions="1" base_Element="_Vnj5FaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnkgIaAGEe2yhtolEJTpxQ" base_Element="_Vnj5FaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Generics xmi:id="_VnlHMKAGEe2yhtolEJTpxQ" genericsValue="Card" base_Element="_VnkgIqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnlHMaAGEe2yhtolEJTpxQ" base_Element="_VnkgIqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnluQ6AGEe2yhtolEJTpxQ" base_Element="_VnluQqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Generics xmi:id="_VnluRKAGEe2yhtolEJTpxQ" genericsValue="Socket" base_Element="_VnluQqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnmVUqAGEe2yhtolEJTpxQ" base_Element="_VnmVUaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Generics xmi:id="_VnmVU6AGEe2yhtolEJTpxQ" genericsValue="Thread" base_Element="_VnmVUaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Vnm8YaAGEe2yhtolEJTpxQ" base_Element="_Vnm8YKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Vnm8Y6AGEe2yhtolEJTpxQ" base_Element="_Vnm8YqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_VnnjcaAGEe2yhtolEJTpxQ" base_Element="_VnnjcKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn0-0KAGEe2yhtolEJTpxQ" base_Element="_Vn0XwKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn0-06AGEe2yhtolEJTpxQ" base_Element="_Vn0-0aAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn1l4KAGEe2yhtolEJTpxQ" base_Element="_Vn0-1KAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn1l46AGEe2yhtolEJTpxQ" base_Element="_Vn1l4aAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn2M8KAGEe2yhtolEJTpxQ" base_Element="_Vn1l5KAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn2M86AGEe2yhtolEJTpxQ" base_Element="_Vn2M8aAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn20AKAGEe2yhtolEJTpxQ" base_Element="_Vn2M9KAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn20A6AGEe2yhtolEJTpxQ" base_Element="_Vn20AaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn20BqAGEe2yhtolEJTpxQ" base_Element="_Vn20BKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn3bEaAGEe2yhtolEJTpxQ" base_Element="_Vn20B6AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn4CIKAGEe2yhtolEJTpxQ" base_Element="_Vn3bEqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn4CI6AGEe2yhtolEJTpxQ" base_Element="_Vn4CIaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn4pMKAGEe2yhtolEJTpxQ" base_Element="_Vn4CJKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn4pM6AGEe2yhtolEJTpxQ" base_Element="_Vn4pMaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn5QQqAGEe2yhtolEJTpxQ" base_Element="_Vn5QQKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn5QRaAGEe2yhtolEJTpxQ" base_Element="_Vn5QQ6AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn53UKAGEe2yhtolEJTpxQ" base_Element="_Vn5QRqAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn53U6AGEe2yhtolEJTpxQ" base_Element="_Vn53UaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn6eYKAGEe2yhtolEJTpxQ" base_Element="_Vn53VKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn6eY6AGEe2yhtolEJTpxQ" base_Element="_Vn6eYaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn6eZqAGEe2yhtolEJTpxQ" base_Element="_Vn6eZKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn7FcKAGEe2yhtolEJTpxQ" base_Element="_Vn6eZ6AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn7Fc6AGEe2yhtolEJTpxQ" base_Element="_Vn7FcaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn7sgKAGEe2yhtolEJTpxQ" base_Element="_Vn7FdKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn7sg6AGEe2yhtolEJTpxQ" base_Element="_Vn7sgaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn8TkKAGEe2yhtolEJTpxQ" base_Element="_Vn7shKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn8Tk6AGEe2yhtolEJTpxQ" base_Element="_Vn8TkaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn86oKAGEe2yhtolEJTpxQ" base_Element="_Vn8TlKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn86o6AGEe2yhtolEJTpxQ" base_Element="_Vn86oaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn9hsKAGEe2yhtolEJTpxQ" base_Element="_Vn86pKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn9hs6AGEe2yhtolEJTpxQ" base_Element="_Vn9hsaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn-IwKAGEe2yhtolEJTpxQ" base_Element="_Vn9htKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn-Iw6AGEe2yhtolEJTpxQ" base_Element="_Vn-IwaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn-IxqAGEe2yhtolEJTpxQ" base_Element="_Vn-IxKAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn-v0KAGEe2yhtolEJTpxQ" base_Element="_Vn-Ix6AGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn-v06AGEe2yhtolEJTpxQ" base_Element="_Vn-v0aAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn_W4KAGEe2yhtolEJTpxQ" base_Element="_Vn-v1KAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn_W46AGEe2yhtolEJTpxQ" base_Element="_Vn_W4aAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn_98KAGEe2yhtolEJTpxQ" base_Element="_Vn_W5KAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_Vn_986AGEe2yhtolEJTpxQ" base_Element="_Vn_98aAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_VoAlAKAGEe2yhtolEJTpxQ" base_Element="_Vn_99KAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_VoAlA6AGEe2yhtolEJTpxQ" base_Element="_VoAlAaAGEe2yhtolEJTpxQ"/>
+  <UMLLabProfile:Reference xmi:id="_VoBMEKAGEe2yhtolEJTpxQ" base_Element="_VoAlBKAGEe2yhtolEJTpxQ"/>
+</xmi:XMI>
