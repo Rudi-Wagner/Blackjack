@@ -6,12 +6,11 @@ import java.util.ArrayList;
 
 import misc.CardDeck;
 
-/*
- * Rudi Wagner
- * Paul Weissengruber
- * 5 BHIT
- * Blackjack
- * Server
+/**
+ * This is the main-Server it accepts the connection-requests from clients
+ * and starts a new Thread {@code clientThread} to handle the connection.
+ * @author Rudi Wagner
+ * @author Paul Weissengruber
  */
 public class BlackServer 
 { 
@@ -19,6 +18,20 @@ public class BlackServer
 	private static ArrayList<Socket> allSockets = new ArrayList<Socket>();
 	private static ArrayList<Thread> allThreads = new ArrayList<Thread>();
 	
+	
+	/**
+	 *	This is the Main-Server-Method to start the BlackjackServer.
+	 *
+		This is the main class of a server application that opens a socket to listen for clients.
+		The server listens on port 6868 and creates a new thread for each incoming client connection.
+		The new thread takes over the communication with the client and operates on a shared deck of cards.
+		If no clients are found within 3 seconds, a warning message will be displayed and the server will keep operating.
+		If a client thread is stopped, it will be removed.
+		If an exception occurs, the server will display a message and print a stack trace.
+		
+	 * @param args
+	 * 
+	 */
 	public static void main(String[] args) 
 	{
     	System.out.println("#Server# Server started!");
@@ -40,7 +53,7 @@ public class BlackServer
             		socket = serverSocket.accept();
             	}catch(SocketTimeoutException ste)
             	{
-//            		System.out.println("#Warning# No Client found!");	//Nach 3s wird neu gesucht
+            		System.out.println("#Warning# No Client found! Still operating!");	//Nach 3s wird neu gesucht
             	}
         
                 if(socket != null)
@@ -60,6 +73,10 @@ public class BlackServer
     	}
     }
     
+	/**
+	This method checks all threads in the list "allThreads" to see if they are alive.
+	If a stopped thread is found, it will be removed from the list "allThreads" and its corresponding socket from the list "allSockets".
+	*/
 	public static void checkStoppedThread() 
     {	//Wenn ein gestoppter Thread gefunden wird, wird er aus der ArrayList entfernt
     	for (int i = 0; i < allThreads.size(); i++) 
@@ -73,6 +90,12 @@ public class BlackServer
 		}
     }
     
+	/**
+	This method saves a socket and its corresponding thread to the lists "allSockets" and "allThreads".
+	The method also displays a log message indicating the current size of both lists.
+	@param socket The socket to be saved
+	@param thread The thread corresponding to the socket to be saved
+	*/
     public static void saveConnection(Socket socket, Thread thread) 
     {
     	allSockets.add(socket);
@@ -81,6 +104,12 @@ public class BlackServer
     							+ " , Threads size: " + allThreads.size());
     }
     
+    /**
+    This method removes a socket and its corresponding thread from the lists "allSockets" and "allThreads".
+    The method also displays a log message indicating the current size of both lists.
+    @param socket The socket to be removed
+    @param thread The thread corresponding to the socket to be removed
+    */
     public static void delConnection(Socket socket, Thread thread) 
     {
     	allSockets.remove(socket);

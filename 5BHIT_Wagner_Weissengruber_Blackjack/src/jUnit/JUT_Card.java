@@ -5,7 +5,7 @@ import misc.Card;
 
 public class JUT_Card extends TestCase
 {
-	/*
+	/**
 	 * Check if Card is initialized correctly
 	 */
 	public void testCase_1()

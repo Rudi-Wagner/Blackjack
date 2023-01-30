@@ -10,11 +10,18 @@ public class CardDeck
 	private String[] cardNames	= {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
 	private int[] cardValues 	= { 11	,  2 ,  3 ,  4 ,  5 ,  6 ,  7 ,  8 ,  9 ,  10 ,   10  ,   10   ,   10  };
 	
+	/**
+	 * Dies ist ein Konstruktor, der bei der Erstellung eines CardDeck-Objekts aufgerufen wird und dazu verwendet wird, das Deck zu initialisieren und zu mischen.
+	 */
 	public CardDeck() 
 	{	
 		shuffle();
 	}
 	
+	/**
+	 * Diese Methode wählt eine zufällige Karte aus dem Deck aus und entfernt sie aus dem Deck. Falls das Deck leer ist, wird es gemischt.
+	 * @return
+	 */
 	public Card drawCard()
 	{
 		if (CardDeck.isEmpty()) 
@@ -31,11 +38,18 @@ public class CardDeck
 		return card;
 	}
 
+	/**
+	 * Dies ist eine Getter-Methode, die die Größe des CardDeck zurückgibt.
+	 * @return
+	 */
 	public int getCardDeckSize() 
 	{
 		return CardDeck.size();
 	}
 
+	/**
+	 * Diese Methode mischt das Deck, indem es es zuerst löscht und dann mit neuen Karten wieder aufbaut.
+	 */
 	public void shuffle() 
 	{
 		CardDeck.clear();

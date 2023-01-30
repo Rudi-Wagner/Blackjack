@@ -25,6 +25,12 @@ import javax.swing.border.LineBorder;
 
 import misc.Card;
 
+/**
+ * This is the main-GUI for the BlackClient.
+ * It is has a basic BlackJack-Layout.
+ * @author Rudi Wagner
+ * @author Paul Weissengruber
+ */
 public class Gui {
 
 	private JFrame frmBlackjackJavaClient;
@@ -53,6 +59,14 @@ public class Gui {
 	Color backgroundColor = new Color(48, 49, 54);
 	Color specialColor = new Color(55, 57, 63);
 	
+	/**
+	The main method is the entry point of the Java program.
+	It invokes the EventQueue's invokeLater method and passes a new instance of the Runnable interface.
+	The run method of the Runnable interface is then executed, which creates a new instance of the Gui class
+	and sets the visibility of the window to true.
+	If any exception occurs, it is caught and the stack trace is printed.
+	@param args command line arguments
+	*/
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -66,6 +80,14 @@ public class Gui {
 		});
 	}
 
+	/**
+	Constructor for the Gui class.
+	Initializes an ArrayList of JLabels for playerHand and another ArrayList of Cards for playerCardHand.
+	Assigns the client parameter to the class field "client".
+	Calls the initialize method to set up the GUI.
+	Makes the frame visible.
+	@param client instance of the BlackClient class
+	*/
 	public Gui(BlackClient client) {
 		playerHand = new ArrayList<JLabel>();
 		playerCardHand = new ArrayList<Card>();
@@ -74,6 +96,9 @@ public class Gui {
 		frmBlackjackJavaClient.setVisible(true);
 	}
 
+	/**
+	 * Initialize the contents of the frame.
+	 */
 	private void initialize() 
 	{
 		frmBlackjackJavaClient = new JFrame();
@@ -274,6 +299,10 @@ public class Gui {
 		frmBlackjackJavaClient.dispose();
 	}
 	
+	/**
+	This method is called when the GUI window is resized.
+	The method adjusts the size and positions of the GUI components to fit the new size of the window.
+	*/
 	protected void OnResize() 
 	{
 		if (frmBlackjackJavaClient.getWidth() < 870) 
@@ -355,6 +384,11 @@ public class Gui {
 	}
 
 	//Button Actions
+	/**
+	The split method is used to perform a split action in a card game.
+	It initializes a new GuiForSplit instance, calls the doSplit method from the client object and removes the second card from the player's card hand.
+	It also disables the "splitButton" component, draws a card and resets the hand value.
+	*/
 	private void split() 
 	{
 		System.out.println("#ClientGUI# Request to split Hand.");
@@ -379,6 +413,10 @@ public class Gui {
 		handValue = this.client.getHandValue(false);
 	}
 	
+	/**
+	Adds the split money to the player's total money.
+	@param splitMoney the amount of split money to be added
+	*/
 	public void addSplitMoney(int splitMoney) 
 	{
 		money += splitMoney;
@@ -394,6 +432,16 @@ public class Gui {
 		}
 	}
 
+	/**
+	The doubleDown method is called when the player requests to double down.
+	This method performs the following actions:
+		Prints a message indicating that the player has requested to double down.
+		Draws the last card.
+		Doubles the player's bet.
+		Updates the player's bet amount in the spinner.
+		Repaints the frame.
+		Automatically stands and ends the round.
+	*/
 	private void doubleDown() 
 	{
 		System.out.println("#ClientGUI# Request to double down.");
@@ -424,6 +472,10 @@ public class Gui {
 		stand();
 	}
 
+	/**
+	The method drawCard() requests a new card from the server and updates the GUI accordingly.
+	If the player already has 2 cards in their hand, the double down and split buttons will be disabled.
+	*/
 	private void drawCard() 
 	{
 		System.out.println("#ClientGUI# Request new Card.");
@@ -444,6 +496,11 @@ public class Gui {
 		}
 	}
 	
+	/**
+	The method {@code stand} is used to make the player stand and end the round of BlackJack.
+	It disables all the buttons on the playerActionPanel except the reload button and enables the betSpinner.
+	It sends a message "stand" to the server.
+	*/
 	private void stand() 
 	{
 		System.out.println("#ClientGUI# Request to stand.");
@@ -476,6 +533,14 @@ public class Gui {
 		}
 	}
 	
+	/**
+	 * The method {@code newRound} resets the game state and prepares the game for a new round of blackjack.
+	 * First, the method checks if the player has placed a valid bet (greater than 0 and less than or equal to their current money).
+	 * Then, the method resets variables such as `cardCnt` and `handValue`, and updates the hand value with `updateHandValue`.
+	 * The cards in the player's hand are reset and the back of the cards are displayed. The bet spinner is locked and the game status label is reset.
+	 * The first two cards are then drawn and the buttons are reset. The "reload" button is set to be disabled.
+	 * Finally, the Frame is repainted to update the display.
+	 */
 	private void newRound() 
 	{
 		if (!(playerBet > 0 && playerBet <= money)) 
@@ -540,6 +605,9 @@ public class Gui {
 		frmBlackjackJavaClient.repaint();
 	}
 	
+	/**
+	Method that updates the player's bet based on the value selected in the betAmount spinner.
+	*/
 	private void updateBet() 
 	{
 		//Update playerBet from spinner
@@ -556,6 +624,11 @@ public class Gui {
 
 
 	//PlayerLogic
+	/**
+	The method sets a card for the player and checks if the split-option would be valid.
+	It also calls {@code updateCard} to update the card images.
+	@param card the card to be set.
+	*/
 	public void setCard(Card card) 
 	{
 		updateCard(cardCnt, card.getName());
@@ -592,12 +665,20 @@ public class Gui {
 		}
 	}
 	
+	/**
+	Updates the displayed hand value of the player in the GUI.
+	*/
 	private void updateHandValue() 
 	{
 		playerHandValueLabel.setText("Current player-hand value: " + handValue + "");
 		frmBlackjackJavaClient.repaint();
 	}
 
+	/**
+	This method updates the image for a card on the GUI.
+	@param pos The position of the card in the player's hand.
+	@param type The name of the card's image file.
+	*/
 	public void updateCard(int pos, String type)
 	{
 		JLabel card = playerHand.get(pos);
@@ -606,6 +687,11 @@ public class Gui {
 		frmBlackjackJavaClient.repaint();
 	}
 
+	/**
+	Updates the GUI to display the outcome of the round and the dealer's hand value.
+	@param gameStatus the outcome of the round - either "win", "loose", or "draw"
+	@param dealerHandValue the hand value of the dealer
+	*/
 	public void endRound(String gameStatus, int dealerHandValue) 
 	{
 		System.out.println("#Client# Round state: " + gameStatus);

@@ -16,27 +16,39 @@ import misc.CardDeck;
 import misc.CardHand;
 import misc.JsonObj;
 
+/**
+ * This is a new Thread that gets started from the main-Server.
+ * It handels the connection to one Client each.
+ * @author Rudi Wagner
+ * @author Paul Weissengruber
+ */
 public class clientThread extends Thread
-{
-	
-	/*
-	 * Rudi Wagner
-	 * Paul Weissengruber
-	 * 5 BHIT
-	 * Blackjack
-	 * clientThread
-	 */
-	
+{	
 	private Socket socket;
 	private CardDeck deck;
 	private CardHand dealerHand;
 	
+	/**
+	The constructor for the class "clientThread". It initializes the instance variables "socket" and "deck".
+	@param givenSocket The socket to be assigned to the instance variable "socket"
+	@param deck The deck of cards to be assigned to the instance variable "deck"
+	*/
 	public clientThread(Socket givenSocket, CardDeck deck)
 	{
 		this.socket = givenSocket;
 		this.deck = deck;
 	}
 	
+	/**
+	The {@code run} method of the {@code clientThread} class.
+	This method receives and processes incoming requests from a client.
+	
+	The incoming requests are read from the input stream and written to the output stream using a {@link BufferedReader} and a {@link PrintWriter}.
+	The method uses a {@link Gson} object to deserialize the incoming JSON messages and to serialize the outgoing JSON messages.
+	The method checks the type of the incoming request, either "draw" or "stand". If the type is "draw", the method retrieves a card from the deck and returns it to the client.
+	If the type is "stand", the method calculates the hand value of the dealer, compares it with the hand value of the player, and returns the game state to the client.
+	The method ends if the client requests a close session.
+	*/
     public void run() 
     { 
     	boolean run = true;
@@ -120,7 +132,14 @@ public class clientThread extends Thread
 		System.out.println("#Log# Socket ~" + socket.getRemoteSocketAddress() + "~ in Thread " + this.getName() + " has been closed!");
     }
 
-	private String getGameState(int playerHandValue, int dealerHandValue) 
+    /**
+     * Determines the outcome of a game of Blackjack based on the values of the player's and dealer's hands.
+     *
+     * @param playerHandValue the sum of the player's hand
+     * @param dealerHandValue the sum of the dealer's hand
+     * @return the outcome of the game as a string: "win", "loose", or "draw"
+     */
+    private String getGameState(int playerHandValue, int dealerHandValue) 
 	{
 		System.out.println("D: " + dealerHandValue + ", P: " + playerHandValue);
 		//If both have more than 21 or their Value is equal
@@ -147,7 +166,11 @@ public class clientThread extends Thread
 		return "draw";
 	}
 
-	private void createDealerHand(int playerHandValue) 
+    /**
+    Creates the dealer's hand and adds cards to it until the hand's value is greater than 16.
+    @param playerHandValue The value of the player's hand to check whether it is reasonable to draw more cards.
+    */
+    private void createDealerHand(int playerHandValue) 
 	{
 		dealerHand = new CardHand();
 		//Draw first two

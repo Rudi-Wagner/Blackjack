@@ -48,6 +48,10 @@ public class GuiForSplit {
 	Color specialColor = new Color(55, 57, 63);
 	
 
+	/**
+	 * Die main-Methode erstellt eine neue Instanz der GuiForSplit-Klasse und setzt ihre Sichtbarkeit auf true, damit die GUI sichtbar ist.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -61,6 +65,15 @@ public class GuiForSplit {
 		});
 	}
 
+	/**
+	 * Die Konstruktormethode richtet die GUI ein. Sie nimmt drei Parameter entgegen: mainGui, client und card. 
+	 * Sie erstellt eine ArrayList mit JLabel-Objekten namens playerHand und eine weitere namens playerCardHand, um Karten zu speichern. 
+	 * Dann ruft sie die initialize-Methode auf, um die GUI-Komponenten einzurichten. Anschließend wird die Sichtbarkeit der GUI auf true gesetzt und der Wert des card-Parameters 
+	 * als erste Karte in der playerCardHand-Liste gesetzt. Dann wartet es, bis playerCardHand mindestens eine Karte hat und ruft die drawCard-Methode auf.
+	 * @param mainGui
+	 * @param client
+	 * @param card
+	 */
 	public GuiForSplit(Gui mainGui, BlackClient client, Card card) 
 	{
 		this.mainGui = mainGui;
@@ -82,6 +95,13 @@ public class GuiForSplit {
 		drawCard();
 	}
 
+	/**
+	 * JFrame erstellt und seine Eigenschaften wie Größe, Hintergrundfarbe und Schließoperation werden eingestellt. 
+	 * Dann werden drei Panels für Spieleraktionen, Spielerhand und Dealerhand erstellt. 
+	 * Das Spieleraktionspanel enthält drei Schaltflächen für die Spieleraktionen: eine Karte ziehen, stehen oder verdoppeln. 
+	 * Die Spielerhand- und Dealerhand-Panels zeigen die Karten in den Händen des Spielers und des Dealers an. 
+	 * Der Code richtet auch Event-Listener für Fenstergrößenänderung und Fensterschließereignisse ein, die die OnResize- und OnClose-Methoden auslösen.
+	 */
 	private void initialize() 
 	{
 		frmBlackjackJavaClient = new JFrame();
@@ -191,6 +211,10 @@ public class GuiForSplit {
 		frmBlackjackJavaClient.getContentPane().add(lblGameStatus);
 	}
 	
+	/**
+	 * Diese Methode wird aufgerufen, wenn das Hauptfenster geschlossen wird. 
+	 * Es setzt die Referenz auf die GUI auf null und macht das Fenster unsichtbar und bereinigt es.
+	 */
 	protected void OnClose()
 	{
 		this.mainGui.gui2 = null;
@@ -198,6 +222,11 @@ public class GuiForSplit {
 		frmBlackjackJavaClient.dispose();
 	}
 
+	/**
+	 * Diese Methode wird aufgerufen, wenn das Fenstergröße verändert wird. 
+	 * Es passt die Größe und Position bestimmter Komponenten wie Schaltflächen, Texte, Panels etc. an, um sicherzustellen, 
+	 * dass sie gut angepasst sind und entsprechend des verfügbaren Platzes angezeigt werden.
+	 */
 	protected void OnResize() 
 	{
 		if (frmBlackjackJavaClient.getWidth() < 870) 
@@ -256,6 +285,10 @@ public class GuiForSplit {
 
 	//Button Actions
 
+	/**
+	 *  Die Methode ermöglicht es dem Spieler, seinen Einsatz zu verdoppeln und die letzte Karte zu ziehen.
+	 *  Anschließend wird die Runde automatisch beendet (Stand).
+	 */
 	private void doubleDown() 
 	{
 		System.out.println("#ClientGUI# Request to double down.");
@@ -277,6 +310,10 @@ public class GuiForSplit {
 		stand();
 	}
 
+	/**
+	 * Die Methode sendet eine Anfrage an den Server, um eine neue Karte zu ziehen. 
+	 * Wenn die Anzahl der Karten bereits bei 2 liegt, werden die Schaltflächen "DoubleDown" und "Split" deaktiviert.
+	 */
 	private void drawCard() 
 	{
 		System.out.println("#Client2GUI# Request new Card.");
@@ -297,6 +334,11 @@ public class GuiForSplit {
 		}
 	}
 	
+	/**
+	 * Diese Methode wird aufgerufen, wenn ein Spieler beschließt, keine weiteren Karten mehr zu ziehen (Stand). 
+	 * Es gibt eine Ausgabe auf der Konsole und sendet eine Nachricht an den Server, dass der Spieler stehen möchte. 
+	 * Die Schaltflächen im Spiel werden entsprechend deaktiviert.
+	 */
 	private void stand() 
 	{
 		System.out.println("#ClientGUI# Request to stand.");
@@ -320,6 +362,11 @@ public class GuiForSplit {
 	}
 
 	//PlayerLogic
+	/**
+	 * Diese Methode wird aufgerufen, wenn eine neue Karte an den Spieler ausgegeben wird. Es wird die Karte in der Hand des Spielers aktualisiert und dessen Handwert berechnet.
+	 * Wenn die Hand des Spielers zwei Karten enthält, wird überprüft, ob sie gleichwertig sind, um zu bestimmen, ob der Spieler die Möglichkeit hat, die Hand zu splitten.
+	 * @param card
+	 */
 	public void setCard(Card card) 
 	{
 		updateCard(cardCnt, card.getName());
@@ -356,12 +403,20 @@ public class GuiForSplit {
 		}
 	}
 	
+	/**
+	 * Diese Methode aktualisiert den angezeigten Handwert des Spielers auf der Benutzeroberfläche.
+	 */
 	private void updateHandValue() 
 	{
 		playerHandValueLabel.setText("Current player-hand value: " + handValue + "");
 		frmBlackjackJavaClient.repaint();
 	}
 
+	/**
+	 * Diese Methode aktualisiert die angezeigte Karte des Spielers auf der Benutzeroberfläche.
+	 * @param pos
+	 * @param type
+	 */
 	public void updateCard(int pos, String type)
 	{
 		JLabel card = playerHand.get(pos);
@@ -370,6 +425,12 @@ public class GuiForSplit {
 		frmBlackjackJavaClient.repaint();
 	}
 
+	/**
+	 * Diese Methode wird aufgerufen, wenn eine Runde beendet ist. 
+	 * Es wird der Spielstatus berechnet (gewinnen, verlieren oder unentschieden) und die entsprechende Nachricht auf der Benutzeroberfläche angezeigt.
+	 * @param gameStatus
+	 * @param dealerHandValue
+	 */
 	public void endRound(String gameStatus, int dealerHandValue) 
 	{
 		System.out.println("#Client# Round state: " + gameStatus);

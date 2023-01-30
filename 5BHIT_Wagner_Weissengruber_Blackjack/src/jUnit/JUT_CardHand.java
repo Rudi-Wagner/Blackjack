@@ -13,7 +13,7 @@ public class JUT_CardHand extends TestCase
 		cardHand = new CardHand();
 	}
 	
-	/*
+	/**
 	 * Basic tests on standard Methods
 	 */
 	public void testCase_1()
@@ -33,7 +33,7 @@ public class JUT_CardHand extends TestCase
 		assertEquals(0, cardHand.getCardHandSize());
 	}
 	
-	/*
+	/**
 	 * Test getValue() Method
 	 * Normal Value without Aces
 	 * 5 + 5 + 5 = 15
@@ -47,7 +47,7 @@ public class JUT_CardHand extends TestCase
 		assertEquals(15, cardHand.getValue());
 	}
 	
-	/*
+	/**
 	 * Test getValue() Method
 	 * Normal Value with Ace at first place
 	 * 11 + 5 + 5 = 21
@@ -61,7 +61,7 @@ public class JUT_CardHand extends TestCase
 		assertEquals(21, cardHand.getValue());
 	}
 	
-	/*
+	/**
 	 * Test getValue() Method
 	 * Normal Value with Ace at last place
 	 * 10 + 5 + 11 > 21 --> deswegen soll das Ass als 1 gewertet werden
@@ -77,7 +77,7 @@ public class JUT_CardHand extends TestCase
 		assertEquals(16, cardHand.getValue());
 	}
 	
-	/*
+	/**
 	 * Test getValue() Method
 	 * Normal Value with Ace in the middle
 	 * 5 + 11 + 5 = 21

@@ -7,11 +7,17 @@ public class JUT_CardDeck extends TestCase
 {
 	private CardDeck cardDeck;
 	
+	/**
+	 * Initialisiert eine neue Instanz von "CardDeck".
+	 */
 	protected void setUp()
 	{
 		cardDeck = new CardDeck();
 	}
 	
+	/**
+	 * Überprüft, ob die Instanz von "CardDeck" korrekt erstellt wurde und 52 Karten enthält, und ob die Methode drawCard() funktioniert und eine Karte aus dem Deck entfernt.
+	 */
 	public void testCase_1()
 	{
 		//Test if CardDeck is created and correctly filled
@@ -28,6 +34,9 @@ public class JUT_CardDeck extends TestCase
 		assertEquals(actual, expected);
 	}
 	
+	/**
+	 * Überprüft, ob das Deck leer ist, nachdem alle Karten entfernt wurden, und ob das Deck durch die Methode shuffle() neu gemischt und voll (52 Karten) wurde.
+	 */
 	public void testCase_2()
 	{
 		//Clear deck and test if empty
