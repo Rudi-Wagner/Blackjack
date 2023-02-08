@@ -1,5 +1,5 @@
-# 5BHIT_Wagner_Weissengruber_Blackjack
-
+# Blackjack mit Server & Client Struktur
+## Softwareprojekt 2022-2023 HTL-Traun
 
 
 ## Haupt-Funktionalität:
