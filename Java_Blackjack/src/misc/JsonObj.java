@@ -10,6 +10,7 @@ public class JsonObj
 	 * Dies ist ein Konstruktor, der bei der Erstellung eines JsonObj-Objekts aufgerufen wird und dazu verwendet wird, den Typ und den Wert des Objekts zu initialisieren
 	 * @param type
 	 * @param value
+	 * @author Rudi Wagner
 	 */
 	public JsonObj(String type, int value) 
 	{

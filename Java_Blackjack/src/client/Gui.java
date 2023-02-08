@@ -29,7 +29,6 @@ import misc.Card;
  * This is the main-GUI for the BlackClient.
  * It is has a basic BlackJack-Layout.
  * @author Rudi Wagner
- * @author Paul Weissengruber
  */
 public class Gui {
 

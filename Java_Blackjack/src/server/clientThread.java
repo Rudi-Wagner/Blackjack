@@ -20,7 +20,6 @@ import misc.JsonObj;
  * This is a new Thread that gets started from the main-Server.
  * It handels the connection to one Client each.
  * @author Rudi Wagner
- * @author Paul Weissengruber
  */
 public class clientThread extends Thread
 {	

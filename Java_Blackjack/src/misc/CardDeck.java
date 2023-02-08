@@ -12,6 +12,7 @@ public class CardDeck
 	
 	/**
 	 * Dies ist ein Konstruktor, der bei der Erstellung eines CardDeck-Objekts aufgerufen wird und dazu verwendet wird, das Deck zu initialisieren und zu mischen.
+	 * @author Rudi Wagner
 	 */
 	public CardDeck() 
 	{	

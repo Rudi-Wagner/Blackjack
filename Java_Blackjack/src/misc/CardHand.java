@@ -10,6 +10,7 @@ public class CardHand
 
 	/**
 	 * Konstruktor, initialisiert eine neue ArrayList für die Karten.
+	 * @author Rudi Wagner
 	 */
 	public CardHand() 
 	{

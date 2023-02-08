@@ -22,7 +22,6 @@ import misc.JsonObj;
  * It is responsible to send and recieve data to/from the Server.
  * The messaging-system works with JSON.
  * @author Rudi Wagner
- * @author Paul Weissengruber
  */
 public class BlackClient extends Thread{
 	
@@ -35,14 +34,6 @@ public class BlackClient extends Thread{
 	private CardHand handSplitted;
 	private boolean doForSplitted = false;
 	private String inputString = "";
- 
-	/*
-	 * Rudi Wagner
-	 * Paul Weissengruber
-	 * 5 BHIT
-	 * Blackjack
-	 * Client
-	 */
 	
 	/**
 	The main method that starts the game by creating an instance of the {@link BlackClient} class and the {@link Gui} class.

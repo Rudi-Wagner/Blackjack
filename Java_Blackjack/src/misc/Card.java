@@ -9,6 +9,7 @@ public class Card
 	 * Dies ist ein Konstruktor, der bei der Erstellung eines Card-Objekts aufgerufen wird und dazu verwendet wird, den Namen und den Wert der Karte zu initialisieren.
 	 * @param name
 	 * @param value
+	 * @author Rudi Wagner
 	 */
 	public Card(String name, int value) {
 		super();

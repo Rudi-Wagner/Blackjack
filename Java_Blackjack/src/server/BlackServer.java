@@ -10,7 +10,6 @@ import misc.CardDeck;
  * This is the main-Server it accepts the connection-requests from clients
  * and starts a new Thread {@code clientThread} to handle the connection.
  * @author Rudi Wagner
- * @author Paul Weissengruber
  */
 public class BlackServer 
 { 
