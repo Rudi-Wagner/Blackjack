@@ -22,19 +22,25 @@ public class BlackServer
 	 *	This is the Main-Server-Method to start the BlackjackServer.
 	 *
 		This is the main class of a server application that opens a socket to listen for clients.
-		The server listens on port 6868 and creates a new thread for each incoming client connection.
+		The server listens on a given port or 6868 and creates a new thread for each incoming client connection.
 		The new thread takes over the communication with the client and operates on a shared deck of cards.
 		If no clients are found within 3 seconds, a warning message will be displayed and the server will keep operating.
 		If a client thread is stopped, it will be removed.
 		If an exception occurs, the server will display a message and print a stack trace.
 		
-	 * @param args
+	 * @param args 1: port
 	 * 
 	 */
 	public static void main(String[] args) 
 	{
     	System.out.println("#Server# Server started!");
+    	
     	int port = 6868;		//Port festlegen
+    	if(args.length > 0)
+    	{
+    		port = Integer.parseInt(args[0]);
+    	}
+    	
     	CardDeck deck = new CardDeck();
  
     	//Oeffnen und warten auf Clients

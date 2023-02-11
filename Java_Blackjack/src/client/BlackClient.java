@@ -35,12 +35,22 @@ public class BlackClient extends Thread{
 	private boolean doForSplitted = false;
 	private String inputString = "";
 	
+	//Connection Data
+	private static String hostname = "localhost";
+	private static int port = 6868;
+	
 	/**
 	The main method that starts the game by creating an instance of the {@link BlackClient} class and the {@link Gui} class.
-	@param args the command line arguments
+	@param args 1: port, 2: hostname
 	*/
 	public static void main(String[] args)
 	{
+    	if(args.length > 0)
+    	{
+    		port = Integer.parseInt(args[0]);
+    		hostname = args[1];
+    	}
+		
 		BlackClient client = new BlackClient();
 		window = new Gui(client);
 		client.start();
@@ -49,7 +59,7 @@ public class BlackClient extends Thread{
 	/**
 	The {@code run} method of the {@code BlackClient} class is responsible for connecting the client to the server, handling communication between the client and server, and processing the game logic.
 	The method first outputs a message to indicate that the client has started.
-	Then it sets up the connection to the server using the localhost and port 6868.
+	Then it sets up the connection to the server using the given arguments or localhost and port 6868.
 	If the server is not found, it retries to connect every 5 seconds until it succeeds.
 	Once connected, the method initializes the socket, output, and writer, and creates a CardHand object to store the client's cards.
 	The method also creates an input stream and a buffered reader to receive messages from the server.
@@ -62,9 +72,6 @@ public class BlackClient extends Thread{
 	public void run() 
 	{	
     	System.out.println("#Client# Client Started!");
-    	//Connection Data
-    	String hostname = "localhost";
-    	int port = 6868;
  
     	try {
     		//Intialize socket, output and writer
@@ -82,6 +89,10 @@ public class BlackClient extends Thread{
 						e.printStackTrace();
 					}
     			}
+    			if (inputString.equals("quit")) 
+            	{
+    				return;
+            	}
     		}
     		System.out.println("#Client# Connected succesfully");
     		   		
@@ -226,6 +237,7 @@ public class BlackClient extends Thread{
             Thread.sleep(5000);				
             
 			socket.close();
+			System.exit(0);
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
