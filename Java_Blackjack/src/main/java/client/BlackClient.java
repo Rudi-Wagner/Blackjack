@@ -1,4 +1,4 @@
-package client;
+package main.java.client;
 
 
 import java.io.BufferedReader;
@@ -12,9 +12,9 @@ import java.net.UnknownHostException;
 
 import com.google.gson.Gson;
 
-import misc.Card;
-import misc.CardHand;
-import misc.JsonObj;
+import main.java.misc.Card;
+import main.java.misc.CardHand;
+import main.java.misc.JsonObj;
 
 
 /**
@@ -24,7 +24,7 @@ import misc.JsonObj;
  * @author Rudi Wagner
  */
 public class BlackClient extends Thread{
-	
+
 	private OutputStream output;
 	private PrintWriter writer;
 	private static Gui window;
@@ -34,11 +34,11 @@ public class BlackClient extends Thread{
 	private CardHand handSplitted;
 	private boolean doForSplitted = false;
 	private String inputString = "";
-	
+
 	//Connection Data
 	private static String hostname = "localhost";
 	private static int port = 6868;
-	
+
 	/**
 	The main method that starts the game by creating an instance of the {@link BlackClient} class and the {@link Gui} class.
 	@param args 1: port, 2: hostname
@@ -50,12 +50,12 @@ public class BlackClient extends Thread{
     		port = Integer.parseInt(args[0]);
     		hostname = args[1];
     	}
-		
+
 		BlackClient client = new BlackClient();
 		window = new Gui(client);
 		client.start();
 	}
-	
+
 	/**
 	The {@code run} method of the {@code BlackClient} class is responsible for connecting the client to the server, handling communication between the client and server, and processing the game logic.
 	The method first outputs a message to indicate that the client has started.
@@ -69,10 +69,11 @@ public class BlackClient extends Thread{
 	If the input string is "quit", the loop is broken, and the method calls the shutdown method to close the socket.
 	If any exceptions are caught, such as UnknownHostException or IOException, the method outputs an error message.
 	*/
-	public void run() 
-	{	
+	@Override
+	public void run()
+	{
     	System.out.println("#Client# Client Started!");
- 
+
     	try {
     		//Intialize socket, output and writer
     		while(socket == null)
@@ -89,36 +90,36 @@ public class BlackClient extends Thread{
 						e.printStackTrace();
 					}
     			}
-    			if (inputString.equals("quit")) 
+    			if (inputString.equals("quit"))
             	{
     				return;
             	}
     		}
     		System.out.println("#Client# Connected succesfully");
-    		   		
+
             output = socket.getOutputStream();
             writer = new PrintWriter(output, true);
             hand = new CardHand();
             handSplitted = new CardHand();
-            
+
             InputStream input = socket.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
-            
+
             while (true) {
             	System.out.print("");	//Ohne dem gehts nimma xD
-            	if (inputString.equals("draw")) 
+            	if (inputString.equals("draw"))
             	{
-            		if (!doForSplitted) 
+            		if (!doForSplitted)
             		{//Do for standard GUI
             			inputString = getMsgDraw();
                         writer.println(inputString);	//Send message to server
                         inputString = "";
-         
+
                         String answer = reader.readLine();	//Server answer
                         Card card = translateCardFromJson(answer);
                         hand.addCard(card);
                         window.setCard(card);
-                        
+
                         synchronized(window) {
                             window.notify();
                         }
@@ -130,27 +131,27 @@ public class BlackClient extends Thread{
             			inputString = getMsgDraw();
                         writer.println(inputString);	//Send message to server
                         inputString = "";
-         
+
                         String answer = reader.readLine();	//Server answer
                         Card card = translateCardFromJson(answer);
                         handSplitted.addCard(card);
                         window2.setCard(card);
-                        
+
                         synchronized(window2) {
                             window2.notify();
                         }
-                        
+
                         System.out.println("#Client# Antwort vom Server: " + answer);
             		}
 				}
             	else if (inputString.equals("stand"))
             	{
-            		if (!doForSplitted) 
+            		if (!doForSplitted)
             		{//Do for standard GUI
 						writer.println(getMsgStand(hand.getValue()));
 						hand = new CardHand();
 	            		inputString = "";
-	            		
+
 	            		String answer = reader.readLine();	//Server answer
 	            		JsonObj msgObj = translateFromJson(answer);
 	            		String gameStatus = msgObj.getType();
@@ -162,14 +163,14 @@ public class BlackClient extends Thread{
             			writer.println(getMsgStand(handSplitted.getValue()));
             			handSplitted = new CardHand();
                 		inputString = "";
-                		
+
                 		String answer = reader.readLine();	//Server answer
                 		JsonObj msgObj = translateFromJson(answer);
                 		String gameStatus = msgObj.getType();
                 		int dealerHandValue = msgObj.getValue();
                 		window2.endRound(gameStatus, dealerHandValue);
             		}
-            		
+
             	}
             	else if (inputString.equals("quit"))
             	{
@@ -178,11 +179,11 @@ public class BlackClient extends Thread{
             }
             shutdown();
         } catch (UnknownHostException ex) {
- 
+
             System.out.println("#Client# Server not found: " + ex.getMessage());
- 
+
         } catch (IOException ex) {
- 
+
             System.out.println("#Client# I/O error: " + ex.getMessage());
         }
     }
@@ -194,27 +195,27 @@ public class BlackClient extends Thread{
 	 * @param msg The JSON formatted string to be translated.
 	 * @return A Card object if the string contains both "name" and "value", null otherwise.
 	 */
-	private Card translateCardFromJson(String msg) 
+	private Card translateCardFromJson(String msg)
 	{
 		Gson gson = new Gson();
-		if (msg.contains("name") && msg.contains("value")) 
+		if (msg.contains("name") && msg.contains("value"))
 		{
 			Card card = gson.fromJson(msg, Card.class);
 			return card;
 		}
 		return null;
 	}
-	
+
 	/**
 	Translates a given JSON formatted string into a {@link JsonObj} object.
 	@param msg The JSON formatted string to translate.
 	@return The {@link JsonObj} object that was translated from the given JSON string.
 	Returns {@code null} if the JSON string does not contain both "type" and "value" fields.
 	*/
-	private JsonObj translateFromJson(String msg) 
+	private JsonObj translateFromJson(String msg)
 	{
 		Gson gson = new Gson();
-		if (msg.contains("type") && msg.contains("value")) 
+		if (msg.contains("type") && msg.contains("value"))
 		{
 			JsonObj obj = gson.fromJson(msg, JsonObj.class);
 			return obj;
@@ -232,17 +233,17 @@ public class BlackClient extends Thread{
     	try {
     		System.out.println("#Client# Requested shutdown!");
     		writer.println("closeSession");
-    		
+
     		//Langer Abstand ist notwendig, da der Thread sonst nicht mehr den Abbruch lesen kann
-            Thread.sleep(5000);				
-            
+            Thread.sleep(5000);
+
 			socket.close();
 			System.exit(0);
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	Sends a message to the Client-Loop.
 	@param msg The message to be sent.
@@ -253,7 +254,7 @@ public class BlackClient extends Thread{
 		this.inputString = msg;
 		this.doForSplitted = doForSplitted;
 	}
-	
+
 	/**
 	 * Converts the Draw action to JSON format.
 	 *
@@ -266,7 +267,7 @@ public class BlackClient extends Thread{
 		String jsondata = gson.toJson(obj);
 		return jsondata;
 	}
-	
+
 	/**
 	Generates a JSON string message representing the player's decision to stand in the game.
 	@param handValue the current value of the player's hand
@@ -279,7 +280,7 @@ public class BlackClient extends Thread{
 		String jsondata = gson.toJson(obj);
 		return jsondata;
 	}
-	
+
 	/**
 	Method to split the players hand into two hands.
 	It also sets the Object for the second gui-window
@@ -289,20 +290,20 @@ public class BlackClient extends Thread{
 	{
 		//Set GUI
 		window2 = gui;
-		
+
 		//Save Cards
 		Card card1 = hand.getCardAt(0);
 		Card card2 = hand.getCardAt(1);
-		
+
 		//Clear hands
 		hand.clearHand();
 		handSplitted.clearHand();
-		
+
 		//Set both hands
 		hand.addCard(card1);
 		handSplitted.addCard(card2);
 	}
-	
+
 	/**
 	Gets the value of the hand.
 	@param doForSplitted a boolean indicating if it's for the splitted hand or not
@@ -310,11 +311,11 @@ public class BlackClient extends Thread{
 	*/
 	public int getHandValue(boolean doForSplitted)
 	{
-		if (doForSplitted) 
+		if (doForSplitted)
 		{
 			return handSplitted.getValue();
 		}
 		return hand.getValue();
 	}
-	
+
 }

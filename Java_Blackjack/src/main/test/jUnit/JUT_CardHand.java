@@ -1,18 +1,19 @@
-package jUnit;
+package main.test.jUnit;
 
 import junit.framework.TestCase;
-import misc.Card;
-import misc.CardHand;
+import main.java.misc.Card;
+import main.java.misc.CardHand;
 
 public class JUT_CardHand extends TestCase
 {
 	private CardHand cardHand;
-	
+
+	@Override
 	protected void setUp()
 	{
 		cardHand = new CardHand();
 	}
-	
+
 	/**
 	 * Basic tests on standard Methods
 	 */
@@ -20,19 +21,19 @@ public class JUT_CardHand extends TestCase
 	{
 		//Test if Object is created
 		assertNotNull(cardHand);
-		
+
 		//Test if Card get added correctly
 		cardHand.addCard(new Card("Test Card1", 2));
 		cardHand.addCard(new Card("Test Card2", 2));
 		cardHand.addCard(new Card("Test Card3", 2));
 		cardHand.addCard(new Card("Test Card4", 2));
 		assertEquals(4, cardHand.getCardHandSize());
-		
+
 		//Clear and test if cleared
 		cardHand.clearHand();
 		assertEquals(0, cardHand.getCardHandSize());
 	}
-	
+
 	/**
 	 * Test getValue() Method
 	 * Normal Value without Aces
@@ -46,7 +47,7 @@ public class JUT_CardHand extends TestCase
 		cardHand.addCard(new Card("Test Card3", 5));
 		assertEquals(15, cardHand.getValue());
 	}
-	
+
 	/**
 	 * Test getValue() Method
 	 * Normal Value with Ace at first place
@@ -60,7 +61,7 @@ public class JUT_CardHand extends TestCase
 		cardHand.addCard(new Card("Test Card3", 5));
 		assertEquals(21, cardHand.getValue());
 	}
-	
+
 	/**
 	 * Test getValue() Method
 	 * Normal Value with Ace at last place
@@ -76,7 +77,7 @@ public class JUT_CardHand extends TestCase
 		cardHand.addCard(new Card("Ace of Spades", 11));
 		assertEquals(16, cardHand.getValue());
 	}
-	
+
 	/**
 	 * Test getValue() Method
 	 * Normal Value with Ace in the middle

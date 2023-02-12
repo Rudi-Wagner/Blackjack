@@ -1,10 +1,10 @@
-package misc;
+package main.java.misc;
 
-public class JsonObj 
+public class JsonObj
 {
 	private String type;
 	private int value;
-	
+
 
 	/**
 	 * Dies ist ein Konstruktor, der bei der Erstellung eines JsonObj-Objekts aufgerufen wird und dazu verwendet wird, den Typ und den Wert des Objekts zu initialisieren
@@ -12,7 +12,7 @@ public class JsonObj
 	 * @param value
 	 * @author Rudi Wagner
 	 */
-	public JsonObj(String type, int value) 
+	public JsonObj(String type, int value)
 	{
 		this.type = type;
 		this.value = value;
@@ -27,7 +27,7 @@ public class JsonObj
 		return type;
 	}
 
-	
+
 	/**
 	 * Dies ist eine Getter-Methode, die den Wert des JsonObj-Objekts zurückgibt.
 	 * @return

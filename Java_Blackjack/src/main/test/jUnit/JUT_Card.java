@@ -1,7 +1,7 @@
-package jUnit;
+package main.test.jUnit;
 
 import junit.framework.TestCase;
-import misc.Card;
+import main.java.misc.Card;
 
 public class JUT_Card extends TestCase
 {
@@ -12,9 +12,9 @@ public class JUT_Card extends TestCase
 	{
 		String name = "Test123";
 		int value = 5;
-		
+
 		Card card = new Card(name, value);
-		
+
 		assertNotNull(card);
 		assertEquals(name, card.getName());
 		assertEquals(value, card.getValue());

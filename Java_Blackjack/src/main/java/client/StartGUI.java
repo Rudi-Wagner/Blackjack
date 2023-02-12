@@ -1,9 +1,11 @@
-package client;
+package main.java.client;
 
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
@@ -25,18 +27,19 @@ import javax.swing.SwingConstants;
 public class StartGUI {
 
 	private JFrame frmStart;
-	
+
 	//Colours
 		Color foregroundColor = new Color(136, 138, 145);
 		Color backgroundColor = new Color(48, 49, 54);
 		Color specialColor = new Color(55, 57, 63);
-		
+
 		private JTextField fieldHostname;
 		private JTextField fieldPort;
 		private JLabel errorLabel;
-	
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
+			@Override
 			public void run() {
 				try {
 					StartGUI window = new StartGUI(null);
@@ -53,7 +56,7 @@ public class StartGUI {
 		frmStart.setVisible(true);
 	}
 
-	private void initialize() 
+	private void initialize()
 	{
 		frmStart = new JFrame();
 		frmStart.setIconImage(Toolkit.getDefaultToolkit().getImage(Gui.class.getResource("/resources/card_joker_black.png")));
@@ -63,14 +66,20 @@ public class StartGUI {
 		frmStart.setSize(1010, 310);
 		frmStart.getContentPane().setBackground(backgroundColor);
 		frmStart.getContentPane().setForeground(foregroundColor);
-		
+		frmStart.addWindowListener(new WindowAdapter() {
+		    @Override
+		    public void windowClosing(WindowEvent event) {
+		        OnClose();
+		    }
+		});
+
 		JPanel mainPanel = new JPanel();
 		mainPanel.setBounds(10, 11, 974, 250);
 		mainPanel.setBackground(backgroundColor);
 		mainPanel.setForeground(foregroundColor);
 		mainPanel.setLayout(null);
 		frmStart.getContentPane().add(mainPanel);
-		
+
 		// Top Label //
 		JLabel connectionLabel = new JLabel("Enter the hostname and port to connect to a server.");
 		connectionLabel.setName("connectionlbl");
@@ -79,7 +88,7 @@ public class StartGUI {
 		connectionLabel.setFont(new Font("Tahoma", Font.PLAIN, 32));
 		connectionLabel.setForeground(foregroundColor);
 		mainPanel.add(connectionLabel);
-		
+
 		// Port //
 		JLabel portLabel = new JLabel("Port:");
 		portLabel.setName("portLabel");
@@ -87,7 +96,7 @@ public class StartGUI {
 		portLabel.setFont(new Font("Sitka Small", Font.PLAIN, 30));
 		portLabel.setForeground(foregroundColor);
 		mainPanel.add(portLabel);
-		
+
 		fieldPort = new JTextField();
 		fieldPort.setName("fieldPort");
 		fieldPort.setText("6868");
@@ -97,7 +106,7 @@ public class StartGUI {
 		fieldPort.setBackground(specialColor);
 		fieldPort.setColumns(10);
 		mainPanel.add(fieldPort);
-		
+
 		// Hostname //
 		JLabel hostnameLabel = new JLabel("Hostname:");
 		hostnameLabel.setName("hostnameLabel");
@@ -105,7 +114,7 @@ public class StartGUI {
 		hostnameLabel.setFont(new Font("Sitka Small", Font.PLAIN, 30));
 		hostnameLabel.setForeground(foregroundColor);
 		mainPanel.add(hostnameLabel);
-		
+
 		fieldHostname = new JTextField();
 		fieldHostname.setName("fieldHostname");
 		fieldHostname.setText("127.0.0.1");
@@ -115,9 +124,9 @@ public class StartGUI {
 		fieldHostname.setBackground(specialColor);
 		fieldHostname.setColumns(10);
 		mainPanel.add(fieldHostname);
-		
+
 		// Submit-Button //
-		
+
 		JButton btnSubmit = new JButton("Connect");
 		btnSubmit.setBounds(191, 178, 583, 50);
 		btnSubmit.addActionListener(e -> connect());
@@ -126,11 +135,11 @@ public class StartGUI {
 		btnSubmit.setForeground(foregroundColor);
 		btnSubmit.setBackground(specialColor);
 		mainPanel.add(btnSubmit);
-		
+
 		JDesktopPane desktopPane = new JDesktopPane();
 		desktopPane.setBounds(521, 100, 1, 1);
 		mainPanel.add(desktopPane);
-		
+
 		errorLabel = new JLabel("Server not reachable!");
 		errorLabel.setName("errorLabel");
 		errorLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -147,16 +156,16 @@ public class StartGUI {
 	 * If a connection is successfully established, the start program is initialized with the specified port and hostname.
 	 * In case of a NumberFormatException or an IOException, an error message is displayed and the start form remains visible.
 	 */
-	private void connect() 
+	private void connect()
 	{
 		String hostname = fieldHostname.getText();
 		String port = fieldPort.getText();
-		
-		if (hostname.isBlank() || port.isBlank()) 
+
+		if (hostname.isBlank() || port.isBlank())
 		{
 			return;
 		}
-		
+
 		try {
 			//Test Connection
 			Socket socket = new Socket(hostname, Integer.parseInt(port));
@@ -164,17 +173,24 @@ public class StartGUI {
             PrintWriter writer = new PrintWriter(output, true);
             writer.println("closeSession");
             socket.close();
-			
+
             //Start Program
 			String[] args = {port, hostname};
-			
+
 			frmStart.setVisible(false);
 			BlackClient.main(args);
 			return;
-		} catch (NumberFormatException | IOException e) 
+		} catch (NumberFormatException | IOException e)
 		{
 			errorLabel.setVisible(true);
 			frmStart.setVisible(true);
 		}
+	}
+
+	protected void OnClose()
+	{
+		frmStart.setVisible(false);
+		frmStart.dispose();
+		System.exit(0);
 	}
 }

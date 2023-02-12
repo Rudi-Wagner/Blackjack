@@ -1,4 +1,4 @@
-package client;
+package main.java.client;
 
 import java.awt.Color;
 import java.awt.Component;
@@ -17,36 +17,37 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+import javax.swing.WindowConstants;
 import javax.swing.border.BevelBorder;
 
-import misc.Card;
+import main.java.misc.Card;
 
 public class GuiForSplit {
 
 	private JFrame frmBlackjackJavaClient;
 	private BlackClient client;
 	private Gui mainGui;
-	
+
 	//Panels to access every Component later on
 	private JPanel playerActionPanel;
 	private JPanel playerHandPanel;
 	private JLabel topLabel;
-	
+
 	//PlayerHand variables
 	private ArrayList<JLabel> playerHand;
 	private ArrayList<Card> playerCardHand;
 	private JLabel playerHandValueLabel;
 	private JLabel lblGameStatus;
-	
+
 	private int cardCnt = 0;
 	private int handValue = 0;
 	private int playerBet = 0;
-	
+
 	//Colours
 	Color foregroundColor = new Color(136, 138, 145);
 	Color backgroundColor = new Color(48, 49, 54);
 	Color specialColor = new Color(55, 57, 63);
-	
+
 
 	/**
 	 * Die main-Methode erstellt eine neue Instanz der GuiForSplit-Klasse und setzt ihre Sichtbarkeit auf true, damit die GUI sichtbar ist.
@@ -54,6 +55,7 @@ public class GuiForSplit {
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
+			@Override
 			public void run() {
 				try {
 					GuiForSplit window = new GuiForSplit(null, null, null);
@@ -66,48 +68,48 @@ public class GuiForSplit {
 	}
 
 	/**
-	 * Die Konstruktormethode richtet die GUI ein. Sie nimmt drei Parameter entgegen: mainGui, client und card. 
-	 * Sie erstellt eine ArrayList mit JLabel-Objekten namens playerHand und eine weitere namens playerCardHand, um Karten zu speichern. 
-	 * Dann ruft sie die initialize-Methode auf, um die GUI-Komponenten einzurichten. Anschließend wird die Sichtbarkeit der GUI auf true gesetzt und der Wert des card-Parameters 
+	 * Die Konstruktormethode richtet die GUI ein. Sie nimmt drei Parameter entgegen: mainGui, client und card.
+	 * Sie erstellt eine ArrayList mit JLabel-Objekten namens playerHand und eine weitere namens playerCardHand, um Karten zu speichern.
+	 * Dann ruft sie die initialize-Methode auf, um die GUI-Komponenten einzurichten. Anschließend wird die Sichtbarkeit der GUI auf true gesetzt und der Wert des card-Parameters
 	 * als erste Karte in der playerCardHand-Liste gesetzt. Dann wartet es, bis playerCardHand mindestens eine Karte hat und ruft die drawCard-Methode auf.
 	 * @param mainGui
 	 * @param client
 	 * @param card
 	 */
-	public GuiForSplit(Gui mainGui, BlackClient client, Card card) 
+	public GuiForSplit(Gui mainGui, BlackClient client, Card card)
 	{
 		this.mainGui = mainGui;
-		playerHand = new ArrayList<JLabel>();
-		playerCardHand = new ArrayList<Card>();
+		playerHand = new ArrayList<>();
+		playerCardHand = new ArrayList<>();
 		this.client = client;
 		initialize();
 		frmBlackjackJavaClient.setVisible(true);
-		
+
 		setCard(card);
-		
+
 		synchronized(this) {
-			while(playerCardHand.size() < 1 ) 
+			while(playerCardHand.size() < 1 )
 			{
 				System.out.print("");
 			}
 		}
-		
+
 		drawCard();
 	}
 
 	/**
-	 * JFrame erstellt und seine Eigenschaften wie Größe, Hintergrundfarbe und Schließoperation werden eingestellt. 
-	 * Dann werden drei Panels für Spieleraktionen, Spielerhand und Dealerhand erstellt. 
-	 * Das Spieleraktionspanel enthält drei Schaltflächen für die Spieleraktionen: eine Karte ziehen, stehen oder verdoppeln. 
-	 * Die Spielerhand- und Dealerhand-Panels zeigen die Karten in den Händen des Spielers und des Dealers an. 
+	 * JFrame erstellt und seine Eigenschaften wie Größe, Hintergrundfarbe und Schließoperation werden eingestellt.
+	 * Dann werden drei Panels für Spieleraktionen, Spielerhand und Dealerhand erstellt.
+	 * Das Spieleraktionspanel enthält drei Schaltflächen für die Spieleraktionen: eine Karte ziehen, stehen oder verdoppeln.
+	 * Die Spielerhand- und Dealerhand-Panels zeigen die Karten in den Händen des Spielers und des Dealers an.
 	 * Der Code richtet auch Event-Listener für Fenstergrößenänderung und Fensterschließereignisse ein, die die OnResize- und OnClose-Methoden auslösen.
 	 */
-	private void initialize() 
+	private void initialize()
 	{
 		frmBlackjackJavaClient = new JFrame();
 		frmBlackjackJavaClient.setIconImage(Toolkit.getDefaultToolkit().getImage(GuiForSplit.class.getResource("/resources/card_joker_black.png")));
 		frmBlackjackJavaClient.setTitle("Blackjack Java Client");
-		frmBlackjackJavaClient.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		frmBlackjackJavaClient.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		frmBlackjackJavaClient.addWindowListener(new WindowAdapter() {
 		    @Override
 		    public void windowClosing(WindowEvent event) {
@@ -119,12 +121,13 @@ public class GuiForSplit {
 		frmBlackjackJavaClient.getContentPane().setBackground(backgroundColor);
 		frmBlackjackJavaClient.getContentPane().setForeground(foregroundColor);
 		frmBlackjackJavaClient.addComponentListener(new ComponentAdapter() {
-		    public void componentResized(ComponentEvent componentEvent) 
+		    @Override
+			public void componentResized(ComponentEvent componentEvent)
 		    {
 		        OnResize();
 		    }
 		});
-		
+
 		//Player Action Panel (Middle Panel with Buttons)
 		playerActionPanel = new JPanel();
 		playerActionPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
@@ -133,7 +136,7 @@ public class GuiForSplit {
 		playerActionPanel.setLayout(null);
 		playerActionPanel.setForeground(foregroundColor);
 		playerActionPanel.setBackground(backgroundColor);
-		
+
 			//Hit Button
 			JButton drawButton = new JButton("Hit");
 			drawButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
@@ -143,7 +146,7 @@ public class GuiForSplit {
 			drawButton.setForeground(foregroundColor);
 			drawButton.setBackground(specialColor);
 			playerActionPanel.add(drawButton);
-			
+
 			//Stand Button
 			JButton standButton = new JButton("Stand");
 			standButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
@@ -153,7 +156,7 @@ public class GuiForSplit {
 			standButton.setForeground(foregroundColor);
 			standButton.setBackground(specialColor);
 			playerActionPanel.add(standButton);
-			
+
 			//Double Down Button
 			JButton doubleDownButton = new JButton("Double");
 			doubleDownButton.setFont(new Font("Sitka Small", Font.PLAIN, 30));
@@ -163,7 +166,7 @@ public class GuiForSplit {
 			doubleDownButton.setForeground(foregroundColor);
 			doubleDownButton.setBackground(specialColor);
 			playerActionPanel.add(doubleDownButton);
-		
+
 		//Player Hand Panel
 		playerHandPanel = new JPanel();
 		playerHandPanel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
@@ -172,7 +175,7 @@ public class GuiForSplit {
 		playerHandPanel.setForeground(foregroundColor);
 		playerHandPanel.setBackground(backgroundColor);
 		frmBlackjackJavaClient.getContentPane().add(playerHandPanel);
-			
+
 		playerHandValueLabel = new JLabel("Current player-hand value: ");
 		playerHandValueLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		playerHandValueLabel.setBounds(10, 0, 357, 20);
@@ -180,7 +183,7 @@ public class GuiForSplit {
 		playerHandValueLabel.setForeground(foregroundColor);
 		playerHandValueLabel.setBackground(backgroundColor);
 		playerHandPanel.add(playerHandValueLabel);
-			
+
 			//Set Player Hand Images
 			int cards = 11;
 			for(int i = 0; i < cards; i++)
@@ -192,7 +195,7 @@ public class GuiForSplit {
 				playerHand.add(card);
 				playerHandPanel.add(card);
 			}
-		
+
 		//Title
 		topLabel = new JLabel("BLACKJACK");
 		topLabel.setFont(new Font("Tahoma", Font.PLAIN, 30));
@@ -200,7 +203,7 @@ public class GuiForSplit {
 		topLabel.setBounds(10, 10, 964, 80);
 		topLabel.setForeground(foregroundColor);
 		frmBlackjackJavaClient.getContentPane().add(topLabel);
-		
+
 		lblGameStatus = new JLabel("");
 		lblGameStatus.setHorizontalAlignment(SwingConstants.CENTER);
 		lblGameStatus.setName("gameStatusLabel");
@@ -210,9 +213,9 @@ public class GuiForSplit {
 		lblGameStatus.setBounds(339, 85, 357, 20);
 		frmBlackjackJavaClient.getContentPane().add(lblGameStatus);
 	}
-	
+
 	/**
-	 * Diese Methode wird aufgerufen, wenn das Hauptfenster geschlossen wird. 
+	 * Diese Methode wird aufgerufen, wenn das Hauptfenster geschlossen wird.
 	 * Es setzt die Referenz auf die GUI auf null und macht das Fenster unsichtbar und bereinigt es.
 	 */
 	protected void OnClose()
@@ -223,32 +226,32 @@ public class GuiForSplit {
 	}
 
 	/**
-	 * Diese Methode wird aufgerufen, wenn das Fenstergröße verändert wird. 
-	 * Es passt die Größe und Position bestimmter Komponenten wie Schaltflächen, Texte, Panels etc. an, um sicherzustellen, 
+	 * Diese Methode wird aufgerufen, wenn das Fenstergröße verändert wird.
+	 * Es passt die Größe und Position bestimmter Komponenten wie Schaltflächen, Texte, Panels etc. an, um sicherzustellen,
 	 * dass sie gut angepasst sind und entsprechend des verfügbaren Platzes angezeigt werden.
 	 */
-	protected void OnResize() 
+	protected void OnResize()
 	{
-		if (frmBlackjackJavaClient.getWidth() < 870) 
+		if (frmBlackjackJavaClient.getWidth() < 870)
 		{
 			frmBlackjackJavaClient.setBounds(frmBlackjackJavaClient.getX(), frmBlackjackJavaClient.getY(), 870, frmBlackjackJavaClient.getHeight());
 		}
-		
+
 		System.out.println("#GUI# Resizing to fit frame size: width: " + frmBlackjackJavaClient.getWidth() + ", height: " + frmBlackjackJavaClient.getHeight());
 		//Resize TopLabel
 		topLabel.setBounds(topLabel.getX(), topLabel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, topLabel.getHeight());
-		
+
 		//Resize PlayerHandPanel
 			Component[] handComponents = playerHandPanel.getComponents();
 			//Panel Size/Pos
 			playerHandPanel.setBounds(playerHandPanel.getX(), playerHandPanel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, playerHandPanel.getHeight());
-			
+
 			//			  (Panel Width - Extra Spacing Left&Right - Button Widths) / spacingAmount
 			int handSpacing = (playerHandPanel.getWidth() - 20 - (11 * 64)) / 12;
 			int handNextX = 10;
-			for (Component component : handComponents) 
+			for (Component component : handComponents)
 			{
-				if (!component.getName().equals("playerHandValueLabel")) 
+				if (!component.getName().equals("playerHandValueLabel"))
 				{
 					int x = handNextX + handSpacing;
 					int y = component.getY();
@@ -256,25 +259,25 @@ public class GuiForSplit {
 					handNextX = component.getX() + component.getWidth();
 				}
 			}
-		
+
 		//Resize PlayerActionPanel
 			Component[] actionComponents = playerActionPanel.getComponents();
 			//Panel Size/Pos
 			playerActionPanel.setBounds(playerActionPanel.getX(), playerActionPanel.getY(), frmBlackjackJavaClient.getWidth() - 20 - 16, playerActionPanel.getHeight());
-			
+
 			//			  (Panel Width - Extra Spacing Left&Right - Button Widths) / spacingAmount
 			int actionSpacing = (playerActionPanel.getWidth() - 20 - (3 * 200)) / 4;
 			int actionNextX = 10;
-			for (Component component : actionComponents) 
+			for (Component component : actionComponents)
 			{
-				if (!component.getName().equals("reloadButton")) 
+				if (!component.getName().equals("reloadButton"))
 				{
 					int x = actionNextX + actionSpacing;
 					int y = component.getY();
 					component.setLocation(x, y);
 					actionNextX = component.getX() + component.getWidth();
 				}
-				if (component.getName().equals("reloadButton")) 
+				if (component.getName().equals("reloadButton"))
 				{
 					int x = (playerActionPanel.getWidth() - component.getWidth())/2;
 					int y = component.getY();
@@ -289,18 +292,18 @@ public class GuiForSplit {
 	 *  Die Methode ermöglicht es dem Spieler, seinen Einsatz zu verdoppeln und die letzte Karte zu ziehen.
 	 *  Anschließend wird die Runde automatisch beendet (Stand).
 	 */
-	private void doubleDown() 
+	private void doubleDown()
 	{
 		System.out.println("#ClientGUI# Request to double down.");
 		//Draw last Card
 		drawCard();
-		
+
 		//double MoneyBet
 		playerBet = playerBet * 2;
-		
+
 		//Update playerBet from spinner
 		frmBlackjackJavaClient.repaint();
-		
+
 		//Automaticly Stand & end Round
 		try {
 			Thread.sleep(50);
@@ -311,19 +314,19 @@ public class GuiForSplit {
 	}
 
 	/**
-	 * Die Methode sendet eine Anfrage an den Server, um eine neue Karte zu ziehen. 
+	 * Die Methode sendet eine Anfrage an den Server, um eine neue Karte zu ziehen.
 	 * Wenn die Anzahl der Karten bereits bei 2 liegt, werden die Schaltflächen "DoubleDown" und "Split" deaktiviert.
 	 */
-	private void drawCard() 
+	private void drawCard()
 	{
 		System.out.println("#Client2GUI# Request new Card.");
 		client.sendMessage("draw", true);
-		
+
 		if(cardCnt == 2)
 		{
 			//Disable DoubleDown and Split Button
 			Component[] components = playerActionPanel.getComponents();
-			for (Component component : components) 
+			for (Component component : components)
 			{
 				if(component.getName().equals("doubleDownButton") || component.getName().equals("splitButton"))
 				{
@@ -333,26 +336,26 @@ public class GuiForSplit {
 			}
 		}
 	}
-	
+
 	/**
-	 * Diese Methode wird aufgerufen, wenn ein Spieler beschließt, keine weiteren Karten mehr zu ziehen (Stand). 
-	 * Es gibt eine Ausgabe auf der Konsole und sendet eine Nachricht an den Server, dass der Spieler stehen möchte. 
+	 * Diese Methode wird aufgerufen, wenn ein Spieler beschließt, keine weiteren Karten mehr zu ziehen (Stand).
+	 * Es gibt eine Ausgabe auf der Konsole und sendet eine Nachricht an den Server, dass der Spieler stehen möchte.
 	 * Die Schaltflächen im Spiel werden entsprechend deaktiviert.
 	 */
-	private void stand() 
+	private void stand()
 	{
 		System.out.println("#ClientGUI# Request to stand.");
 		client.sendMessage("stand", true);
-		
+
 		Component[] actionComponents = playerActionPanel.getComponents();
-		for (Component component : actionComponents) 
+		for (Component component : actionComponents)
 		{
 			if(component.getClass() == JButton.class && !component.getName().equals("reloadButton"))
 			{
 				//Set all Buttons to false
 				component.setEnabled(false);
 			}
-			
+
 			if(component.getName().equals("reloadButton"))
 			{
 				//Set reload Button true
@@ -367,46 +370,46 @@ public class GuiForSplit {
 	 * Wenn die Hand des Spielers zwei Karten enthält, wird überprüft, ob sie gleichwertig sind, um zu bestimmen, ob der Spieler die Möglichkeit hat, die Hand zu splitten.
 	 * @param card
 	 */
-	public void setCard(Card card) 
+	public void setCard(Card card)
 	{
 		updateCard(cardCnt, card.getName());
 		playerCardHand.add(card);
 		handValue = this.client.getHandValue(true);
 		cardCnt++;
-		
+
 		//Check for duplicate Cards to enable Split
-		if (cardCnt == 2 ) 
+		if (cardCnt == 2 )
 		{
 			Component[] actionComponents = playerActionPanel.getComponents();
-			for (Component component : actionComponents) 
+			for (Component component : actionComponents)
 			{
 				if(component.getName().equals("splitButton"))
 				{
 					component.setEnabled(false);
-					
+
 					Card card1 = playerCardHand.get(0);
 					Card card2 = playerCardHand.get(1);
-					if (card1.getValue() == card2.getValue()) 
+					if (card1.getValue() == card2.getValue())
 					{
 						component.setEnabled(true);
 					}
 				}
 			}
 		}
-		
+
 		updateHandValue();
-		
-		if (handValue >= 21 || cardCnt >= 11) 
+
+		if (handValue >= 21 || cardCnt >= 11)
 		{
 			//Automaticly stand and stop the user from hitting again
 			stand();
 		}
 	}
-	
+
 	/**
 	 * Diese Methode aktualisiert den angezeigten Handwert des Spielers auf der Benutzeroberfläche.
 	 */
-	private void updateHandValue() 
+	private void updateHandValue()
 	{
 		playerHandValueLabel.setText("Current player-hand value: " + handValue + "");
 		frmBlackjackJavaClient.repaint();
@@ -426,37 +429,37 @@ public class GuiForSplit {
 	}
 
 	/**
-	 * Diese Methode wird aufgerufen, wenn eine Runde beendet ist. 
+	 * Diese Methode wird aufgerufen, wenn eine Runde beendet ist.
 	 * Es wird der Spielstatus berechnet (gewinnen, verlieren oder unentschieden) und die entsprechende Nachricht auf der Benutzeroberfläche angezeigt.
 	 * @param gameStatus
 	 * @param dealerHandValue
 	 */
-	public void endRound(String gameStatus, int dealerHandValue) 
+	public void endRound(String gameStatus, int dealerHandValue)
 	{
 		System.out.println("#Client# Round state: " + gameStatus);
 		String gameStatusMSG = "";
 		int money = 0;
-		switch (gameStatus) 
+		switch (gameStatus)
 		{
 			case "win":
 				money += playerBet * 1.5;
 				gameStatusMSG = " You WON " + (int)(playerBet * 1.5) + "€ Dealer has:" + dealerHandValue;
 				break;
-				
+
 			case "loose":
 				money -= playerBet;
 				gameStatusMSG = " You LOST " + playerBet + "€ Dealer has:" + dealerHandValue;
 				break;
-				
+
 			case "draw":
 				//Stays the same
 				gameStatusMSG = " DRAW  Dealer has:" + dealerHandValue;
 				break;
 		}
-		
+
 		//Update GUI
-		lblGameStatus.setText(gameStatusMSG);;
-		
+		lblGameStatus.setText(gameStatusMSG);
+
 		mainGui.addSplitMoney(money);
 	}
 }
